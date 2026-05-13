@@ -14,6 +14,7 @@ import type { LocatorIndexEntry } from '../../models/locator.js';
 import type { DomSnapshot } from '../../models/snapshot.js';
 import type { HealingHistoryEntry } from '../../models/healing.js';
 import type { Patch } from '../../models/patch.js';
+import type { FrameworkMap, LocatorRecord, AnalysisMeta } from '../analyzer/types.js';
 
 export class MemoryStorage implements StorageProvider {
   private metadata: Record<string, unknown> = {};
@@ -106,6 +107,15 @@ export class MemoryStorage implements StorageProvider {
     const patch = this.patches.get(id);
     if (!patch) return { ok: false, error: `Patch ${id} not found` };
     patch.status = status as Patch['status'];
+    return { ok: true, value: undefined };
+  }
+
+  async saveAnalysis(
+    _projectRoot: string,
+    _frameworkMap: FrameworkMap,
+    _locatorRecords: LocatorRecord[],
+    _analysisMeta: AnalysisMeta,
+  ): Promise<Result<void>> {
     return { ok: true, value: undefined };
   }
 }

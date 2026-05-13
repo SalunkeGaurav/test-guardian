@@ -67,6 +67,8 @@ export class PlaywrightAdapter implements FrameworkAdapter {
     const allLocators: Locator[] = [];
     const allPageObjects: AnalysisResult['pageObjects'] = [];
     const allNavigations: AnalysisResult['navigations'] = [];
+    const skippedFiles: string[] = [];
+    const warnings: string[] = [];
 
     // 2. Parse each test file
     for (const filePath of scanResult.files) {
@@ -104,11 +106,29 @@ export class PlaywrightAdapter implements FrameworkAdapter {
 
         debug('playwright', `  → ${parseResult.tests.length} tests, ${parseResult.locators.length} locators, ${parseResult.pageObjects.length} page objects`);
       } catch (err) {
-        warn('playwright', `Failed to parse ${filePath}: ${err instanceof Error ? err.message : String(err)}`);
+        const msg = `Failed to parse ${filePath}: ${err instanceof Error ? err.message : String(err)}`;
+        warn('playwright', msg);
+        skippedFiles.push(filePath);
+        warnings.push(msg);
       }
     }
 
-    // 3. Deduplicate locators by ID
+    // 3. Count locator occurrences per unique ID
+    const occurrenceCount = new Map<string, number>();
+    for (const l of allLocators) {
+      occurrenceCount.set(l.id, (occurrenceCount.get(l.id) ?? 0) + 1);
+    }
+
+    // 4. Build per-file locator ID sets
+    const fileLocatorIds = new Map<string, Set<string>>();
+    for (const l of allLocators) {
+      if (!fileLocatorIds.has(l.sourceFile)) {
+        fileLocatorIds.set(l.sourceFile, new Set());
+      }
+      fileLocatorIds.get(l.sourceFile)!.add(l.id);
+    }
+
+    // 5. Deduplicate locators by ID, keeping first occurrence
     const seenIds = new Set<string>();
     const uniqueLocators = allLocators.filter((l) => {
       if (seenIds.has(l.id)) return false;
@@ -124,18 +144,21 @@ export class PlaywrightAdapter implements FrameworkAdapter {
       locators: uniqueLocators,
       pageObjects: allPageObjects,
       navigations: allNavigations,
+      parserWarnings: warnings,
+      locatorCounts: Object.fromEntries(occurrenceCount),
       stats: {
         totalFiles: testFiles.length,
         totalTests: testFiles.reduce((sum, f) => sum + f.tests.length, 0),
         totalLocators: uniqueLocators.length,
         totalPageObjects: allPageObjects.length,
         totalNavigations: allNavigations.length,
+        totalSkipped: skippedFiles.length,
         analyzedAt: Date.now(),
         durationMs: Math.round(durationMs),
       },
     };
 
-    info('playwright', `Analysis complete: ${result.stats.totalFiles} files, ${result.stats.totalTests} tests, ${result.stats.totalLocators} locators (${Math.round(durationMs)}ms)`);
+    info('playwright', `Analysis complete: ${result.stats.totalFiles} files, ${result.stats.totalTests} tests, ${result.stats.totalLocators} locators, ${result.stats.totalSkipped} skipped (${Math.round(durationMs)}ms)`);
 
     return { ok: true, value: result };
   }

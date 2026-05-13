@@ -1,23 +1,10 @@
-/**
- * StorageProvider — unified contract for .testguardian persistence.
- *
- * Implemented by the storage module. All I/O flows through this interface.
- *
- * Schema layout in .testguardian/:
- *   index.json       — project metadata
- *   traces/{id}.json — ExecutionTrace
- *   locators.json    — LocatorIndex (serialized)
- *   snapshots/{id}/  — DomSnapshot (html + metadata.json)
- *   patches/{id}.json — Patch records
- *   history.json     — HealingHistoryEntry[]
- */
-
 import type { Result } from '../models/result.js';
 import type { ExecutionTrace, TraceSummary } from '../models/trace.js';
 import type { LocatorIndexEntry } from '../models/locator.js';
 import type { DomSnapshot } from '../models/snapshot.js';
 import type { HealingHistoryEntry } from '../models/healing.js';
 import type { Patch } from '../models/patch.js';
+import type { FrameworkMap, LocatorRecord, AnalysisMeta } from '../core/analyzer/types.js';
 
 export interface StorageProvider {
   /** Project metadata. */
@@ -46,4 +33,12 @@ export interface StorageProvider {
   savePatch(patch: Patch): Promise<Result<void>>;
   listPatches(status?: string): Promise<Result<Patch[]>>;
   updatePatchStatus(id: string, status: string): Promise<Result<void>>;
+
+  /** Analysis persistence. */
+  saveAnalysis(
+    projectRoot: string,
+    frameworkMap: FrameworkMap,
+    locatorRecords: LocatorRecord[],
+    analysisMeta: AnalysisMeta,
+  ): Promise<Result<void>>;
 }

@@ -1,24 +1,8 @@
-/**
- * analyze — CLI command implementation.
- *
- * Detects Playwright in the current project, scans test files,
- * extracts test structure, locators, page objects, and navigation patterns.
- *
- * Outputs:
- *   .testguardian/framework-map.json
- *   .testguardian/locators.json
- *   .testguardian/index.json (updated)
- *
- * Usage:
- *   tg analyze
- *   tg analyze --adapter playwright
- *   tg analyze --verbose
- */
-
 import { resolve } from 'node:path';
 import { info, warn, error, setLogLevel } from '../../src/logger/index.js';
 import { analyzeProject } from '../../src/core/analyzer/index.js';
 import { PlaywrightAdapter } from '../../src/adapters/playwright/index.js';
+import { FileStorage } from '../../src/core/storage/index.js';
 import type { LogLevel } from '../../src/logger/index.js';
 
 export interface AnalyzeOptions {
@@ -35,7 +19,6 @@ export async function analyze(options: AnalyzeOptions): Promise<void> {
 
   const projectRoot = resolve(process.cwd());
 
-  // 1. Detect and select adapter
   if (options.adapter && options.adapter !== 'playwright') {
     error('CLI', `Unsupported adapter: ${options.adapter}. Only 'playwright' is supported in this version.`);
     process.exit(1);
@@ -51,11 +34,10 @@ export async function analyze(options: AnalyzeOptions): Promise<void> {
 
   info('CLI', 'Playwright detected. Starting analysis...');
 
-  // 2. Run analysis
   try {
-    const result = await analyzeProject(projectRoot, adapter);
+    const storage = new FileStorage(projectRoot);
+    const result = await analyzeProject(projectRoot, adapter, storage);
 
-    // 3. Print summary
     console.log('');
     console.log('╔══════════════════════════════════════════╗');
     console.log('║        TestGuardian Analysis             ║');
@@ -69,9 +51,12 @@ export async function analyze(options: AnalyzeOptions): Promise<void> {
     printValue('Locators', String(result.stats.totalLocators));
     printValue('Page objects', String(result.stats.totalPageObjects));
     printValue('Navigations', String(result.stats.totalNavigations));
+    if (result.stats.totalSkipped > 0) {
+      printValue('Skipped files', String(result.stats.totalSkipped));
+    }
     console.log('');
     printValue('Duration', `${result.stats.durationMs}ms`);
-    printValue('Output', '.testguardian/framework-map.json');
+    printValue('Output', '.testguardian/');
     console.log('');
 
     info('CLI', 'Analysis complete');

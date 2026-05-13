@@ -1,67 +1,66 @@
-/**
- * Analyzer Module — Orchestrator
- *
- * Entry point for all analysis workflows.
- * Coordinates framework detection, test file scanning, and metadata extraction.
- *
- * Flow:
- *   1. Detect framework (delegates to detector)
- *   2. Find the right adapter
- *   3. Run adapter.analyze() to extract all metadata
- *   4. Generate framework-map.json and persist to .testguardian/
- *   5. Store locator metadata
- */
-
-import { writeFileSync, mkdirSync, existsSync } from 'node:fs';
-import { join, resolve } from 'node:path';
-import { info, warn, span } from '../../logger/index.js';
+import { info, span } from '../../logger/index.js';
 import type { PlaywrightAdapter } from '../../adapters/playwright/index.js';
-import type { AnalysisResult, FrameworkMap } from './types.js';
+import type {
+  AnalysisResult, FrameworkMap, LocatorRecord, AnalysisMeta,
+  PageObjectDefinition,
+} from './types.js';
+import type { StorageProvider } from '../../interfaces/storage.js';
 
 export type FrameworkAdapterInstance = PlaywrightAdapter;
 
-/**
- * Run the full analysis pipeline on a project.
- */
+const ANALYSIS_VERSION = '0.1.0';
+const SCHEMA_VERSION = '1.0.0';
+
 export async function analyzeProject(
   projectRoot: string,
   adapter: FrameworkAdapterInstance,
+  storage: StorageProvider,
 ): Promise<AnalysisResult> {
   const endSpan = span('analyzer', `Analyzing ${projectRoot}`);
 
-  // 1. Run adapter analysis
   const result = await adapter.analyze(projectRoot);
   if (!result.ok) {
     throw new Error(`Analysis failed: ${result.error}`);
   }
 
-  // 2. Generate and persist artifacts
-  persistAnalysis(projectRoot, result.value);
+  const analysis = result.value;
 
-  endSpan();
-  return result.value;
-}
+  const frameworkMap = buildFrameworkMap(analysis);
+  const locatorRecords = buildLocatorRecords(analysis);
+  const analysisMeta = buildAnalysisMeta(analysis);
 
-/**
- * Generate and write analysis artifacts to .testguardian/.
- */
-function persistAnalysis(projectRoot: string, result: AnalysisResult): void {
-  const tgDir = resolve(join(projectRoot, '.testguardian'));
-  if (!existsSync(tgDir)) {
-    mkdirSync(tgDir, { recursive: true });
+  const persistResult = await storage.saveAnalysis(projectRoot, frameworkMap, locatorRecords, analysisMeta);
+  if (!persistResult.ok) {
+    throw new Error(`Persistence failed: ${persistResult.error}`);
   }
 
-  // 2a. Write framework-map.json
-  const frameworkMap: FrameworkMap = {
+  endSpan();
+  return analysis;
+}
+
+function buildFrameworkMap(result: AnalysisResult): FrameworkMap {
+  // Compute per-file locator IDs from the raw locator list
+  const fileLocatorIds = new Map<string, Set<string>>();
+  const fileNavCounts = new Map<string, number>();
+  for (const loc of result.locators) {
+    if (!fileLocatorIds.has(loc.sourceFile)) {
+      fileLocatorIds.set(loc.sourceFile, new Set());
+    }
+    fileLocatorIds.get(loc.sourceFile)!.add(loc.id);
+  }
+  for (const nav of result.navigations) {
+    fileNavCounts.set(nav.filePath, (fileNavCounts.get(nav.filePath) ?? 0) + 1);
+  }
+
+  return {
+    schemaVersion: SCHEMA_VERSION,
     framework: result.framework,
     testFiles: result.testFiles.map((f) => ({
       path: f.path,
       relativePath: f.relativePath,
-      tests: f.tests.map((t) => ({
-        name: t.name,
-        line: t.line,
-        tags: t.tags,
-      })),
+      tests: f.tests.map((t) => ({ name: t.name, line: t.line, tags: t.tags })),
+      locatorIds: Array.from(fileLocatorIds.get(f.path) ?? []),
+      navigationCount: fileNavCounts.get(f.path) ?? 0,
     })),
     pageObjects: result.pageObjects.map((po) => ({
       name: po.name,
@@ -72,17 +71,30 @@ function persistAnalysis(projectRoot: string, result: AnalysisResult): void {
         value: l.value,
       })),
     })),
+    navigations: result.navigations.map((n) => ({
+      url: n.url,
+      urlPattern: n.urlPattern,
+      filePath: n.filePath,
+      line: n.line,
+      contextName: n.contextName,
+    })),
     totalTests: result.stats.totalTests,
+    totalLocators: result.stats.totalLocators,
+    totalNavigations: result.stats.totalNavigations,
     analyzedAt: result.stats.analyzedAt,
   };
+}
 
-  const mapPath = join(tgDir, 'framework-map.json');
-  writeFileSync(mapPath, JSON.stringify(frameworkMap, null, 2), 'utf-8');
-  info('analyzer', `Wrote ${mapPath}`);
+function buildLocatorRecords(result: AnalysisResult): LocatorRecord[] {
+  // Build locator ID → page object name map
+  const poMap = new Map<string, string>();
+  for (const po of result.pageObjects) {
+    for (const loc of po.locators) {
+      poMap.set(loc.id, po.name);
+    }
+  }
 
-  // 2b. Write locators.json
-  const locatorsPath = join(tgDir, 'locators.json');
-  const locatorJson = result.locators.map((l) => ({
+  return result.locators.map((l) => ({
     id: l.id,
     strategy: l.strategy,
     value: l.value,
@@ -91,26 +103,20 @@ function persistAnalysis(projectRoot: string, result: AnalysisResult): void {
     sourceLine: l.sourceLine,
     context: l.context,
     propertyName: l.propertyName,
+    pageObjectName: poMap.get(l.id) ?? null,
+    occurrences: result.locatorCounts[l.id] ?? 1,
     verified: l.verified,
   }));
-  writeFileSync(locatorsPath, JSON.stringify(locatorJson, null, 2), 'utf-8');
-  info('analyzer', `Wrote ${locatorsPath} (${locatorJson.length} locators)`);
+}
 
-  // 2c. Update index.json with stats
-  const indexPath = join(tgDir, 'index.json');
-  const indexData: Record<string, unknown> = {
-    version: '0.1.0',
-    framework: result.framework,
-    createdAt: Date.now(),
+function buildAnalysisMeta(result: AnalysisResult): AnalysisMeta {
+  return {
+    analysisVersion: ANALYSIS_VERSION,
+    schemaVersion: SCHEMA_VERSION,
     analyzedAt: result.stats.analyzedAt,
-    lastTraceAt: null,
-    stats: {
-      totalTraces: 0,
-      totalLocators: result.stats.totalLocators,
-      totalPatches: 0,
-      healedLocators: 0,
-    },
+    durationMs: result.stats.durationMs,
+    fileCount: result.stats.totalFiles,
+    skippedCount: result.stats.totalSkipped,
+    parserWarnings: result.parserWarnings,
   };
-  writeFileSync(indexPath, JSON.stringify(indexData, null, 2), 'utf-8');
-  info('analyzer', `Updated ${indexPath}`);
 }
