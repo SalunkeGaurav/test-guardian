@@ -1,0 +1,23 @@
+{
+  "name": "@testguardian/core",
+  "version": "0.1.0",
+  "description": "Framework-agnostic automation healing platform",
+  "private": true,
+  "main": "src/index.ts",
+  "type": "module",
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "tsc --noEmit",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "commander": "^12.0.0",
+    "typescript": "^5.4.0",
+    "fast-glob": "^3.3.0"
+  },
+  "devDependencies": {
+    "vitest": "^1.6.0",
+    "@types/node": "^20.0.0"
+  }
+}

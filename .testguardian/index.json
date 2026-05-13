@@ -1,0 +1,13 @@
+{
+  "version": "0.1.0",
+  "framework": null,
+  "createdAt": null,
+  "analyzedAt": null,
+  "lastTraceAt": null,
+  "stats": {
+    "totalTraces": 0,
+    "totalLocators": 0,
+    "totalPatches": 0,
+    "healedLocators": 0
+  }
+}
