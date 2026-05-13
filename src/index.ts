@@ -32,5 +32,40 @@ export type {
   HealingProposal, HealingStrategy, HealingHistoryEntry, StrategyVerdict,
 } from './models/healing.js';
 export type { Patch, PatchFile, PatchStatus } from './models/patch.js';
+export type {
+  ReplayStep,
+  ReplaySession,
+  ReplaySessionIndexEntry,
+  CanonicalActionType,
+  LocatorReference,
+  NavigationContext,
+  StepResult,
+  SnapshotReference,
+  InputPayload,
+} from './models/replay.js';
+export type {
+  DomComparisonResult,
+  StructuralChange,
+  AttributeChange,
+  LocatorSurvivabilityResult,
+  SimilarityMetrics,
+  NormalizedElement,
+  SnapshotPair,
+} from './models/dom-intelligence.js';
+export type {
+  HealingCandidate,
+  CandidateRanking,
+  CandidateExplanation,
+  ChangeExplanation,
+  DomEvidence,
+  CandidateStrategy,
+  HealingStrategyDefinition,
+} from './models/healing-candidate.js';
+export type {
+  ValidationResult,
+  ValidationStatus,
+  FalsePositiveIndicator,
+  ExecutionMetadata,
+} from './models/validation.js';
 export type { Result } from './models/result.js';
 export { success, failure } from './models/result.js';
