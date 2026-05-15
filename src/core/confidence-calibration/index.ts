@@ -1,0 +1,30 @@
+export {
+  runConfidenceCalibration,
+  generateCalibrationSummary,
+} from './engine.js';
+
+export type {
+  ConfidenceCalibrationReport,
+  ConfidenceReliabilityReport,
+  LocatorStrategyAccuracy,
+  RepositoryTypeAccuracy,
+  ComplexityAccuracy,
+  MutationCategoryAccuracy,
+  RiskLevelAccuracy,
+  OverallAccuracyMetrics,
+  GovernanceHardeningReport,
+  GovernanceThresholds,
+  RiskyAcceptancePattern,
+  ThresholdSensitivityCurve,
+  GovernanceHardeningRecommendation,
+  StructuralConfidenceCorrelationReport,
+  SignificantPattern,
+  RecalibrationRecommendation,
+  CalibrationSimulationReport,
+  SimulationParameters,
+  SimulationResults,
+  ConfidenceCalibrationOptions,
+  HealingOutcome,
+  ConfidenceScore,
+  GovernanceDecision,
+} from './types.js';
