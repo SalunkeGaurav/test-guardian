@@ -1,0 +1,37 @@
+{
+  "generatedAt": 0,
+  "limitations": [
+    {
+      "category": "Framework Support",
+      "limitation": "Primary support for Playwright only; Cypress and Selenium are experimental"
+    },
+    {
+      "category": "Test Types",
+      "limitation": "UI and API tests supported; visual regression and performance tests not supported"
+    },
+    {
+      "category": "Healing Scope",
+      "limitation": "Locator failures, navigation issues, timing problems supported; logic errors not supported"
+    },
+    {
+      "category": "Governance",
+      "limitation": "Confidence thresholds and safety validation supported; custom rules and ML not supported"
+    },
+    {
+      "category": "Performance",
+      "limitation": "Large repositories (>1000 test files) may experience slower analysis"
+    },
+    {
+      "category": "Complex Patterns",
+      "limitation": "Deeply nested POM hierarchies may not be fully analyzed"
+    },
+    {
+      "category": "Dynamic Locators",
+      "limitation": "Locators generated at runtime may not be detected"
+    },
+    {
+      "category": "Custom Frameworks",
+      "limitation": "Custom test frameworks require adapter development"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "generatedAt": 0,
+  "features": [
+    {
+      "name": "Healing Pipeline",
+      "status": "stable",
+      "description": "Automated test healing with confidence governance"
+    },
+    {
+      "name": "Patch Generation",
+      "status": "stable",
+      "description": "AST-aware patch generation and validation"
+    },
+    {
+      "name": "Confidence Governance",
+      "status": "stable",
+      "description": "Deterministic confidence scoring and gating"
+    },
+    {
+      "name": "Stability Analysis",
+      "status": "stable",
+      "description": "Test stability monitoring and reporting"
+    },
+    {
+      "name": "Audit Trail",
+      "status": "stable",
+      "description": "Complete audit trail for all decisions"
+    },
+    {
+      "name": "Repository Validation",
+      "status": "stable",
+      "description": "Framework detection and compatibility validation"
+    },
+    {
+      "name": "Execution Lab",
+      "status": "stable",
+      "description": "Test execution and evidence collection"
+    },
+    {
+      "name": "Developer Review",
+      "status": "stable",
+      "description": "Developer-facing review bundles"
+    },
+    {
+      "name": "Production Readiness",
+      "status": "stable",
+      "description": "Production readiness assessment"
+    },
+    {
+      "name": "Corpus Execution",
+      "status": "stable",
+      "description": "Large-scale corpus analysis"
+    },
+    {
+      "name": "Stabilization Analysis",
+      "status": "stable",
+      "description": "Stabilization priorities and alpha readiness"
+    }
+  ]
+}

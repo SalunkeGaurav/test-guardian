@@ -155,4 +155,226 @@ program
     await runWorkflowSimulation({ sessionCount: parseInt(opts.sessions, 10), outputPath: opts.output, verbose: opts.verbose });
   });
 
+program
+  .command('risk-discrimination')
+  .description('Run risk discrimination analysis (Risk Discrimination Hardening v1)')
+  .option('--candidate-id <id>', 'Analyze a specific candidate')
+  .option('--governance', 'Run governance blind spot analysis')
+  .option('--simulation', 'Run risk simulation')
+  .option('--verbose', 'Enable debug logging')
+  .action(async (opts) => {
+    const { runRiskDiscrimination } = await import('./commands/risk-discrimination.js');
+    await runRiskDiscrimination({
+      candidateId: opts.candidateId,
+      governanceAnalysis: opts.governance,
+      simulation: opts.simulation,
+      verbose: opts.verbose,
+    });
+  });
+
+program
+  .command('ci-failure-validation')
+  .description('Run real CI failure replay validation (Real CI Failure Replay Validation v1)')
+  .option('--corpus <path>', 'Path to failure corpus JSON file')
+  .option('--replay-attempts <number>', 'Number of replay attempts per failure', '5')
+  .option('--verbose', 'Enable debug logging')
+  .action(async (opts) => {
+    const { runCIFailureValidation } = await import('./commands/ci-failure-validation.js');
+    await runCIFailureValidation({
+      corpusPath: opts.corpus,
+      replayAttempts: parseInt(opts.replayAttempts, 10),
+      verbose: opts.verbose,
+    });
+  });
+
+program
+  .command('cohesion-audit')
+  .description('Run architecture cohesion audit (Architecture Cohesion Audit v1)')
+  .option('--modules <list>', 'Comma-separated list of modules to audit')
+  .option('--skip-persistence', 'Skip persistence schema audit')
+  .option('--skip-dependency', 'Skip dependency stability audit')
+  .option('--skip-determinism', 'Skip determinism integrity audit')
+  .option('--verbose', 'Enable debug logging')
+  .action(async (opts) => {
+    const { runArchitectureCohesionAudit } = await import('./commands/architecture-cohesion-audit.js');
+    await runArchitectureCohesionAudit({
+      modules: opts.modules,
+      skipPersistence: opts.skipPersistence,
+      skipDependency: opts.skipDependency,
+      skipDeterminism: opts.skipDeterminism,
+      verbose: opts.verbose,
+    });
+  });
+
+program
+  .command('runtime-heal')
+  .description('Execute runtime healing loop for a failing test (Runtime Healing Execution Loop v1)')
+  .option('--test <path>', 'Path to the failing test file')
+  .option('--line <number>', 'Line number of the failing locator')
+  .option('--locator <expression>', 'The failing locator expression')
+  .option('--project <path>', 'Project root directory')
+  .option('--verbose', 'Enable debug logging')
+  .action(async (opts) => {
+    const { runtimeHeal } = await import('./commands/runtime-heal.js');
+    await runtimeHeal({
+      test: opts.test,
+      line: opts.line ? parseInt(opts.line, 10) : undefined,
+      locator: opts.locator,
+      project: opts.project,
+      verbose: opts.verbose,
+    });
+  });
+
+program
+  .command('runtime-hardening')
+  .description('Execute runtime hardening analysis for browser stability (Real Browser Runtime Hardening v1)')
+  .option('--test <path>', 'Path to the test file to harden')
+  .option('--project <path>', 'Project root directory')
+  .option('--verbose', 'Enable debug logging')
+  .action(async (opts) => {
+    const { runtimeHardening } = await import('./commands/runtime-hardening.js');
+    await runtimeHardening({
+      test: opts.test,
+      project: opts.project,
+      verbose: opts.verbose,
+    });
+  });
+
+program
+  .command('run')
+  .description('Execute unified TestGuardian workflow (Unified Execution Runtime v1)')
+  .option('--repo <path>', 'Path to the repository to analyze and heal')
+  .option('--sandbox', 'Enable sandbox verification')
+  .option('--validate-only', 'Run validation only, skip healing')
+  .option('--runtime-healing', 'Run runtime healing only')
+  .option('--strict-governance', 'Use strict governance thresholds')
+  .option('--report-only', 'Generate report only')
+  .option('--verbose', 'Enable debug logging')
+  .action(async (opts) => {
+    const { run } = await import('./commands/run.js');
+    await run({
+      repo: opts.repo,
+      sandbox: opts.sandbox,
+      validateOnly: opts.validateOnly,
+      runtimeHealing: opts.runtimeHealing,
+      strictGovernance: opts.strictGovernance,
+      reportOnly: opts.reportOnly,
+      verbose: opts.verbose,
+    });
+  });
+
+program
+  .command('execution-lab')
+  .description('Execute operational execution laboratory (Execution Lab v1)')
+  .option('--corpus <path>', 'Path to repository corpus')
+  .option('--iterations <number>', 'Number of execution iterations', '3')
+  .option('--batch-size <number>', 'Number of repositories per batch', '10')
+  .option('--subset <pattern>', 'Filter repositories by pattern')
+  .option('--report-only', 'Generate report only, skip execution')
+  .option('--verbose', 'Enable debug logging')
+  .action(async (opts) => {
+    const { executionLab } = await import('./commands/execution-lab.js');
+    await executionLab({
+      corpus: opts.corpus,
+      iterations: parseInt(opts.iterations, 10),
+      batchSize: parseInt(opts.batchSize, 10),
+      subset: opts.subset,
+      reportOnly: opts.reportOnly,
+      verbose: opts.verbose,
+    });
+  });
+
+program
+  .command('review')
+  .description('Generate developer-facing review reports (Developer Review Experience v1)')
+  .option('--report <path>', 'Path to review bundle JSON report')
+  .option('--json', 'Output as JSON')
+  .option('--html', 'Output as HTML')
+  .option('--compact', 'Output compact summary')
+  .option('--full', 'Output full detailed report (default)')
+  .option('--verbose', 'Enable debug logging')
+  .action(async (opts) => {
+    const { review } = await import('./commands/review.js');
+    const format = opts.json ? 'json' : opts.html ? 'html' : opts.compact ? 'compact' : 'full';
+    await review({
+      report: opts.report,
+      format: format as 'html' | 'json' | 'compact' | 'full',
+      verbose: opts.verbose,
+    });
+  });
+
+program
+  .command('production-readiness')
+  .description('Execute production readiness assessment (Production Readiness & Real-World Integration v1)')
+  .option('--repo <path>', 'Path to repository to assess')
+  .option('--profile', 'Include performance profiling')
+  .option('--ci', 'Include CI integration report')
+  .option('--package-audit', 'Include package readiness audit')
+  .option('--verbose', 'Enable debug logging')
+  .action(async (opts) => {
+    const { productionReadiness } = await import('./commands/production-readiness.js');
+    await productionReadiness({
+      repo: opts.repo,
+      profile: opts.profile,
+      ci: opts.ci,
+      packageAudit: opts.packageAudit,
+      verbose: opts.verbose,
+    });
+  });
+
+program
+  .command('corpus-scale')
+  .description('Execute large-scale corpus validation (Large Scale Corpus Execution v1)')
+  .option('--corpus <path>', 'Path to benchmark corpus directory')
+  .option('--batch-size <number>', 'Number of repositories per batch', '10')
+  .option('--resume', 'Resume from previous execution state')
+  .option('--failed-only', 'Re-run only failed repositories')
+  .option('--report-only', 'Generate reports only, skip execution')
+  .option('--verbose', 'Enable debug logging')
+  .action(async (opts) => {
+    const { corpusScale } = await import('./commands/corpus-scale.js');
+    await corpusScale({
+      corpus: opts.corpus,
+      batchSize: parseInt(opts.batchSize, 10),
+      resume: opts.resume,
+      failedOnly: opts.failedOnly,
+      reportOnly: opts.reportOnly,
+      verbose: opts.verbose,
+    });
+  });
+
+program
+  .command('stabilization')
+  .description('Execute stabilization analysis (Stabilization & Real-World Evidence v1)')
+  .option('--corpus <path>', 'Path to benchmark corpus directory')
+  .option('--batch-size <number>', 'Number of repositories per batch', '10')
+  .option('--resume', 'Resume from previous execution state')
+  .option('--report-only', 'Generate reports only, skip execution')
+  .option('--verbose', 'Enable debug logging')
+  .action(async (opts) => {
+    const { stabilization } = await import('./commands/stabilization.js');
+    await stabilization({
+      corpus: opts.corpus,
+      batchSize: parseInt(opts.batchSize, 10),
+      resume: opts.resume,
+      reportOnly: opts.reportOnly,
+      verbose: opts.verbose,
+    });
+  });
+
+program
+  .command('alpha-prepare')
+  .description('Prepare alpha release with consolidated reports (Alpha Consolidation & Packaging v1)')
+  .option('--corpus <path>', 'Path to benchmark corpus directory')
+  .option('--output <path>', 'Output directory for reports')
+  .option('--verbose', 'Enable debug logging')
+  .action(async (opts) => {
+    const { alphaPrepare } = await import('./commands/alpha-prepare.js');
+    await alphaPrepare({
+      corpus: opts.corpus,
+      output: opts.output,
+      verbose: opts.verbose,
+    });
+  });
+
 await program.parseAsync(process.argv);

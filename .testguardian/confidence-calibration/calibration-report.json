@@ -1,0 +1,377 @@
+{
+  "id": "cc-1778833377256-ad5t56c",
+  "generatedAt": 1778833377273,
+  "sourceCorpusPath": "C:\\Users\\Hp\\Automation Tools\\Tool Testing Data\\benchmark-repositories",
+  "analysisResults": {
+    "byLocatorStrategy": [
+      {
+        "strategy": "baseline",
+        "sampleSize": 78,
+        "predictedAccuracy": 70,
+        "actualAccuracy": 89.74358974358975,
+        "calibrationError": 19.74358974358975,
+        "overconfident": false,
+        "underconfident": true
+      },
+      {
+        "strategy": "broken-locator",
+        "sampleSize": 222,
+        "predictedAccuracy": 70,
+        "actualAccuracy": 29.27927927927928,
+        "calibrationError": 40.72072072072072,
+        "overconfident": true,
+        "underconfident": false
+      }
+    ],
+    "byRepositoryType": [
+      {
+        "type": "playwright-typescript",
+        "sampleSize": 19,
+        "averageConfidence": 74.09237326326922,
+        "actualSuccessRate": 74.49829559756024,
+        "calibrationError": 0.4059223342910201
+      },
+      {
+        "type": "playwright-javascript",
+        "sampleSize": 31,
+        "averageConfidence": 66.20859863606975,
+        "actualSuccessRate": 65.18270963336053,
+        "calibrationError": 1.0258890027092207
+      },
+      {
+        "type": "cucumber-playwright",
+        "sampleSize": 24,
+        "averageConfidence": 76.7287579235997,
+        "actualSuccessRate": 77.05959871263063,
+        "calibrationError": 0.3308407890309297
+      }
+    ],
+    "byReplayComplexity": [
+      {
+        "complexity": "simple",
+        "sampleSize": 34,
+        "averageConfidence": 66.61072237294582,
+        "actualAccuracy": 65.57201897199703,
+        "calibrationError": 1.0387034009487905
+      },
+      {
+        "complexity": "moderate",
+        "sampleSize": 67,
+        "averageConfidence": 73.66641255111443,
+        "actualAccuracy": 75.10297253090249,
+        "calibrationError": 1.4365599797880577
+      },
+      {
+        "complexity": "complex",
+        "sampleSize": 28,
+        "averageConfidence": 82.95575853676533,
+        "actualAccuracy": 86.18141299911345,
+        "calibrationError": 3.2256544623481176
+      }
+    ],
+    "byMutationCategory": [
+      {
+        "category": "locator-mutation",
+        "sampleSize": 20,
+        "averageConfidence": 78.89895177069585,
+        "actualRecoveryRate": 75.78743452578078,
+        "calibrationError": 3.1115172449150634
+      },
+      {
+        "category": "selector-rewrite",
+        "sampleSize": 19,
+        "averageConfidence": 62.43821312446522,
+        "actualRecoveryRate": 65.0107205372273,
+        "calibrationError": 2.5725074127620786
+      },
+      {
+        "category": "strategy-switch",
+        "sampleSize": 39,
+        "averageConfidence": 58.4144817466665,
+        "actualRecoveryRate": 60.19942340733652,
+        "calibrationError": 1.7849416606700146
+      },
+      {
+        "category": "dynamic-handler",
+        "sampleSize": 34,
+        "averageConfidence": 59.72562486197066,
+        "actualRecoveryRate": 53.088331900815426,
+        "calibrationError": 6.637292961155232
+      }
+    ],
+    "byStructuralRiskLevel": [
+      {
+        "riskLevel": "low",
+        "sampleSize": 23,
+        "averageConfidence": 77.9265960119537,
+        "actualAccuracy": 79.07566752444207,
+        "calibrationError": 1.1490715124883621
+      },
+      {
+        "riskLevel": "medium",
+        "sampleSize": 23,
+        "averageConfidence": 63.19376667261613,
+        "actualAccuracy": 61.2619854701544,
+        "calibrationError": 1.9317812024617282
+      },
+      {
+        "riskLevel": "high",
+        "sampleSize": 21,
+        "averageConfidence": 45.22043746127032,
+        "actualAccuracy": 36.63771567044313,
+        "calibrationError": 8.582721790827193
+      }
+    ],
+    "overallAccuracyMetrics": {
+      "meanCalibrationError": 7.661255174389591,
+      "calibrationSlope": 0.85,
+      "calibrationIntercept": 12,
+      "brierScore": 0.18,
+      "reliabilityDiagramBuckets": [
+        5,
+        10,
+        15,
+        20,
+        25,
+        30,
+        35,
+        40
+      ]
+    }
+  },
+  "governanceAnalysis": {
+    "currentThresholds": {
+      "minConfidence": 70,
+      "maxRiskyRecovery": 30,
+      "maxGovernanceRejection": 25,
+      "structuralChangeTolerance": 20
+    },
+    "falseAcceptanceRate": 14.906832298136646,
+    "falseRejectionRate": 7.453416149068323,
+    "riskyAcceptancePatterns": [
+      {
+        "pattern": "chained-locator",
+        "acceptedCount": 110,
+        "actualFailureCount": 33,
+        "falseAcceptanceRate": 30
+      },
+      {
+        "pattern": "dynamic-selector",
+        "acceptedCount": 45,
+        "actualFailureCount": 18,
+        "falseAcceptanceRate": 40
+      },
+      {
+        "pattern": "computed-locator",
+        "acceptedCount": 28,
+        "actualFailureCount": 11,
+        "falseAcceptanceRate": 39
+      }
+    ],
+    "replayInstabilityAcceptancePatterns": [
+      "async-chain",
+      "modal-flow",
+      "iframe-transition"
+    ],
+    "thresholdSensitivityCurves": [
+      {
+        "threshold": 50,
+        "truePositiveRate": 95,
+        "falsePositiveRate": 25,
+        "f1Score": 83.82352941176471,
+        "recommended": false
+      },
+      {
+        "threshold": 55,
+        "truePositiveRate": 91.5,
+        "falsePositiveRate": 23,
+        "f1Score": 83.62611275964392,
+        "recommended": false
+      },
+      {
+        "threshold": 60,
+        "truePositiveRate": 88,
+        "falsePositiveRate": 21,
+        "f1Score": 83.25748502994011,
+        "recommended": false
+      },
+      {
+        "threshold": 65,
+        "truePositiveRate": 84.5,
+        "falsePositiveRate": 19,
+        "f1Score": 82.7129909365559,
+        "recommended": false
+      },
+      {
+        "threshold": 70,
+        "truePositiveRate": 81,
+        "falsePositiveRate": 17,
+        "f1Score": 81.98780487804878,
+        "recommended": false
+      },
+      {
+        "threshold": 75,
+        "truePositiveRate": 77.5,
+        "falsePositiveRate": 15,
+        "f1Score": 81.07692307692308,
+        "recommended": true
+      },
+      {
+        "threshold": 80,
+        "truePositiveRate": 74,
+        "falsePositiveRate": 13,
+        "f1Score": 79.9751552795031,
+        "recommended": true
+      },
+      {
+        "threshold": 85,
+        "truePositiveRate": 70.5,
+        "falsePositiveRate": 11,
+        "f1Score": 78.67711598746081,
+        "recommended": true
+      },
+      {
+        "threshold": 90,
+        "truePositiveRate": 67,
+        "falsePositiveRate": 9,
+        "f1Score": 77.17721518987342,
+        "recommended": false
+      }
+    ],
+    "hardeningRecommendations": [
+      {
+        "recommendation": "Increase minConfidence threshold",
+        "currentValue": 70,
+        "recommendedValue": 75,
+        "expectedImpact": "Reduce false acceptance by ~12%"
+      },
+      {
+        "recommendation": "Lower maxRiskyRecovery tolerance",
+        "currentValue": 30,
+        "recommendedValue": 25,
+        "expectedImpact": "Block 15% more risky mutations"
+      },
+      {
+        "recommendation": "Add structural penalty for chained locators",
+        "currentValue": 0,
+        "recommendedValue": 15,
+        "expectedImpact": "Reduce confidence for deep chains"
+      }
+    ]
+  },
+  "structuralCorrelation": {
+    "chainedLocatorCorrelation": 40.909090909090914,
+    "wrapperAbstractionCorrelation": 35.294117647058826,
+    "dynamicSelectorCorrelation": 43.07692307692308,
+    "repeatedSelectorCorrelation": 40,
+    "oversizedPageObjectCorrelation": 50,
+    "asyncFlowCorrelation": 50,
+    "bddAbstractionCorrelation": 32,
+    "significantPatterns": [
+      {
+        "pattern": "oversized-page-object",
+        "correlationWithConfidenceFailure": 50,
+        "occurrenceCount": 30,
+        "severity": "high"
+      },
+      {
+        "pattern": "async-heavy-flow",
+        "correlationWithConfidenceFailure": 50,
+        "occurrenceCount": 40,
+        "severity": "high"
+      },
+      {
+        "pattern": "dynamic-selector",
+        "correlationWithConfidenceFailure": 43.07692307692308,
+        "occurrenceCount": 65,
+        "severity": "high"
+      },
+      {
+        "pattern": "chained-locator",
+        "correlationWithConfidenceFailure": 40.909090909090914,
+        "occurrenceCount": 110,
+        "severity": "high"
+      },
+      {
+        "pattern": "repeated-selector",
+        "correlationWithConfidenceFailure": 40,
+        "occurrenceCount": 45,
+        "severity": "medium"
+      },
+      {
+        "pattern": "wrapper-abstraction",
+        "correlationWithConfidenceFailure": 35.294117647058826,
+        "occurrenceCount": 85,
+        "severity": "medium"
+      },
+      {
+        "pattern": "bdd-abstraction",
+        "correlationWithConfidenceFailure": 32,
+        "occurrenceCount": 25,
+        "severity": "medium"
+      }
+    ]
+  },
+  "recalibrationRecommendations": [
+    {
+      "weightType": "replay",
+      "currentWeight": 25,
+      "recommendedWeight": 30,
+      "rationale": "Replay stability shows 40% correlation with confidence failure. Increase weight to penalize unstable replays.",
+      "expectedImprovement": 8
+    },
+    {
+      "weightType": "uniqueness",
+      "currentWeight": 20,
+      "recommendedWeight": 18,
+      "rationale": "Uniqueness scoring shows slight overconfidence. Slight reduction to improve calibration.",
+      "expectedImprovement": 3
+    },
+    {
+      "weightType": "structural",
+      "currentWeight": 25,
+      "recommendedWeight": 28,
+      "rationale": "Structural patterns (chained locators, wrappers) strongly correlate with failures. Increase penalty.",
+      "expectedImprovement": 12
+    },
+    {
+      "weightType": "validation",
+      "currentWeight": 15,
+      "recommendedWeight": 14,
+      "rationale": "Validation confidence slightly underestimates failure rate. Minor adjustment.",
+      "expectedImprovement": 2
+    },
+    {
+      "weightType": "runtime",
+      "currentWeight": 15,
+      "recommendedWeight": 10,
+      "rationale": "Runtime signals show lower reliability. Reduce weight to prevent misleading confidence.",
+      "expectedImprovement": 5
+    }
+  ],
+  "simulationResults": {
+    "simulationName": "Strict Governance Simulation",
+    "parameters": {
+      "strictnessAdjustment": 10,
+      "replayWeightAdjustment": 5,
+      "uniquenessWeightAdjustment": -2,
+      "structuralPenaltyAdjustment": 3,
+      "confidenceThresholdAdjustment": 5
+    },
+    "results": {
+      "projectedFalsePositiveReduction": 5.217391304347825,
+      "projectedRiskyRecoveryReduction": 8.8,
+      "projectedRecoveryLoss": 3.5,
+      "projectedOverallAccuracy": 3.1612551743895914,
+      "affectedLocatorStrategies": [
+        "chained-locator",
+        "dynamic-selector",
+        "computed-locator"
+      ],
+      "affectedRepositoryTypes": [
+        "playwright-typescript",
+        "cucumber-playwright"
+      ]
+    }
+  }
+}

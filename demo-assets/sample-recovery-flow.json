@@ -1,0 +1,124 @@
+{
+  "reportId": "demo-recovery-flow-1",
+  "generatedAt": 0,
+  "testFile": "tests/search.spec.ts",
+  "testName": "user searches for products",
+  "line": 8,
+  "failure": {
+    "type": "element-not-found",
+    "message": "locator resolved to 0 elements. Waiting for element...",
+    "locator": "page.locator('.search-input')"
+  },
+  "recoveryFlow": [
+    {
+      "step": 1,
+      "action": "analyze-failure",
+      "result": {
+        "rootCause": "CSS class renamed from .search-input to .search-field",
+        "confidence": 0.90
+      }
+    },
+    {
+      "step": 2,
+      "action": "generate-candidates",
+      "result": {
+        "candidates": [
+          {
+            "selector": ".search-field",
+            "confidence": 0.90,
+            "strategy": "class-migration",
+            "reason": "Class renamed, new class found in DOM"
+          },
+          {
+            "selector": "input[placeholder=\"Search products\"]",
+            "confidence": 0.85,
+            "strategy": "semantic-fallback",
+            "reason": "Semantic selector based on input purpose"
+          },
+          {
+            "selector": "[data-testid=\"search-input\"]",
+            "confidence": 0.80,
+            "strategy": "attribute-recovery",
+            "reason": "Test ID attribute found on search input"
+          }
+        ]
+      }
+    },
+    {
+      "step": 3,
+      "action": "rank-candidates",
+      "result": {
+        "ranking": [
+          { "selector": ".search-field", "rank": 1, "score": 0.90 },
+          { "selector": "input[placeholder=\"Search products\"]", "rank": 2, "score": 0.85 },
+          { "selector": "[data-testid=\"search-input\"]", "rank": 3, "score": 0.80 }
+        ],
+        "rankingCriteria": ["confidence", "specificity", "stability", "semantic-match"]
+      }
+    },
+    {
+      "step": 4,
+      "action": "safety-validation",
+      "result": {
+        "topCandidate": ".search-field",
+        "safetyChecks": [
+          { "check": "unique-match", "passed": true, "matchingElements": 1 },
+          { "check": "no-regression", "passed": true, "regressions": 0 },
+          { "check": "semantic-preservation", "passed": true, "similarity": 0.95 }
+        ],
+        "overallSafety": "passed"
+      }
+    },
+    {
+      "step": 5,
+      "action": "sandbox-execution",
+      "result": {
+        "executed": true,
+        "result": "passed",
+        "executionTime": 1850,
+        "replayConsistent": true,
+        "noSideEffects": true
+      }
+    },
+    {
+      "step": 6,
+      "action": "governance-gate",
+      "result": {
+        "passed": true,
+        "confidence": 0.90,
+        "threshold": 0.70,
+        "decision": "accept"
+      }
+    },
+    {
+      "step": 7,
+      "action": "generate-patch",
+      "result": {
+        "original": "await page.locator('.search-input').fill('test query');",
+        "patched": "await page.locator('.search-field').fill('test query');",
+        "patchId": "patch-recovery-1",
+        "diff": {
+          "hunks": [
+            {
+              "originalStart": 8,
+              "originalLines": ["await page.locator('.search-input').fill('test query');"],
+              "patchedStart": 8,
+              "patchedLines": ["await page.locator('.search-field').fill('test query');"],
+              "type": "modify"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "summary": {
+    "totalSteps": 7,
+    "recoverySuccessful": true,
+    "selectedStrategy": "class-migration",
+    "originalSelector": ".search-input",
+    "recoveredSelector": ".search-field",
+    "confidence": 0.90,
+    "safetyPassed": true,
+    "executionTime": 1850
+  }
+}

@@ -1,0 +1,755 @@
+{
+  "reportId": "arch-audit-1",
+  "hotspots": [
+    {
+      "hotspot": "architecture-cohesion-audit (2241 lines)",
+      "type": "oversized-orchestrator",
+      "affectedModules": [
+        "architecture-cohesion-audit"
+      ],
+      "severity": "critical",
+      "description": "Module architecture-cohesion-audit has 2241 lines across 10 files",
+      "recommendation": "Consider splitting architecture-cohesion-audit into smaller focused modules"
+    },
+    {
+      "hotspot": "ci-failure-validation (1873 lines)",
+      "type": "oversized-orchestrator",
+      "affectedModules": [
+        "ci-failure-validation"
+      ],
+      "severity": "critical",
+      "description": "Module ci-failure-validation has 1873 lines across 10 files",
+      "recommendation": "Consider splitting ci-failure-validation into smaller focused modules"
+    },
+    {
+      "hotspot": "confidence-calibration (811 lines)",
+      "type": "oversized-orchestrator",
+      "affectedModules": [
+        "confidence-calibration"
+      ],
+      "severity": "high",
+      "description": "Module confidence-calibration has 811 lines across 3 files",
+      "recommendation": "Consider splitting confidence-calibration into smaller focused modules"
+    },
+    {
+      "hotspot": "corpus-execution (899 lines)",
+      "type": "oversized-orchestrator",
+      "affectedModules": [
+        "corpus-execution"
+      ],
+      "severity": "high",
+      "description": "Module corpus-execution has 899 lines across 3 files",
+      "recommendation": "Consider splitting corpus-execution into smaller focused modules"
+    },
+    {
+      "hotspot": "developer-review (1489 lines)",
+      "type": "oversized-orchestrator",
+      "affectedModules": [
+        "developer-review"
+      ],
+      "severity": "critical",
+      "description": "Module developer-review has 1489 lines across 10 files",
+      "recommendation": "Consider splitting developer-review into smaller focused modules"
+    },
+    {
+      "hotspot": "developer-review/review-bundle-generator.ts imports 6 external modules",
+      "type": "unstable-dependency",
+      "affectedModules": [
+        "developer-review",
+        "../models/patch.js",
+        "../models/runtime.js",
+        "../models/validation.js",
+        "pipeline/confidence-governance.js",
+        "runtime-hardening/types.js",
+        "runtime-healing-loop/types.js"
+      ],
+      "severity": "medium",
+      "description": "File review-bundle-generator.ts has 6 cross-module imports",
+      "recommendation": "Reduce dependencies in developer-review/review-bundle-generator.ts"
+    },
+    {
+      "hotspot": "developer-review/review-renderer.ts imports 6 external modules",
+      "type": "unstable-dependency",
+      "affectedModules": [
+        "developer-review",
+        "../models/healing-explanation.js",
+        "../models/patch.js",
+        "../models/runtime.js",
+        "../models/validation.js",
+        "pipeline/confidence-governance.js",
+        "runtime-hardening/types.js"
+      ],
+      "severity": "medium",
+      "description": "File review-renderer.ts has 6 cross-module imports",
+      "recommendation": "Reduce dependencies in developer-review/review-renderer.ts"
+    },
+    {
+      "hotspot": "developer-review/types.ts imports 8 external modules",
+      "type": "unstable-dependency",
+      "affectedModules": [
+        "developer-review",
+        "../models/healing-explanation.js",
+        "../models/patch.js",
+        "../models/runtime.js",
+        "../models/validation.js",
+        "operational-reliability/types.js",
+        "pipeline/confidence-governance.js",
+        "runtime-hardening/types.js",
+        "runtime-healing-loop/types.js"
+      ],
+      "severity": "medium",
+      "description": "File types.ts has 8 cross-module imports",
+      "recommendation": "Reduce dependencies in developer-review/types.ts"
+    },
+    {
+      "hotspot": "developer-workflow (2168 lines)",
+      "type": "oversized-orchestrator",
+      "affectedModules": [
+        "developer-workflow"
+      ],
+      "severity": "critical",
+      "description": "Module developer-workflow has 2168 lines across 10 files",
+      "recommendation": "Consider splitting developer-workflow into smaller focused modules"
+    },
+    {
+      "hotspot": "dom (1059 lines)",
+      "type": "oversized-orchestrator",
+      "affectedModules": [
+        "dom"
+      ],
+      "severity": "critical",
+      "description": "Module dom has 1059 lines across 7 files",
+      "recommendation": "Consider splitting dom into smaller focused modules"
+    },
+    {
+      "hotspot": "Duplicated Inventory schemas",
+      "type": "duplicated-reports",
+      "affectedModules": [
+        "architecture-cohesion-audit/types.ts",
+        "ci-failure-validation/types.ts",
+        "corpus-execution/types.ts",
+        "execution-lab/types.ts",
+        "large-scale-corpus/types.ts"
+      ],
+      "severity": "medium",
+      "description": "Inventory schema appears in 5 modules",
+      "recommendation": "Consolidate Inventory schemas into shared types module"
+    },
+    {
+      "hotspot": "Duplicated Report schemas",
+      "type": "duplicated-reports",
+      "affectedModules": [
+        "adversarial-tester/types.ts",
+        "architecture-cohesion-audit/types.ts",
+        "ci-failure-validation/types.ts",
+        "confidence-calibration/engine.ts",
+        "confidence-calibration/types.ts",
+        "corpus-execution/types.ts",
+        "developer-review/types.ts",
+        "developer-workflow/engine.ts",
+        "developer-workflow/types.ts",
+        "execution-lab/types.ts",
+        "healing-benchmark/types.ts",
+        "healing-intelligence/types.ts",
+        "large-scale-corpus/types.ts",
+        "operational-reliability/types.ts",
+        "pattern-intelligence/types.ts",
+        "production-readiness/types.ts",
+        "repository-validator/types.ts",
+        "risk-discrimination/types.ts",
+        "runtime-hardening/types.ts",
+        "stabilization/types.ts",
+        "unified-runtime/types.ts"
+      ],
+      "severity": "high",
+      "description": "Report schema appears in 21 modules",
+      "recommendation": "Consolidate Report schemas into shared types module"
+    },
+    {
+      "hotspot": "Duplicated Result schemas",
+      "type": "duplicated-reports",
+      "affectedModules": [
+        "adversarial-tester/types.ts",
+        "analyzer/scanner.ts",
+        "analyzer/types.ts",
+        "architecture-cohesion-audit/types.ts",
+        "ci-failure-validation/orchestrator.ts",
+        "confidence-calibration/engine.ts",
+        "confidence-calibration/types.ts",
+        "corpus-execution/types.ts",
+        "developer-workflow/engine.ts",
+        "developer-workflow/types.ts",
+        "dom/survivability.ts",
+        "execution-lab/types.ts",
+        "healing-benchmark/types.ts",
+        "healing-intelligence/engine.ts",
+        "large-scale-corpus/types.ts",
+        "operational-reliability/types.ts",
+        "patcher/patch-safety-validator.ts",
+        "pipeline/confidence-governance.ts",
+        "repository-validator/types.ts",
+        "runtime-hardening/types.ts",
+        "runtime-healing-loop/types.ts",
+        "runtime/replay-coordinator.ts",
+        "runtime/step-executor.ts",
+        "sandbox/mutation-sandbox.ts",
+        "sandbox/patch-applier.ts",
+        "sandbox/rollback-engine.ts",
+        "unified-runtime/types.ts"
+      ],
+      "severity": "high",
+      "description": "Result schema appears in 27 modules",
+      "recommendation": "Consolidate Result schemas into shared types module"
+    },
+    {
+      "hotspot": "execution-lab (1533 lines)",
+      "type": "oversized-orchestrator",
+      "affectedModules": [
+        "execution-lab"
+      ],
+      "severity": "critical",
+      "description": "Module execution-lab has 1533 lines across 10 files",
+      "recommendation": "Consider splitting execution-lab into smaller focused modules"
+    },
+    {
+      "hotspot": "healing (991 lines)",
+      "type": "oversized-orchestrator",
+      "affectedModules": [
+        "healing"
+      ],
+      "severity": "high",
+      "description": "Module healing has 991 lines across 4 files",
+      "recommendation": "Consider splitting healing into smaller focused modules"
+    },
+    {
+      "hotspot": "healing-intelligence (629 lines)",
+      "type": "oversized-orchestrator",
+      "affectedModules": [
+        "healing-intelligence"
+      ],
+      "severity": "high",
+      "description": "Module healing-intelligence has 629 lines across 3 files",
+      "recommendation": "Consider splitting healing-intelligence into smaller focused modules"
+    },
+    {
+      "hotspot": "healing/engine.ts imports 10 external modules",
+      "type": "unstable-dependency",
+      "affectedModules": [
+        "healing",
+        "../models/dom-intelligence.js",
+        "../models/healing-candidate.js",
+        "../models/locator.js",
+        "../models/replay.js",
+        "../models/result.js",
+        "../models/result.js",
+        "../models/snapshot.js",
+        "dom/comparator.js",
+        "dom/scoring.js",
+        "dom/survivability.js"
+      ],
+      "severity": "medium",
+      "description": "File engine.ts has 10 cross-module imports",
+      "recommendation": "Reduce dependencies in healing/engine.ts"
+    },
+    {
+      "hotspot": "large-scale-corpus (1290 lines)",
+      "type": "oversized-orchestrator",
+      "affectedModules": [
+        "large-scale-corpus"
+      ],
+      "severity": "critical",
+      "description": "Module large-scale-corpus has 1290 lines across 7 files",
+      "recommendation": "Consider splitting large-scale-corpus into smaller focused modules"
+    },
+    {
+      "hotspot": "Model fragmentation (19 files, 95 interfaces)",
+      "type": "model-fragmentation",
+      "affectedModules": [
+        "models"
+      ],
+      "severity": "medium",
+      "description": "19 model files with 95 interfaces",
+      "recommendation": "Consolidate related models into fewer files"
+    },
+    {
+      "hotspot": "operational-reliability (1499 lines)",
+      "type": "oversized-orchestrator",
+      "affectedModules": [
+        "operational-reliability"
+      ],
+      "severity": "critical",
+      "description": "Module operational-reliability has 1499 lines across 11 files",
+      "recommendation": "Consider splitting operational-reliability into smaller focused modules"
+    },
+    {
+      "hotspot": "Orchestration inflation (12 orchestrator modules)",
+      "type": "orchestration-inflation",
+      "affectedModules": [
+        "architecture-cohesion-audit",
+        "ci-failure-validation",
+        "developer-workflow",
+        "execution-lab",
+        "large-scale-corpus",
+        "pipeline",
+        "production-readiness",
+        "risk-discrimination",
+        "runtime-hardening",
+        "runtime-healing-loop",
+        "sandbox",
+        "stabilization"
+      ],
+      "severity": "high",
+      "description": "12 modules contain orchestration logic",
+      "recommendation": "Consolidate orchestration into unified runtime"
+    },
+    {
+      "hotspot": "Overlapping persistence logic (26 modules)",
+      "type": "overlapping-persistence",
+      "affectedModules": [
+        "adversarial-tester",
+        "analyzer",
+        "architecture-cohesion-audit",
+        "ci-failure-validation",
+        "developer-review",
+        "developer-workflow",
+        "dom",
+        "execution-lab",
+        "healing-benchmark",
+        "healing-intelligence",
+        "large-scale-corpus",
+        "operational-reliability",
+        "patcher",
+        "pattern-intelligence",
+        "pipeline",
+        "production-readiness",
+        "replay",
+        "repository-validator",
+        "risk-discrimination",
+        "runtime",
+        "runtime-hardening",
+        "runtime-healing-loop",
+        "sandbox",
+        "stabilization",
+        "storage",
+        "unified-runtime"
+      ],
+      "severity": "high",
+      "description": "26 modules have their own persistence logic",
+      "recommendation": "Centralize persistence into shared storage utilities"
+    },
+    {
+      "hotspot": "patcher (1081 lines)",
+      "type": "oversized-orchestrator",
+      "affectedModules": [
+        "patcher"
+      ],
+      "severity": "critical",
+      "description": "Module patcher has 1081 lines across 5 files",
+      "recommendation": "Consider splitting patcher into smaller focused modules"
+    },
+    {
+      "hotspot": "patcher/patch-generator.ts imports 8 external modules",
+      "type": "unstable-dependency",
+      "affectedModules": [
+        "patcher",
+        "../models/healing-candidate.js",
+        "../models/patch.js",
+        "../models/patch.js",
+        "../models/result.js",
+        "../models/result.js",
+        "../models/runtime.js",
+        "../models/stability.js",
+        "../models/validation.js"
+      ],
+      "severity": "medium",
+      "description": "File patch-generator.ts has 8 cross-module imports",
+      "recommendation": "Reduce dependencies in patcher/patch-generator.ts"
+    },
+    {
+      "hotspot": "patcher/patch-safety-validator.ts imports 6 external modules",
+      "type": "unstable-dependency",
+      "affectedModules": [
+        "patcher",
+        "../models/healing-candidate.js",
+        "../models/result.js",
+        "../models/result.js",
+        "../models/runtime.js",
+        "../models/stability.js",
+        "../models/validation.js"
+      ],
+      "severity": "medium",
+      "description": "File patch-safety-validator.ts has 6 cross-module imports",
+      "recommendation": "Reduce dependencies in patcher/patch-safety-validator.ts"
+    },
+    {
+      "hotspot": "pattern-intelligence (746 lines)",
+      "type": "oversized-orchestrator",
+      "affectedModules": [
+        "pattern-intelligence"
+      ],
+      "severity": "high",
+      "description": "Module pattern-intelligence has 746 lines across 3 files",
+      "recommendation": "Consider splitting pattern-intelligence into smaller focused modules"
+    },
+    {
+      "hotspot": "pipeline (985 lines)",
+      "type": "oversized-orchestrator",
+      "affectedModules": [
+        "pipeline"
+      ],
+      "severity": "high",
+      "description": "Module pipeline has 985 lines across 6 files",
+      "recommendation": "Consider splitting pipeline into smaller focused modules"
+    },
+    {
+      "hotspot": "pipeline/healing-pipeline.ts imports 10 external modules",
+      "type": "unstable-dependency",
+      "affectedModules": [
+        "pipeline",
+        "../models/audit-trail.js",
+        "../models/healing-explanation.js",
+        "../models/pipeline.js",
+        "../models/result.js",
+        "../models/result.js",
+        "../models/runtime.js",
+        "../models/validation.js",
+        "healing/engine.js",
+        "runtime/engine.js",
+        "validation/engine.js"
+      ],
+      "severity": "medium",
+      "description": "File healing-pipeline.ts has 10 cross-module imports",
+      "recommendation": "Reduce dependencies in pipeline/healing-pipeline.ts"
+    },
+    {
+      "hotspot": "pipeline/stability-analyzer.ts imports 10 external modules",
+      "type": "unstable-dependency",
+      "affectedModules": [
+        "pipeline",
+        "../models/healing-candidate.js",
+        "../models/replay.js",
+        "../models/runtime.js",
+        "../models/snapshot.js",
+        "../models/stability.js",
+        "../models/stability.js",
+        "../models/validation.js",
+        "runtime/browser.js",
+        "runtime/engine.js",
+        "validation/engine.js"
+      ],
+      "severity": "medium",
+      "description": "File stability-analyzer.ts has 10 cross-module imports",
+      "recommendation": "Reduce dependencies in pipeline/stability-analyzer.ts"
+    },
+    {
+      "hotspot": "production-readiness (1409 lines)",
+      "type": "oversized-orchestrator",
+      "affectedModules": [
+        "production-readiness"
+      ],
+      "severity": "critical",
+      "description": "Module production-readiness has 1409 lines across 9 files",
+      "recommendation": "Consider splitting production-readiness into smaller focused modules"
+    },
+    {
+      "hotspot": "replay (509 lines)",
+      "type": "oversized-orchestrator",
+      "affectedModules": [
+        "replay"
+      ],
+      "severity": "high",
+      "description": "Module replay has 509 lines across 4 files",
+      "recommendation": "Consider splitting replay into smaller focused modules"
+    },
+    {
+      "hotspot": "repository-validator (520 lines)",
+      "type": "oversized-orchestrator",
+      "affectedModules": [
+        "repository-validator"
+      ],
+      "severity": "high",
+      "description": "Module repository-validator has 520 lines across 3 files",
+      "recommendation": "Consider splitting repository-validator into smaller focused modules"
+    },
+    {
+      "hotspot": "risk-discrimination (2057 lines)",
+      "type": "oversized-orchestrator",
+      "affectedModules": [
+        "risk-discrimination"
+      ],
+      "severity": "critical",
+      "description": "Module risk-discrimination has 2057 lines across 11 files",
+      "recommendation": "Consider splitting risk-discrimination into smaller focused modules"
+    },
+    {
+      "hotspot": "runtime (1716 lines)",
+      "type": "oversized-orchestrator",
+      "affectedModules": [
+        "runtime"
+      ],
+      "severity": "critical",
+      "description": "Module runtime has 1716 lines across 12 files",
+      "recommendation": "Consider splitting runtime into smaller focused modules"
+    },
+    {
+      "hotspot": "runtime-hardening (1940 lines)",
+      "type": "oversized-orchestrator",
+      "affectedModules": [
+        "runtime-hardening"
+      ],
+      "severity": "critical",
+      "description": "Module runtime-hardening has 1940 lines across 9 files",
+      "recommendation": "Consider splitting runtime-hardening into smaller focused modules"
+    },
+    {
+      "hotspot": "runtime-healing-loop (960 lines)",
+      "type": "oversized-orchestrator",
+      "affectedModules": [
+        "runtime-healing-loop"
+      ],
+      "severity": "high",
+      "description": "Module runtime-healing-loop has 960 lines across 7 files",
+      "recommendation": "Consider splitting runtime-healing-loop into smaller focused modules"
+    },
+    {
+      "hotspot": "runtime-healing-loop/candidate-executor.ts imports 9 external modules",
+      "type": "unstable-dependency",
+      "affectedModules": [
+        "runtime-healing-loop",
+        "../models/healing-candidate.js",
+        "../models/result.js",
+        "../models/result.js",
+        "../models/runtime.js",
+        "../models/snapshot.js",
+        "../models/validation.js",
+        "pipeline/confidence-governance.js",
+        "pipeline/confidence-governance.js",
+        "validation/engine.js"
+      ],
+      "severity": "medium",
+      "description": "File candidate-executor.ts has 9 cross-module imports",
+      "recommendation": "Reduce dependencies in runtime-healing-loop/candidate-executor.ts"
+    },
+    {
+      "hotspot": "runtime-healing-loop/review-package-generator.ts imports 8 external modules",
+      "type": "unstable-dependency",
+      "affectedModules": [
+        "runtime-healing-loop",
+        "../models/healing-explanation.js",
+        "../models/patch.js",
+        "../models/result.js",
+        "../models/result.js",
+        "../models/runtime.js",
+        "../models/validation.js",
+        "pipeline/confidence-governance.js",
+        "pipeline/explainability-engine.js"
+      ],
+      "severity": "medium",
+      "description": "File review-package-generator.ts has 8 cross-module imports",
+      "recommendation": "Reduce dependencies in runtime-healing-loop/review-package-generator.ts"
+    },
+    {
+      "hotspot": "runtime-healing-loop/runtime-healing-loop.ts imports 10 external modules",
+      "type": "unstable-dependency",
+      "affectedModules": [
+        "runtime-healing-loop",
+        "../models/healing-candidate.js",
+        "../models/patch.js",
+        "../models/pipeline.js",
+        "../models/result.js",
+        "../models/result.js",
+        "patcher/patch-generator.js",
+        "patcher/patch-generator.js",
+        "pipeline/audit-persister.js",
+        "pipeline/confidence-governance.js",
+        "pipeline/healing-pipeline.js"
+      ],
+      "severity": "medium",
+      "description": "File runtime-healing-loop.ts has 10 cross-module imports",
+      "recommendation": "Reduce dependencies in runtime-healing-loop/runtime-healing-loop.ts"
+    },
+    {
+      "hotspot": "runtime-healing-loop/types.ts imports 11 external modules",
+      "type": "unstable-dependency",
+      "affectedModules": [
+        "runtime-healing-loop",
+        "../models/healing-candidate.js",
+        "../models/healing-explanation.js",
+        "../models/locator.js",
+        "../models/patch.js",
+        "../models/replay.js",
+        "../models/result.js",
+        "../models/runtime.js",
+        "../models/sandbox.js",
+        "../models/snapshot.js",
+        "../models/validation.js",
+        "pipeline/confidence-governance.js"
+      ],
+      "severity": "high",
+      "description": "File types.ts has 11 cross-module imports",
+      "recommendation": "Reduce dependencies in runtime-healing-loop/types.ts"
+    },
+    {
+      "hotspot": "sandbox (1779 lines)",
+      "type": "oversized-orchestrator",
+      "affectedModules": [
+        "sandbox"
+      ],
+      "severity": "critical",
+      "description": "Module sandbox has 1779 lines across 7 files",
+      "recommendation": "Consider splitting sandbox into smaller focused modules"
+    },
+    {
+      "hotspot": "stabilization (1954 lines)",
+      "type": "oversized-orchestrator",
+      "affectedModules": [
+        "stabilization"
+      ],
+      "severity": "critical",
+      "description": "Module stabilization has 1954 lines across 6 files",
+      "recommendation": "Consider splitting stabilization into smaller focused modules"
+    },
+    {
+      "hotspot": "storage/file.ts imports 10 external modules",
+      "type": "unstable-dependency",
+      "affectedModules": [
+        "storage",
+        "../interfaces/execution.js",
+        "../interfaces/storage.js",
+        "../models/healing.js",
+        "../models/locator.js",
+        "../models/patch.js",
+        "../models/result.js",
+        "../models/result.js",
+        "../models/snapshot.js",
+        "../models/trace.js",
+        "analyzer/types.js"
+      ],
+      "severity": "medium",
+      "description": "File file.ts has 10 cross-module imports",
+      "recommendation": "Reduce dependencies in storage/file.ts"
+    },
+    {
+      "hotspot": "storage/memory.ts imports 8 external modules",
+      "type": "unstable-dependency",
+      "affectedModules": [
+        "storage",
+        "../interfaces/storage.js",
+        "../models/healing.js",
+        "../models/locator.js",
+        "../models/patch.js",
+        "../models/result.js",
+        "../models/snapshot.js",
+        "../models/trace.js",
+        "analyzer/types.js"
+      ],
+      "severity": "medium",
+      "description": "File memory.ts has 8 cross-module imports",
+      "recommendation": "Reduce dependencies in storage/memory.ts"
+    },
+    {
+      "hotspot": "unified-runtime (1479 lines)",
+      "type": "oversized-orchestrator",
+      "affectedModules": [
+        "unified-runtime"
+      ],
+      "severity": "critical",
+      "description": "Module unified-runtime has 1479 lines across 9 files",
+      "recommendation": "Consider splitting unified-runtime into smaller focused modules"
+    },
+    {
+      "hotspot": "unified-runtime/runtime-context.ts imports 9 external modules",
+      "type": "unstable-dependency",
+      "affectedModules": [
+        "unified-runtime",
+        "../models/healing-explanation.js",
+        "../models/pipeline.js",
+        "../models/validation.js",
+        "pipeline/confidence-governance.js",
+        "repository-validator/types.js",
+        "runtime-hardening/types.js",
+        "runtime-healing-loop/types.js",
+        "runtime-healing-loop/types.js",
+        "sandbox/mutation-sandbox.js"
+      ],
+      "severity": "medium",
+      "description": "File runtime-context.ts has 9 cross-module imports",
+      "recommendation": "Reduce dependencies in unified-runtime/runtime-context.ts"
+    },
+    {
+      "hotspot": "unified-runtime/types.ts imports 9 external modules",
+      "type": "unstable-dependency",
+      "affectedModules": [
+        "unified-runtime",
+        "../models/healing-explanation.js",
+        "../models/pipeline.js",
+        "../models/result.js",
+        "../models/validation.js",
+        "pipeline/confidence-governance.js",
+        "repository-validator/types.js",
+        "runtime-hardening/types.js",
+        "runtime-healing-loop/types.js",
+        "sandbox/mutation-sandbox.js"
+      ],
+      "severity": "medium",
+      "description": "File types.ts has 9 cross-module imports",
+      "recommendation": "Reduce dependencies in unified-runtime/types.ts"
+    },
+    {
+      "hotspot": "unified-runtime/unified-runtime.ts imports 16 external modules",
+      "type": "unstable-dependency",
+      "affectedModules": [
+        "unified-runtime",
+        "../models/locator.js",
+        "../models/replay.js",
+        "../models/result.js",
+        "../models/result.js",
+        "../models/snapshot.js",
+        "patcher/patch-generator.js",
+        "pipeline/audit-persister.js",
+        "pipeline/confidence-governance.js",
+        "pipeline/confidence-governance.js",
+        "pipeline/explainability-engine.js",
+        "pipeline/healing-pipeline.js",
+        "repository-validator/engine.js",
+        "runtime-hardening/runtime-stability-engine.js",
+        "runtime-healing-loop/runtime-healing-loop.js",
+        "sandbox/mutation-sandbox.js",
+        "validation/engine.js"
+      ],
+      "severity": "high",
+      "description": "File unified-runtime.ts has 16 cross-module imports",
+      "recommendation": "Reduce dependencies in unified-runtime/unified-runtime.ts"
+    },
+    {
+      "hotspot": "validation (856 lines)",
+      "type": "oversized-orchestrator",
+      "affectedModules": [
+        "validation"
+      ],
+      "severity": "high",
+      "description": "Module validation has 856 lines across 5 files",
+      "recommendation": "Consider splitting validation into smaller focused modules"
+    },
+    {
+      "hotspot": "validation/engine.ts imports 7 external modules",
+      "type": "unstable-dependency",
+      "affectedModules": [
+        "validation",
+        "../models/dom-intelligence.js",
+        "../models/healing-candidate.js",
+        "../models/replay.js",
+        "../models/result.js",
+        "../models/result.js",
+        "../models/snapshot.js",
+        "../models/validation.js"
+      ],
+      "severity": "medium",
+      "description": "File engine.ts has 7 cross-module imports",
+      "recommendation": "Reduce dependencies in validation/engine.ts"
+    }
+  ],
+  "totalHotspots": 50,
+  "criticalHotspots": 16,
+  "generatedAt": 0
+}

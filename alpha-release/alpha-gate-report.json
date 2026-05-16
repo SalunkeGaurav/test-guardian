@@ -1,0 +1,81 @@
+{
+  "generatedAt": 0,
+  "overallPassed": false,
+  "overallScore": 2057,
+  "checks": [
+    {
+      "name": "compile-instability",
+      "passed": true,
+      "score": 9986,
+      "threshold": 95,
+      "details": [
+        "Compile stability: 99.859 (excellent)",
+        "553 unit tests passing across 23 test files",
+        "0 type errors across all modules"
+      ],
+      "blockers": []
+    },
+    {
+      "name": "deterministic-failures",
+      "passed": true,
+      "score": 100,
+      "threshold": 95,
+      "details": [
+        "No Date.now() usage in core modules",
+        "No Math.random() usage in core modules",
+        "All report IDs use deterministic counters",
+        "All generatedAt fields use 0 for determinism",
+        "Corpus execution: 105 repos, 0 failed (0.0% failure rate)"
+      ],
+      "blockers": []
+    },
+    {
+      "name": "unsupported-runtime-flows",
+      "passed": true,
+      "score": 100,
+      "threshold": 90,
+      "details": [
+        "Unsupported patterns found: 0",
+        "Healing pipeline: supported",
+        "Patch generation: supported",
+        "Confidence governance: supported",
+        "Runtime hardening: supported",
+        "Repository validation: supported"
+      ],
+      "blockers": []
+    },
+    {
+      "name": "replay-trustworthiness",
+      "passed": false,
+      "score": 0,
+      "threshold": 90,
+      "details": [
+        "Replay instability hotspots: 0",
+        "Stability score: 0"
+      ],
+      "blockers": [
+        "Stability score below threshold: 0 < 90"
+      ]
+    },
+    {
+      "name": "governance-instability",
+      "passed": true,
+      "score": 100,
+      "threshold": 80,
+      "details": [
+        "Governance weaknesses: 0",
+        "Overall governance health: healthy",
+        "Alpha readiness status: ready",
+        "Critical blockers: 0"
+      ],
+      "blockers": []
+    }
+  ],
+  "blockers": [
+    "Stability score below threshold: 0 < 90"
+  ],
+  "recommendations": [
+    "Fix replay-trustworthiness: Stability score below threshold: 0 < 90"
+  ],
+  "decision": "blocked"
+}

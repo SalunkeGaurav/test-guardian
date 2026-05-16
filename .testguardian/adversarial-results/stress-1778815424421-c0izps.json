@@ -1,0 +1,233 @@
+{
+  "id": "stress-1778815424421-c0izps",
+  "generatedAt": 1778815424701,
+  "fixturePath": "tests/fixtures/adversarial-repos",
+  "overallStability": 96.4,
+  "parserSurvivability": 100,
+  "compileSurvivability": 85.7,
+  "rollbackIntegrity": 100,
+  "replayStability": 100,
+  "results": [
+    {
+      "fixtureName": "basic.spec.ts",
+      "category": "parser",
+      "passed": true,
+      "details": {
+        "testsFound": 2,
+        "locatorsFound": 8,
+        "pageObjectsFound": 0
+      }
+    },
+    {
+      "fixtureName": "broken.spec.ts",
+      "category": "parser",
+      "passed": true,
+      "details": {
+        "note": "gracefully skipped broken file"
+      }
+    },
+    {
+      "fixtureName": "chained-locators.spec.ts",
+      "category": "parser",
+      "passed": true,
+      "details": {
+        "testsFound": 2,
+        "locatorsFound": 5,
+        "pageObjectsFound": 0
+      }
+    },
+    {
+      "fixtureName": "duplicated-selectors.spec.ts",
+      "category": "parser",
+      "passed": true,
+      "details": {
+        "testsFound": 3,
+        "locatorsFound": 13,
+        "pageObjectsFound": 0
+      }
+    },
+    {
+      "fixtureName": "dynamic-factories.spec.ts",
+      "category": "parser",
+      "passed": true,
+      "details": {
+        "testsFound": 3,
+        "locatorsFound": 6,
+        "pageObjectsFound": 0
+      }
+    },
+    {
+      "fixtureName": "mixed-conventions.spec.ts",
+      "category": "parser",
+      "passed": true,
+      "details": {
+        "testsFound": 3,
+        "locatorsFound": 10,
+        "pageObjectsFound": 0
+      }
+    },
+    {
+      "fixtureName": "mixed-js.spec.js",
+      "category": "parser",
+      "passed": true,
+      "details": {
+        "testsFound": 2,
+        "locatorsFound": 1,
+        "pageObjectsFound": 0
+      }
+    },
+    {
+      "fixtureName": "basic.spec.ts",
+      "category": "mutation",
+      "passed": true,
+      "details": {
+        "mutantCount": 8,
+        "rollbackAvailable": true,
+        "formattingPreserved": true
+      }
+    },
+    {
+      "fixtureName": "broken.spec.ts",
+      "category": "mutation",
+      "passed": false,
+      "error": "Skipped broken file",
+      "details": {
+        "reason": "parser-failure"
+      }
+    },
+    {
+      "fixtureName": "chained-locators.spec.ts",
+      "category": "mutation",
+      "passed": true,
+      "details": {
+        "mutantCount": 17,
+        "rollbackAvailable": true,
+        "formattingPreserved": true
+      }
+    },
+    {
+      "fixtureName": "duplicated-selectors.spec.ts",
+      "category": "mutation",
+      "passed": true,
+      "details": {
+        "mutantCount": 13,
+        "rollbackAvailable": true,
+        "formattingPreserved": true
+      }
+    },
+    {
+      "fixtureName": "dynamic-factories.spec.ts",
+      "category": "mutation",
+      "passed": true,
+      "details": {
+        "mutantCount": 6,
+        "rollbackAvailable": true,
+        "formattingPreserved": true
+      }
+    },
+    {
+      "fixtureName": "mixed-conventions.spec.ts",
+      "category": "mutation",
+      "passed": true,
+      "details": {
+        "mutantCount": 10,
+        "rollbackAvailable": true,
+        "formattingPreserved": true
+      }
+    },
+    {
+      "fixtureName": "mixed-js.spec.js",
+      "category": "mutation",
+      "passed": true,
+      "details": {
+        "mutantCount": 1,
+        "rollbackAvailable": true,
+        "formattingPreserved": true
+      }
+    },
+    {
+      "fixtureName": "basic.spec.ts",
+      "category": "replay",
+      "passed": true,
+      "details": {
+        "navigations": 2,
+        "locators": 8,
+        "replayable": true
+      }
+    },
+    {
+      "fixtureName": "broken.spec.ts",
+      "category": "replay",
+      "passed": true,
+      "details": {
+        "navigations": 1,
+        "locators": 1,
+        "replayable": true
+      }
+    },
+    {
+      "fixtureName": "chained-locators.spec.ts",
+      "category": "replay",
+      "passed": true,
+      "details": {
+        "navigations": 2,
+        "locators": 5,
+        "replayable": true
+      }
+    },
+    {
+      "fixtureName": "duplicated-selectors.spec.ts",
+      "category": "replay",
+      "passed": true,
+      "details": {
+        "navigations": 3,
+        "locators": 13,
+        "replayable": true
+      }
+    },
+    {
+      "fixtureName": "dynamic-factories.spec.ts",
+      "category": "replay",
+      "passed": true,
+      "details": {
+        "navigations": 3,
+        "locators": 6,
+        "replayable": true
+      }
+    },
+    {
+      "fixtureName": "mixed-conventions.spec.ts",
+      "category": "replay",
+      "passed": true,
+      "details": {
+        "navigations": 3,
+        "locators": 10,
+        "replayable": true
+      }
+    },
+    {
+      "fixtureName": "mixed-js.spec.js",
+      "category": "replay",
+      "passed": true,
+      "details": {
+        "navigations": 2,
+        "locators": 1,
+        "replayable": true
+      }
+    }
+  ],
+  "unsupportedPatterns": [
+    "mixed-getBy-locator",
+    "dynamic-locator-factories"
+  ],
+  "failureCategories": {
+    "unsupported-pattern": 0,
+    "parser-limitation": 0,
+    "mutation-instability": 1,
+    "replay-instability": 0,
+    "determinism-violation": 0,
+    "runtime-validation-weakness": 0,
+    "architectural-coupling": 0
+  },
+  "architecturalWeakPoints": []
+}

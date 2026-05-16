@@ -1,0 +1,49 @@
+{
+  "id": "repo-val-1778858187174-8zc5jx",
+  "repositoryPath": "C:\\Users\\Hp\\Automation Tools\\test-guardian\\tests\\fixtures\\healing-benchmarks",
+  "analyzedAt": 1778858187390,
+  "compatibilityStatus": "supported",
+  "parserResults": {
+    "totalFiles": 5,
+    "successfullyParsed": 5,
+    "failedFiles": [],
+    "unsupportedSyntax": [],
+    "parseDurationMs": 20
+  },
+  "locatorPatternStats": {
+    "totalLocators": 37,
+    "strategyBreakdown": {
+      "css": 33,
+      "role": 4
+    },
+    "dynamicSelectors": 0,
+    "unstableSelectors": 26,
+    "chainedLocators": 37,
+    "pageObjects": [],
+    "customWrappers": 0,
+    "mixedFrameworkConventions": []
+  },
+  "mutationSafetyResults": {
+    "totalTestFiles": 5,
+    "successfullyMutated": 5,
+    "failedMutations": [],
+    "compileSuccessRate": 100,
+    "rollbackSuccessRate": 100,
+    "formattingPreserved": true,
+    "importPreserved": true
+  },
+  "stabilityMetrics": {
+    "parserSurvivability": 100,
+    "compileStability": 100,
+    "replayStability": 100,
+    "overallCompatibilityScore": 100
+  },
+  "architecturalRisks": [
+    {
+      "category": "Locator Stability",
+      "severity": "medium",
+      "description": "High proportion (26) of unstable selectors detected",
+      "affectedFiles": []
+    }
+  ]
+}

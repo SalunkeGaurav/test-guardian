@@ -1,0 +1,804 @@
+{
+  "id": "healing-bench-1778822032057-6igzg8",
+  "generatedAt": 1778822032322,
+  "benchmarkPath": "tests/fixtures/healing-benchmarks",
+  "benchmarkResults": [
+    {
+      "benchmarkId": "baseline.spec.ts",
+      "category": "baseline",
+      "originalLocator": "css:page.locator('#username')",
+      "attemptedRecovery": false,
+      "outcome": "successful-safe-recovery",
+      "recoveryTimeMs": 100,
+      "safetyVerified": true,
+      "details": {
+        "locator": "page.locator('#username')",
+        "strategy": "css",
+        "isDynamic": false,
+        "isDuplicate": false,
+        "isChained": true
+      }
+    },
+    {
+      "benchmarkId": "baseline.spec.ts",
+      "category": "baseline",
+      "originalLocator": "css:page.locator('#password')",
+      "attemptedRecovery": false,
+      "outcome": "successful-safe-recovery",
+      "recoveryTimeMs": 84,
+      "safetyVerified": true,
+      "details": {
+        "locator": "page.locator('#password')",
+        "strategy": "css",
+        "isDynamic": false,
+        "isDuplicate": false,
+        "isChained": true
+      }
+    },
+    {
+      "benchmarkId": "baseline.spec.ts",
+      "category": "baseline",
+      "originalLocator": "role:page.getByRole('button')",
+      "attemptedRecovery": false,
+      "outcome": "successful-safe-recovery",
+      "recoveryTimeMs": 103,
+      "safetyVerified": true,
+      "details": {
+        "locator": "page.getByRole('button')",
+        "strategy": "role",
+        "isDynamic": false,
+        "isDuplicate": false,
+        "isChained": false
+      }
+    },
+    {
+      "benchmarkId": "baseline.spec.ts",
+      "category": "baseline",
+      "originalLocator": "css:page.locator('.dashboard')",
+      "attemptedRecovery": false,
+      "outcome": "successful-safe-recovery",
+      "recoveryTimeMs": 69,
+      "safetyVerified": true,
+      "details": {
+        "locator": "page.locator('.dashboard')",
+        "strategy": "css",
+        "isDynamic": false,
+        "isDuplicate": false,
+        "isChained": true
+      }
+    },
+    {
+      "benchmarkId": "baseline.spec.ts",
+      "category": "baseline",
+      "originalLocator": "css:page.locator('input[name=\"username\"]')",
+      "attemptedRecovery": false,
+      "outcome": "successful-safe-recovery",
+      "recoveryTimeMs": 92,
+      "safetyVerified": true,
+      "details": {
+        "locator": "page.locator('input[name=\"username\"]')",
+        "strategy": "css",
+        "isDynamic": false,
+        "isDuplicate": false,
+        "isChained": true
+      }
+    },
+    {
+      "benchmarkId": "baseline.spec.ts",
+      "category": "baseline",
+      "originalLocator": "css:page.locator('input[name=\"password\"]')",
+      "attemptedRecovery": false,
+      "outcome": "successful-safe-recovery",
+      "recoveryTimeMs": 17,
+      "safetyVerified": true,
+      "details": {
+        "locator": "page.locator('input[name=\"password\"]')",
+        "strategy": "css",
+        "isDynamic": false,
+        "isDuplicate": false,
+        "isChained": true
+      }
+    },
+    {
+      "benchmarkId": "baseline.spec.ts",
+      "category": "baseline",
+      "originalLocator": "css:page.locator('button[type=\"submit\"]')",
+      "attemptedRecovery": false,
+      "outcome": "successful-safe-recovery",
+      "recoveryTimeMs": 93,
+      "safetyVerified": true,
+      "details": {
+        "locator": "page.locator('button[type=\"submit\"]')",
+        "strategy": "css",
+        "isDynamic": false,
+        "isDuplicate": false,
+        "isChained": true
+      }
+    },
+    {
+      "benchmarkId": "baseline.spec.ts",
+      "category": "baseline",
+      "originalLocator": "css:page.locator('.error-message')",
+      "attemptedRecovery": false,
+      "outcome": "successful-safe-recovery",
+      "recoveryTimeMs": 78,
+      "safetyVerified": true,
+      "details": {
+        "locator": "page.locator('.error-message')",
+        "strategy": "css",
+        "isDynamic": false,
+        "isDuplicate": false,
+        "isChained": true
+      }
+    },
+    {
+      "benchmarkId": "baseline.spec.ts",
+      "category": "baseline",
+      "originalLocator": "role:page.getByRole('link')",
+      "attemptedRecovery": false,
+      "outcome": "successful-safe-recovery",
+      "recoveryTimeMs": 92,
+      "safetyVerified": true,
+      "details": {
+        "locator": "page.getByRole('link')",
+        "strategy": "role",
+        "isDynamic": false,
+        "isDuplicate": false,
+        "isChained": false
+      }
+    },
+    {
+      "benchmarkId": "baseline.spec.ts",
+      "category": "baseline",
+      "originalLocator": "css:page.locator('.profile-container')",
+      "attemptedRecovery": false,
+      "outcome": "successful-safe-recovery",
+      "recoveryTimeMs": 31,
+      "safetyVerified": true,
+      "details": {
+        "locator": "page.locator('.profile-container')",
+        "strategy": "css",
+        "isDynamic": false,
+        "isDuplicate": false,
+        "isChained": true
+      }
+    },
+    {
+      "benchmarkId": "baseline.spec.ts",
+      "category": "baseline",
+      "originalLocator": "navigation:https://example.com/login",
+      "attemptedRecovery": false,
+      "outcome": "successful-safe-recovery",
+      "recoveryTimeMs": 40,
+      "safetyVerified": true,
+      "details": {
+        "url": "https://example.com/login",
+        "isDynamic": false
+      }
+    },
+    {
+      "benchmarkId": "baseline.spec.ts",
+      "category": "baseline",
+      "originalLocator": "navigation:https://example.com/login",
+      "attemptedRecovery": false,
+      "outcome": "validation-failed",
+      "recoveryTimeMs": 12,
+      "safetyVerified": false,
+      "details": {
+        "url": "https://example.com/login",
+        "isDynamic": false
+      }
+    },
+    {
+      "benchmarkId": "baseline.spec.ts",
+      "category": "baseline",
+      "originalLocator": "navigation:https://example.com/dashboard",
+      "attemptedRecovery": false,
+      "outcome": "successful-safe-recovery",
+      "recoveryTimeMs": 31,
+      "safetyVerified": true,
+      "details": {
+        "url": "https://example.com/dashboard",
+        "isDynamic": false
+      }
+    },
+    {
+      "benchmarkId": "broken-aria-label.spec.ts",
+      "category": "broken-locator",
+      "originalLocator": "css:page.locator('#username')",
+      "attemptedRecovery": true,
+      "outcome": "successful-but-risky",
+      "recoveryTimeMs": 41,
+      "safetyVerified": false,
+      "details": {
+        "locator": "page.locator('#username')",
+        "strategy": "css",
+        "isDynamic": false,
+        "isDuplicate": false,
+        "isChained": true
+      }
+    },
+    {
+      "benchmarkId": "broken-aria-label.spec.ts",
+      "category": "broken-locator",
+      "originalLocator": "css:page.locator('#password')",
+      "attemptedRecovery": true,
+      "outcome": "successful-but-risky",
+      "recoveryTimeMs": 56,
+      "safetyVerified": false,
+      "details": {
+        "locator": "page.locator('#password')",
+        "strategy": "css",
+        "isDynamic": false,
+        "isDuplicate": false,
+        "isChained": true
+      }
+    },
+    {
+      "benchmarkId": "broken-aria-label.spec.ts",
+      "category": "broken-locator",
+      "originalLocator": "role:page.getByRole('button')",
+      "attemptedRecovery": true,
+      "outcome": "successful-but-risky",
+      "recoveryTimeMs": 70,
+      "safetyVerified": false,
+      "details": {
+        "locator": "page.getByRole('button')",
+        "strategy": "role",
+        "isDynamic": false,
+        "isDuplicate": false,
+        "isChained": false
+      }
+    },
+    {
+      "benchmarkId": "broken-aria-label.spec.ts",
+      "category": "broken-locator",
+      "originalLocator": "css:page.locator('.dashboard')",
+      "attemptedRecovery": true,
+      "outcome": "successful-but-risky",
+      "recoveryTimeMs": 99,
+      "safetyVerified": false,
+      "details": {
+        "locator": "page.locator('.dashboard')",
+        "strategy": "css",
+        "isDynamic": false,
+        "isDuplicate": false,
+        "isChained": true
+      }
+    },
+    {
+      "benchmarkId": "broken-aria-label.spec.ts",
+      "category": "broken-locator",
+      "originalLocator": "css:page.locator('input[name=\"username\"]')",
+      "attemptedRecovery": true,
+      "outcome": "successful-but-risky",
+      "recoveryTimeMs": 12,
+      "safetyVerified": false,
+      "details": {
+        "locator": "page.locator('input[name=\"username\"]')",
+        "strategy": "css",
+        "isDynamic": false,
+        "isDuplicate": false,
+        "isChained": true
+      }
+    },
+    {
+      "benchmarkId": "broken-aria-label.spec.ts",
+      "category": "broken-locator",
+      "originalLocator": "css:page.locator('input[name=\"password\"]')",
+      "attemptedRecovery": true,
+      "outcome": "successful-safe-recovery",
+      "recoveryTimeMs": 92,
+      "safetyVerified": true,
+      "details": {
+        "locator": "page.locator('input[name=\"password\"]')",
+        "strategy": "css",
+        "isDynamic": false,
+        "isDuplicate": false,
+        "isChained": true
+      }
+    },
+    {
+      "benchmarkId": "broken-aria-label.spec.ts",
+      "category": "broken-locator",
+      "originalLocator": "css:page.locator('button[type=\"submit\"]')",
+      "attemptedRecovery": true,
+      "outcome": "successful-but-risky",
+      "recoveryTimeMs": 44,
+      "safetyVerified": false,
+      "details": {
+        "locator": "page.locator('button[type=\"submit\"]')",
+        "strategy": "css",
+        "isDynamic": false,
+        "isDuplicate": false,
+        "isChained": true
+      }
+    },
+    {
+      "benchmarkId": "broken-aria-label.spec.ts",
+      "category": "broken-locator",
+      "originalLocator": "css:page.locator('.error-message')",
+      "attemptedRecovery": true,
+      "outcome": "successful-but-risky",
+      "recoveryTimeMs": 36,
+      "safetyVerified": false,
+      "details": {
+        "locator": "page.locator('.error-message')",
+        "strategy": "css",
+        "isDynamic": false,
+        "isDuplicate": false,
+        "isChained": true
+      }
+    },
+    {
+      "benchmarkId": "broken-aria-label.spec.ts",
+      "category": "broken-locator",
+      "originalLocator": "navigation:https://example.com/login",
+      "attemptedRecovery": false,
+      "outcome": "successful-safe-recovery",
+      "recoveryTimeMs": 26,
+      "safetyVerified": true,
+      "details": {
+        "url": "https://example.com/login",
+        "isDynamic": false
+      }
+    },
+    {
+      "benchmarkId": "broken-aria-label.spec.ts",
+      "category": "broken-locator",
+      "originalLocator": "navigation:https://example.com/login",
+      "attemptedRecovery": false,
+      "outcome": "successful-safe-recovery",
+      "recoveryTimeMs": 8,
+      "safetyVerified": true,
+      "details": {
+        "url": "https://example.com/login",
+        "isDynamic": false
+      }
+    },
+    {
+      "benchmarkId": "broken-duplicate-selector.spec.ts",
+      "category": "broken-locator",
+      "originalLocator": "css:page.locator('.btn')",
+      "attemptedRecovery": true,
+      "outcome": "replay-divergence",
+      "recoveryTimeMs": 91,
+      "safetyVerified": false,
+      "details": {
+        "locator": "page.locator('.btn')",
+        "strategy": "css",
+        "isDynamic": false,
+        "isDuplicate": true,
+        "isChained": true
+      }
+    },
+    {
+      "benchmarkId": "broken-duplicate-selector.spec.ts",
+      "category": "broken-locator",
+      "originalLocator": "css:page.locator('.result')",
+      "attemptedRecovery": true,
+      "outcome": "successful-but-risky",
+      "recoveryTimeMs": 73,
+      "safetyVerified": false,
+      "details": {
+        "locator": "page.locator('.result')",
+        "strategy": "css",
+        "isDynamic": false,
+        "isDuplicate": false,
+        "isChained": true
+      }
+    },
+    {
+      "benchmarkId": "broken-duplicate-selector.spec.ts",
+      "category": "broken-locator",
+      "originalLocator": "css:page.locator('.btn')",
+      "attemptedRecovery": true,
+      "outcome": "replay-divergence",
+      "recoveryTimeMs": 46,
+      "safetyVerified": false,
+      "details": {
+        "locator": "page.locator('.btn')",
+        "strategy": "css",
+        "isDynamic": false,
+        "isDuplicate": true,
+        "isChained": true
+      }
+    },
+    {
+      "benchmarkId": "broken-duplicate-selector.spec.ts",
+      "category": "broken-locator",
+      "originalLocator": "css:page.locator('.result-2')",
+      "attemptedRecovery": true,
+      "outcome": "successful-but-risky",
+      "recoveryTimeMs": 28,
+      "safetyVerified": false,
+      "details": {
+        "locator": "page.locator('.result-2')",
+        "strategy": "css",
+        "isDynamic": false,
+        "isDuplicate": false,
+        "isChained": true
+      }
+    },
+    {
+      "benchmarkId": "broken-duplicate-selector.spec.ts",
+      "category": "broken-locator",
+      "originalLocator": "css:page.locator('button')",
+      "attemptedRecovery": true,
+      "outcome": "successful-safe-recovery",
+      "recoveryTimeMs": 52,
+      "safetyVerified": true,
+      "details": {
+        "locator": "page.locator('button')",
+        "strategy": "css",
+        "isDynamic": false,
+        "isDuplicate": false,
+        "isChained": true
+      }
+    },
+    {
+      "benchmarkId": "broken-duplicate-selector.spec.ts",
+      "category": "broken-locator",
+      "originalLocator": "css:page.locator('.modal')",
+      "attemptedRecovery": true,
+      "outcome": "successful-but-risky",
+      "recoveryTimeMs": 37,
+      "safetyVerified": false,
+      "details": {
+        "locator": "page.locator('.modal')",
+        "strategy": "css",
+        "isDynamic": false,
+        "isDuplicate": false,
+        "isChained": true
+      }
+    },
+    {
+      "benchmarkId": "broken-duplicate-selector.spec.ts",
+      "category": "broken-locator",
+      "originalLocator": "navigation:https://example.com",
+      "attemptedRecovery": false,
+      "outcome": "validation-failed",
+      "recoveryTimeMs": 29,
+      "safetyVerified": false,
+      "details": {
+        "url": "https://example.com",
+        "isDynamic": false
+      }
+    },
+    {
+      "benchmarkId": "broken-duplicate-selector.spec.ts",
+      "category": "broken-locator",
+      "originalLocator": "navigation:https://example.com",
+      "attemptedRecovery": false,
+      "outcome": "validation-failed",
+      "recoveryTimeMs": 48,
+      "safetyVerified": false,
+      "details": {
+        "url": "https://example.com",
+        "isDynamic": false
+      }
+    },
+    {
+      "benchmarkId": "broken-duplicate-selector.spec.ts",
+      "category": "broken-locator",
+      "originalLocator": "navigation:https://example.com",
+      "attemptedRecovery": false,
+      "outcome": "successful-safe-recovery",
+      "recoveryTimeMs": 33,
+      "safetyVerified": true,
+      "details": {
+        "url": "https://example.com",
+        "isDynamic": false
+      }
+    },
+    {
+      "benchmarkId": "broken-dynamic-selector.spec.ts",
+      "category": "broken-locator",
+      "originalLocator": "css:page.locator('template:[data-testid=\"...')",
+      "attemptedRecovery": true,
+      "outcome": "successful-but-risky",
+      "recoveryTimeMs": 106,
+      "safetyVerified": false,
+      "details": {
+        "locator": "page.locator('template:[data-testid=\"...')",
+        "strategy": "css",
+        "isDynamic": false,
+        "isDuplicate": false,
+        "isChained": true
+      }
+    },
+    {
+      "benchmarkId": "broken-dynamic-selector.spec.ts",
+      "category": "broken-locator",
+      "originalLocator": "css:page.locator('.success')",
+      "attemptedRecovery": true,
+      "outcome": "successful-safe-recovery",
+      "recoveryTimeMs": 70,
+      "safetyVerified": true,
+      "details": {
+        "locator": "page.locator('.success')",
+        "strategy": "css",
+        "isDynamic": false,
+        "isDuplicate": false,
+        "isChained": true
+      }
+    },
+    {
+      "benchmarkId": "broken-dynamic-selector.spec.ts",
+      "category": "broken-locator",
+      "originalLocator": "css:page.locator('.item')",
+      "attemptedRecovery": true,
+      "outcome": "replay-divergence",
+      "recoveryTimeMs": 66,
+      "safetyVerified": false,
+      "details": {
+        "locator": "page.locator('.item')",
+        "strategy": "css",
+        "isDynamic": false,
+        "isDuplicate": true,
+        "isChained": true
+      }
+    },
+    {
+      "benchmarkId": "broken-dynamic-selector.spec.ts",
+      "category": "broken-locator",
+      "originalLocator": "css:page.locator('.item-3')",
+      "attemptedRecovery": true,
+      "outcome": "replay-divergence",
+      "recoveryTimeMs": 63,
+      "safetyVerified": false,
+      "details": {
+        "locator": "page.locator('.item-3')",
+        "strategy": "css",
+        "isDynamic": false,
+        "isDuplicate": true,
+        "isChained": true
+      }
+    },
+    {
+      "benchmarkId": "broken-dynamic-selector.spec.ts",
+      "category": "broken-locator",
+      "originalLocator": "css:page.locator('<expression>')",
+      "attemptedRecovery": true,
+      "outcome": "successful-but-risky",
+      "recoveryTimeMs": 25,
+      "safetyVerified": false,
+      "details": {
+        "locator": "page.locator('<expression>')",
+        "strategy": "css",
+        "isDynamic": false,
+        "isDuplicate": false,
+        "isChained": true
+      }
+    },
+    {
+      "benchmarkId": "broken-dynamic-selector.spec.ts",
+      "category": "broken-locator",
+      "originalLocator": "navigation:https://example.com",
+      "attemptedRecovery": false,
+      "outcome": "validation-failed",
+      "recoveryTimeMs": 50,
+      "safetyVerified": false,
+      "details": {
+        "url": "https://example.com",
+        "isDynamic": false
+      }
+    },
+    {
+      "benchmarkId": "broken-dynamic-selector.spec.ts",
+      "category": "broken-locator",
+      "originalLocator": "navigation:https://example.com",
+      "attemptedRecovery": false,
+      "outcome": "successful-safe-recovery",
+      "recoveryTimeMs": 28,
+      "safetyVerified": true,
+      "details": {
+        "url": "https://example.com",
+        "isDynamic": false
+      }
+    },
+    {
+      "benchmarkId": "broken-dynamic-selector.spec.ts",
+      "category": "broken-locator",
+      "originalLocator": "navigation:https://example.com",
+      "attemptedRecovery": false,
+      "outcome": "validation-failed",
+      "recoveryTimeMs": 12,
+      "safetyVerified": false,
+      "details": {
+        "url": "https://example.com",
+        "isDynamic": false
+      }
+    },
+    {
+      "benchmarkId": "broken-rename-id.spec.ts",
+      "category": "broken-locator",
+      "originalLocator": "css:page.locator('#username')",
+      "attemptedRecovery": true,
+      "outcome": "successful-but-risky",
+      "recoveryTimeMs": 20,
+      "safetyVerified": false,
+      "details": {
+        "locator": "page.locator('#username')",
+        "strategy": "css",
+        "isDynamic": false,
+        "isDuplicate": false,
+        "isChained": true
+      }
+    },
+    {
+      "benchmarkId": "broken-rename-id.spec.ts",
+      "category": "broken-locator",
+      "originalLocator": "css:page.locator('#password')",
+      "attemptedRecovery": true,
+      "outcome": "successful-but-risky",
+      "recoveryTimeMs": 61,
+      "safetyVerified": false,
+      "details": {
+        "locator": "page.locator('#password')",
+        "strategy": "css",
+        "isDynamic": false,
+        "isDuplicate": false,
+        "isChained": true
+      }
+    },
+    {
+      "benchmarkId": "broken-rename-id.spec.ts",
+      "category": "broken-locator",
+      "originalLocator": "role:page.getByRole('button')",
+      "attemptedRecovery": true,
+      "outcome": "successful-but-risky",
+      "recoveryTimeMs": 26,
+      "safetyVerified": false,
+      "details": {
+        "locator": "page.getByRole('button')",
+        "strategy": "role",
+        "isDynamic": false,
+        "isDuplicate": false,
+        "isChained": false
+      }
+    },
+    {
+      "benchmarkId": "broken-rename-id.spec.ts",
+      "category": "broken-locator",
+      "originalLocator": "css:page.locator('.dashboard')",
+      "attemptedRecovery": true,
+      "outcome": "successful-safe-recovery",
+      "recoveryTimeMs": 31,
+      "safetyVerified": true,
+      "details": {
+        "locator": "page.locator('.dashboard')",
+        "strategy": "css",
+        "isDynamic": false,
+        "isDuplicate": false,
+        "isChained": true
+      }
+    },
+    {
+      "benchmarkId": "broken-rename-id.spec.ts",
+      "category": "broken-locator",
+      "originalLocator": "css:page.locator('input[name=\"username\"]')",
+      "attemptedRecovery": true,
+      "outcome": "successful-but-risky",
+      "recoveryTimeMs": 34,
+      "safetyVerified": false,
+      "details": {
+        "locator": "page.locator('input[name=\"username\"]')",
+        "strategy": "css",
+        "isDynamic": false,
+        "isDuplicate": false,
+        "isChained": true
+      }
+    },
+    {
+      "benchmarkId": "broken-rename-id.spec.ts",
+      "category": "broken-locator",
+      "originalLocator": "css:page.locator('input[name=\"password\"]')",
+      "attemptedRecovery": true,
+      "outcome": "successful-safe-recovery",
+      "recoveryTimeMs": 12,
+      "safetyVerified": true,
+      "details": {
+        "locator": "page.locator('input[name=\"password\"]')",
+        "strategy": "css",
+        "isDynamic": false,
+        "isDuplicate": false,
+        "isChained": true
+      }
+    },
+    {
+      "benchmarkId": "broken-rename-id.spec.ts",
+      "category": "broken-locator",
+      "originalLocator": "css:page.locator('button[type=\"submit\"]')",
+      "attemptedRecovery": true,
+      "outcome": "successful-but-risky",
+      "recoveryTimeMs": 105,
+      "safetyVerified": false,
+      "details": {
+        "locator": "page.locator('button[type=\"submit\"]')",
+        "strategy": "css",
+        "isDynamic": false,
+        "isDuplicate": false,
+        "isChained": true
+      }
+    },
+    {
+      "benchmarkId": "broken-rename-id.spec.ts",
+      "category": "broken-locator",
+      "originalLocator": "css:page.locator('.error-message')",
+      "attemptedRecovery": true,
+      "outcome": "successful-but-risky",
+      "recoveryTimeMs": 87,
+      "safetyVerified": false,
+      "details": {
+        "locator": "page.locator('.error-message')",
+        "strategy": "css",
+        "isDynamic": false,
+        "isDuplicate": false,
+        "isChained": true
+      }
+    },
+    {
+      "benchmarkId": "broken-rename-id.spec.ts",
+      "category": "broken-locator",
+      "originalLocator": "navigation:https://example.com/login",
+      "attemptedRecovery": false,
+      "outcome": "validation-failed",
+      "recoveryTimeMs": 47,
+      "safetyVerified": false,
+      "details": {
+        "url": "https://example.com/login",
+        "isDynamic": false
+      }
+    },
+    {
+      "benchmarkId": "broken-rename-id.spec.ts",
+      "category": "broken-locator",
+      "originalLocator": "navigation:https://example.com/login",
+      "attemptedRecovery": false,
+      "outcome": "validation-failed",
+      "recoveryTimeMs": 40,
+      "safetyVerified": false,
+      "details": {
+        "url": "https://example.com/login",
+        "isDynamic": false
+      }
+    }
+  ],
+  "overallRecoveryRate": 78,
+  "safeMutationRate": 77.8,
+  "falsePositiveRate": 0,
+  "replayConsistencyRate": 92,
+  "rollbackSuccessRate": 100,
+  "compilePreservationRate": 100,
+  "governanceRejectionRate": 14,
+  "healingOutcomes": {
+    "successful-safe-recovery": 21,
+    "successful-but-risky": 18,
+    "false-positive": 0,
+    "replay-divergence": 4,
+    "compile-breaking": 0,
+    "validation-failed": 7,
+    "unsupported-pattern": 0
+  },
+  "riskyHealingPatterns": [
+    {
+      "pattern": "chained-locator",
+      "occurrenceCount": 20,
+      "riskLevel": "high"
+    },
+    {
+      "pattern": "unknown",
+      "occurrenceCount": 2,
+      "riskLevel": "low"
+    }
+  ],
+  "unsupportedPatterns": [],
+  "architecturalWeakPoints": [],
+  "confidenceScoreReliability": {
+    "highConfidenceAccuracy": 42,
+    "moderateConfidenceAccuracy": 75,
+    "lowConfidenceAccuracy": 45,
+    "averageConfidenceScore": 72
+  }
+}

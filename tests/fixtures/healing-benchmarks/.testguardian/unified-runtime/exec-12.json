@@ -1,0 +1,80 @@
+{
+  "executionId": "exec-12",
+  "repoPath": "C:\\Users\\Hp\\Automation Tools\\test-guardian\\tests\\fixtures\\healing-benchmarks",
+  "frameworkType": "unknown",
+  "compatibilityStatus": "supported",
+  "repositorySummary": {
+    "totalFiles": 5,
+    "totalLocators": 37,
+    "compatibilityScore": 100,
+    "risks": 1
+  },
+  "healingSummary": {
+    "totalAttempts": 0,
+    "successfulHealings": 0,
+    "reviewPackages": 0
+  },
+  "validationOutcomes": {
+    "totalValidations": 0,
+    "passed": 0,
+    "failed": 0
+  },
+  "replayStability": {
+    "domStabilized": false,
+    "replayDeterministic": false,
+    "driftSeverity": "none"
+  },
+  "governanceDecisions": {
+    "governancePassed": false,
+    "gatesPassed": 0,
+    "gatesFailed": 0
+  },
+  "sandboxVerification": {
+    "sandboxExecuted": false,
+    "compileSuccess": false,
+    "isolationVerified": false
+  },
+  "patchProposals": {
+    "totalProposals": 0,
+    "status": "none"
+  },
+  "rollbackMetadata": {
+    "rollbackAvailable": false
+  },
+  "riskAnalysis": {
+    "overallRisk": "low",
+    "riskFactors": []
+  },
+  "runtimeMetrics": {
+    "domStabilizationSuccessRate": 0,
+    "replayRecoverySuccess": 0,
+    "staleRecoverySuccess": 0,
+    "iframeRecoveryRate": 0,
+    "asyncRenderInstabilityFrequency": 0,
+    "replayDriftFrequency": 0
+  },
+  "stateTransitions": {
+    "transitions": [
+      {
+        "from": "idle",
+        "to": "analyzing",
+        "stage": "repository-analysis",
+        "success": true,
+        "timestamp": 0
+      }
+    ],
+    "currentState": "analyzing",
+    "finalState": "analyzing",
+    "totalTransitions": 1,
+    "failedTransitions": 0
+  },
+  "failureBoundary": {
+    "events": [],
+    "totalFailures": 0,
+    "recoverableFailures": 0,
+    "unrecoverableFailures": 0,
+    "gracefulDegradation": true
+  },
+  "persistedPaths": [],
+  "completedAt": 0
+}

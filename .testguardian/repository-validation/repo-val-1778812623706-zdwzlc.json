@@ -1,0 +1,108 @@
+{
+  "id": "repo-val-1778812623706-zdwzlc",
+  "repositoryPath": "C:\\Users\\Hp\\Automation Tools\\test-guardian",
+  "analyzedAt": 1778812623706,
+  "compatibilityStatus": "supported",
+  "parserResults": {
+    "totalFiles": 38,
+    "successfullyParsed": 38,
+    "failedFiles": [],
+    "unsupportedSyntax": [],
+    "parseDurationMs": 1288
+  },
+  "locatorPatternStats": {
+    "totalLocators": 104,
+    "strategyBreakdown": {
+      "css": 36,
+      "role": 18,
+      "placeholder": 6,
+      "testid": 12,
+      "alt-text": 6,
+      "title": 6,
+      "text": 10,
+      "label": 6,
+      "xpath": 4
+    },
+    "dynamicSelectors": 0,
+    "unstableSelectors": 50,
+    "chainedLocators": 104,
+    "pageObjects": [
+      {
+        "name": "LoginPage",
+        "locatorCount": 5,
+        "filePath": "..\\..\\.."
+      },
+      {
+        "name": "DashboardPage",
+        "locatorCount": 3,
+        "filePath": "..\\..\\.."
+      },
+      {
+        "name": "SearchPage",
+        "locatorCount": 3,
+        "filePath": "..\\..\\.."
+      },
+      {
+        "name": "ProfilePage",
+        "locatorCount": 4,
+        "filePath": "..\\..\\.."
+      },
+      {
+        "name": "LoginPage",
+        "locatorCount": 5,
+        "filePath": "..\\..\\.."
+      },
+      {
+        "name": "DashboardPage",
+        "locatorCount": 3,
+        "filePath": "..\\..\\.."
+      },
+      {
+        "name": "SearchPage",
+        "locatorCount": 3,
+        "filePath": "..\\..\\.."
+      },
+      {
+        "name": "ProfilePage",
+        "locatorCount": 4,
+        "filePath": "..\\..\\.."
+      }
+    ],
+    "customWrappers": 0,
+    "mixedFrameworkConventions": []
+  },
+  "mutationSafetyResults": {
+    "totalTestFiles": 38,
+    "successfullyMutated": 36,
+    "failedMutations": [
+      {
+        "file": "tests\\unit\\analyzer-persist.test.ts",
+        "mutationType": "ast-modification",
+        "error": "Failed preconditions validation"
+      },
+      {
+        "file": "tests\\unit\\analyzer-persist.test.ts",
+        "mutationType": "ast-modification",
+        "error": "Failed preconditions validation"
+      }
+    ],
+    "compileSuccessRate": 94.73684210526315,
+    "rollbackSuccessRate": 94.73684210526315,
+    "formattingPreserved": true,
+    "importPreserved": true
+  },
+  "stabilityMetrics": {
+    "parserSurvivability": 100,
+    "compileStability": 94.7,
+    "replayStability": 100,
+    "overallCompatibilityScore": 98.2
+  },
+  "architecturalRisks": [
+    {
+      "category": "Locator Stability",
+      "severity": "medium",
+      "description": "High proportion (50) of unstable selectors detected",
+      "affectedFiles": []
+    }
+  ]
+}

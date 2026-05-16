@@ -1,0 +1,129 @@
+{
+  "executionId": "exec-6",
+  "repoPath": "/test/repo",
+  "frameworkType": "playwright",
+  "compatibilityStatus": "supported",
+  "repositorySummary": {
+    "totalFiles": 0,
+    "totalLocators": 0,
+    "compatibilityScore": 0,
+    "risks": 0
+  },
+  "healingSummary": {
+    "totalAttempts": 0,
+    "successfulHealings": 0,
+    "reviewPackages": 0
+  },
+  "validationOutcomes": {
+    "totalValidations": 0,
+    "passed": 0,
+    "failed": 0
+  },
+  "replayStability": {
+    "domStabilized": false,
+    "replayDeterministic": false,
+    "driftSeverity": "none"
+  },
+  "governanceDecisions": {
+    "governancePassed": false,
+    "gatesPassed": 0,
+    "gatesFailed": 0
+  },
+  "sandboxVerification": {
+    "sandboxExecuted": false,
+    "compileSuccess": false,
+    "isolationVerified": false
+  },
+  "patchProposals": {
+    "totalProposals": 0,
+    "status": "none"
+  },
+  "rollbackMetadata": {
+    "rollbackAvailable": false
+  },
+  "riskAnalysis": {
+    "overallRisk": "low",
+    "riskFactors": []
+  },
+  "runtimeMetrics": {
+    "domStabilizationSuccessRate": 0,
+    "replayRecoverySuccess": 0,
+    "staleRecoverySuccess": 0,
+    "iframeRecoveryRate": 0,
+    "asyncRenderInstabilityFrequency": 0,
+    "replayDriftFrequency": 0
+  },
+  "stateTransitions": {
+    "transitions": [
+      {
+        "from": "idle",
+        "to": "analyzing",
+        "stage": "repository-analysis",
+        "success": true,
+        "timestamp": 0
+      },
+      {
+        "from": "analyzing",
+        "to": "hardening",
+        "stage": "runtime-hardening",
+        "success": true,
+        "timestamp": 0
+      },
+      {
+        "from": "hardening",
+        "to": "healing",
+        "stage": "healing-execution",
+        "success": true,
+        "timestamp": 0
+      },
+      {
+        "from": "healing",
+        "to": "validating",
+        "stage": "validation",
+        "success": true,
+        "timestamp": 0
+      },
+      {
+        "from": "validating",
+        "to": "sandboxing",
+        "stage": "sandbox-verification",
+        "success": true,
+        "timestamp": 0
+      },
+      {
+        "from": "sandboxing",
+        "to": "governing",
+        "stage": "governance-review",
+        "success": true,
+        "timestamp": 0
+      },
+      {
+        "from": "governing",
+        "to": "reporting",
+        "stage": "report-aggregation",
+        "success": true,
+        "timestamp": 0
+      },
+      {
+        "from": "reporting",
+        "to": "completed",
+        "stage": "report-aggregation",
+        "success": true,
+        "timestamp": 0
+      }
+    ],
+    "currentState": "completed",
+    "finalState": "completed",
+    "totalTransitions": 8,
+    "failedTransitions": 0
+  },
+  "failureBoundary": {
+    "events": [],
+    "totalFailures": 0,
+    "recoverableFailures": 0,
+    "unrecoverableFailures": 0,
+    "gracefulDegradation": true
+  },
+  "persistedPaths": [],
+  "completedAt": 0
+}

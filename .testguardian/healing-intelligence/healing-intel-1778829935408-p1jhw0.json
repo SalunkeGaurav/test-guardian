@@ -1,0 +1,270 @@
+{
+  "id": "healing-intel-1778829935408-p1jhw0",
+  "generatedAt": 1778829935424,
+  "sourceBenchmarkPath": ".testguardian/healing-benchmarks",
+  "riskyRecoveryAnalysis": {
+    "totalRiskyRecoveries": 61,
+    "riskCategories": [
+      {
+        "category": "chained-locator",
+        "count": 56,
+        "severity": "high"
+      },
+      {
+        "category": "unknown",
+        "count": 5,
+        "severity": "low"
+      }
+    ],
+    "weakConfidenceSignals": [
+      {
+        "signalType": "nth-child usage",
+        "occurrenceCount": 56,
+        "falsePositiveCorrelation": 0.35
+      },
+      {
+        "signalType": "dynamic selector",
+        "occurrenceCount": 0,
+        "falsePositiveCorrelation": 0.45
+      },
+      {
+        "signalType": "duplicate selector",
+        "occurrenceCount": 12,
+        "falsePositiveCorrelation": 0.25
+      }
+    ],
+    "ambiguousResolutions": [
+      {
+        "locator": "page.locator('.btn')",
+        "ambiguityLevel": 0.7,
+        "alternativeCount": 3,
+        "riskScore": 0.65
+      },
+      {
+        "locator": "page.locator('.btn')",
+        "ambiguityLevel": 0.7,
+        "alternativeCount": 3,
+        "riskScore": 0.65
+      },
+      {
+        "locator": "page.locator('.item')",
+        "ambiguityLevel": 0.7,
+        "alternativeCount": 3,
+        "riskScore": 0.65
+      },
+      {
+        "locator": "page.locator('.item-3')",
+        "ambiguityLevel": 0.7,
+        "alternativeCount": 3,
+        "riskScore": 0.65
+      },
+      {
+        "locator": "page.locator('.btn')",
+        "ambiguityLevel": 0.7,
+        "alternativeCount": 3,
+        "riskScore": 0.65
+      }
+    ],
+    "structurallyUnstableMutations": [
+      {
+        "originalLocator": "page.locator('#username')",
+        "mutatedTo": "alternative-selector",
+        "instabilityFactors": [
+          "chained-locator",
+          "low-uniqueness"
+        ]
+      },
+      {
+        "originalLocator": "page.locator('#password')",
+        "mutatedTo": "alternative-selector",
+        "instabilityFactors": [
+          "chained-locator",
+          "low-uniqueness"
+        ]
+      },
+      {
+        "originalLocator": "page.getByRole('button')",
+        "mutatedTo": "alternative-selector",
+        "instabilityFactors": [
+          "chained-locator",
+          "low-uniqueness"
+        ]
+      },
+      {
+        "originalLocator": "page.locator('.dashboard')",
+        "mutatedTo": "alternative-selector",
+        "instabilityFactors": [
+          "chained-locator",
+          "low-uniqueness"
+        ]
+      },
+      {
+        "originalLocator": "page.locator('input[name=\"username\"]')",
+        "mutatedTo": "alternative-selector",
+        "instabilityFactors": [
+          "chained-locator",
+          "low-uniqueness"
+        ]
+      }
+    ]
+  },
+  "replayDivergenceAnalysis": {
+    "totalDivergences": 12,
+    "divergenceTypes": [
+      {
+        "type": "selector-mismatch",
+        "count": 12,
+        "severity": "medium"
+      },
+      {
+        "type": "navigation-timeout",
+        "count": 3,
+        "severity": "high"
+      },
+      {
+        "type": "async-timing",
+        "count": 2,
+        "severity": "low"
+      }
+    ],
+    "navigationDrift": [],
+    "selectorInstability": [],
+    "asyncHazards": [
+      {
+        "type": "wait-for-timeout",
+        "occurrenceCount": 4,
+        "recoveryImpact": 0.6
+      },
+      {
+        "type": "network-idle-timeout",
+        "occurrenceCount": 3,
+        "recoveryImpact": 0.4
+      }
+    ],
+    "modalIframeInstability": [
+      {
+        "type": "modal-handling",
+        "occurrenceCount": 2
+      },
+      {
+        "type": "iframe-navigation",
+        "occurrenceCount": 1
+      }
+    ]
+  },
+  "validationFailureAnalysis": {
+    "totalFailures": 21,
+    "governanceRejections": [
+      {
+        "reason": "confidence-below-threshold",
+        "count": 10,
+        "thresholdViolated": "0.6"
+      },
+      {
+        "reason": "structural-changes-unacceptable",
+        "count": 6,
+        "thresholdViolated": "0.4"
+      }
+    ],
+    "semanticMutationFailures": [],
+    "unsupportedStructureFailures": [
+      {
+        "structureType": "dynamic-selector",
+        "count": 8,
+        "recoveryImpossible": true
+      },
+      {
+        "structureType": "computed-locator",
+        "count": 4,
+        "recoveryImpossible": true
+      }
+    ],
+    "ambiguityHotspots": []
+  },
+  "confidenceCalibration": {
+    "overallAccuracy": 45.3,
+    "confidenceReliability": [
+      {
+        "confidenceBand": "high (>0.7)",
+        "accuracy": 45.3,
+        "sampleSize": 68
+      },
+      {
+        "confidenceBand": "moderate (0.4-0.7)",
+        "accuracy": 75,
+        "sampleSize": 45
+      },
+      {
+        "confidenceBand": "low (<0.4)",
+        "accuracy": 45,
+        "sampleSize": 30
+      }
+    ],
+    "weakScoringSignals": [
+      {
+        "signal": "nth-child index",
+        "reliabilityScore": 0.55,
+        "recommendation": "Use stable attributes instead"
+      },
+      {
+        "signal": "chained locators",
+        "reliabilityScore": 0.6,
+        "recommendation": "Prefer single-level selectors"
+      }
+    ],
+    "falseConfidencePatterns": [
+      {
+        "pattern": "high-confidence-chained",
+        "falseConfidenceRate": 0.35
+      },
+      {
+        "pattern": "high-confidence-dynamic",
+        "falseConfidenceRate": 0.45
+      }
+    ],
+    "governanceThresholdEffectiveness": {
+      "threshold": 0.6,
+      "truePositiveRate": 78,
+      "falsePositiveRate": 22,
+      "recommendation": "Consider raising threshold to 0.7 for more conservative healing"
+    }
+  },
+  "structuralWeaknessAnalysis": {
+    "totalWeakPoints": 111,
+    "wrapperChainWeakness": [
+      {
+        "chainDepth": 1,
+        "occurrenceCount": 99,
+        "instabilityCorrelation": 0.6
+      },
+      {
+        "chainDepth": 2,
+        "occurrenceCount": 29,
+        "instabilityCorrelation": 0.8
+      }
+    ],
+    "dynamicLocatorWeakness": [
+      {
+        "dynamicType": "template-literal",
+        "occurrenceCount": 0,
+        "healingFailureCorrelation": 0.7
+      },
+      {
+        "dynamicType": "computed",
+        "occurrenceCount": 0,
+        "healingFailureCorrelation": 0.85
+      }
+    ],
+    "repeatedSelectorWeakness": [],
+    "oversizedPOWeakness": [],
+    "hierarchyInstability": []
+  },
+  "overallStabilityScore": 9,
+  "recommendations": [
+    "Implement stricter governance thresholds for chained locators",
+    "Add replay stability validation before accepting healing candidates",
+    "Review confidence scoring algorithm for dynamic selectors",
+    "Consider marking dynamic selector healing as experimental feature",
+    "Add structural complexity penalty to confidence scoring"
+  ]
+}

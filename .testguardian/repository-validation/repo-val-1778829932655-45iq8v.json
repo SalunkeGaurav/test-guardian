@@ -1,0 +1,48 @@
+{
+  "id": "repo-val-1778829932655-45iq8v",
+  "repositoryPath": "C:\\Users\\Hp\\Automation Tools\\Tool Testing Data\\benchmark-repositories\\PW-Framework-Step-By-Step",
+  "analyzedAt": 1778829932655,
+  "compatibilityStatus": "supported",
+  "parserResults": {
+    "totalFiles": 12,
+    "successfullyParsed": 12,
+    "failedFiles": [],
+    "unsupportedSyntax": [],
+    "parseDurationMs": 283
+  },
+  "locatorPatternStats": {
+    "totalLocators": 2,
+    "strategyBreakdown": {
+      "css": 2
+    },
+    "dynamicSelectors": 0,
+    "unstableSelectors": 2,
+    "chainedLocators": 2,
+    "pageObjects": [],
+    "customWrappers": 0,
+    "mixedFrameworkConventions": []
+  },
+  "mutationSafetyResults": {
+    "totalTestFiles": 12,
+    "successfullyMutated": 12,
+    "failedMutations": [],
+    "compileSuccessRate": 100,
+    "rollbackSuccessRate": 100,
+    "formattingPreserved": true,
+    "importPreserved": true
+  },
+  "stabilityMetrics": {
+    "parserSurvivability": 100,
+    "compileStability": 100,
+    "replayStability": 100,
+    "overallCompatibilityScore": 100
+  },
+  "architecturalRisks": [
+    {
+      "category": "Locator Stability",
+      "severity": "medium",
+      "description": "High proportion (2) of unstable selectors detected",
+      "affectedFiles": []
+    }
+  ]
+}

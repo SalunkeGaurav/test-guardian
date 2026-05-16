@@ -1,0 +1,59 @@
+{
+  "reportId": "demo-analysis-1",
+  "generatedAt": 0,
+  "projectPath": "./demo-project",
+  "framework": "playwright",
+  "frameworkVersion": "1.40.0",
+  "configFile": "playwright.config.ts",
+  "testFiles": [
+    {
+      "path": "tests/login.spec.ts",
+      "tests": 3,
+      "locators": 8,
+      "pageObjects": 1,
+      "navigations": 2
+    },
+    {
+      "path": "tests/dashboard.spec.ts",
+      "tests": 2,
+      "locators": 6,
+      "pageObjects": 1,
+      "navigations": 1
+    }
+  ],
+  "summary": {
+    "totalTestFiles": 2,
+    "totalTests": 5,
+    "totalLocators": 14,
+    "fragileLocators": 9,
+    "stableLocators": 5,
+    "totalPageObjects": 2,
+    "totalNavigations": 3,
+    "healingOpportunities": 7
+  },
+  "fragilePatterns": [
+    {
+      "pattern": "ID selector",
+      "count": 4,
+      "severity": "high",
+      "examples": ["#username", "#password", "#submit-btn", "#welcome-msg"]
+    },
+    {
+      "pattern": "CSS class selector",
+      "count": 3,
+      "severity": "medium",
+      "examples": [".btn-primary", ".error-text", ".dashboard-card"]
+    },
+    {
+      "pattern": "Text selector",
+      "count": 2,
+      "severity": "low",
+      "examples": ["Sign In", "Welcome Back"]
+    }
+  ],
+  "recommendations": [
+    "Replace ID selectors with data-testid attributes",
+    "Use semantic selectors instead of CSS classes",
+    "Add fallback selectors for critical paths"
+  ]
+}

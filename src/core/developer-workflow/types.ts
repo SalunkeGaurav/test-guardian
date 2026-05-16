@@ -1,191 +1,294 @@
-export type WorkflowStage = 
+/**
+ * Developer Workflow Types
+ *
+ * Models for simulating developer healing workflows.
+ * No autonomous healing - workflow simulation only.
+ */
+
+export type WorkflowStage =
   | 'failure-detected'
   | 'proposal-generated'
   | 'governance-evaluated'
-  | 'replay-evidence-shown'
-  | 'mutation-reviewed'
+  | 'replay-validated'
+  | 'diff-reviewed'
   | 'approved'
   | 'rejected'
-  | 'rolled-back';
+  | 'rollback-initiated';
 
-export type DeveloperDecision = 'approve' | 'reject' | 'needs-more-info' | 'rollback';
+export type DeveloperAction =
+  | 'view-failure'
+  | 'view-proposal'
+  | 'view-governance'
+  | 'view-replay'
+  | 'view-diff'
+  | 'approve'
+  | 'reject'
+  | 'request-more-info'
+  | 'initiate-rollback';
 
-export interface HealingReviewSession {
-  id: string;
-  repositoryId: string;
-  locator: string;
-  originalSelector: string;
-  proposedSelector: string;
-  failureReason: string;
-  stages: WorkflowStageHistory[];
-  currentStage: WorkflowStage;
-  governanceAnalysis: GovernanceDecisionSummary;
-  replayEvidence: ReplayEvidenceSummary;
-  mutationDiff: MutationDiff;
-  structuralRisk: StructuralRiskSummary;
-  confidenceBreakdown: ConfidenceBreakdown;
-  rollbackMetadata: RollbackMetadata;
-  developerDecision: DeveloperDecision | null;
-  decisionReason: string | null;
-  reviewedAt: number | null;
-}
-
-export interface WorkflowStageHistory {
+export interface WorkflowAction {
   stage: WorkflowStage;
-  enteredAt: number;
-  exitedAt: number | null;
-  duration: number;
+  action: DeveloperAction;
+  timestamp: number;
+  details: string;
 }
 
-export interface GovernanceDecisionSummary {
-  passed: boolean;
-  rejected: boolean;
-  reasons: string[];
-  warnings: string[];
-  riskyRecoveryIndicators: RiskyRecoveryIndicator[];
+export interface LocatorFailure {
+  locatorId: string;
+  expression: string;
+  testName: string;
+  testFile: string;
+  errorMessage: string;
+  stackTrace?: string;
+  timestamp: number;
+}
+
+export interface HealingProposal {
+  id: string;
+  locatorId: string;
+  originalExpression: string;
+  proposedExpression: string;
+  strategy: string;
+  confidence: number;
+  evidence: string[];
+}
+
+export interface GovernanceEvaluation {
+  riskLevel: 'low' | 'medium' | 'high' | 'critical';
+  riskFactors: string[];
   confidenceScore: number;
+  approvalRecommended: boolean;
+  warnings: string[];
 }
 
-export interface RiskyRecoveryIndicator {
-  indicator: string;
-  severity: 'low' | 'medium' | 'high';
-  description: string;
-}
-
-export interface ReplayEvidenceSummary {
-  validated: boolean;
-  diverged: boolean;
-  divergenceType: string | null;
-  comparisonUrl: string | null;
-  validationScore: number;
+export interface ReplayValidationEvidence {
+  sessionId: string;
+  matched: boolean;
+  matchedElementCount: number;
+  falsePositiveIndicators: string[];
+  timingInfo: {
+    duration: number;
+    timingVariance: number;
+  };
 }
 
 export interface MutationDiff {
-  original: string;
-  proposed: string;
-  addedLines: number;
-  removedLines: number;
-  changedSelectors: number;
-  strategy: string;
+  originalCode: string;
+  proposedCode: string;
+  patchedCode?: string;
+  targetFile: string;
+  targetLine: number;
+  hunks: DiffHunk[];
 }
 
-export interface StructuralRiskSummary {
-  overallRisk: 'low' | 'medium' | 'high';
-  chainedLocatorRisk: boolean;
-  wrapperAbstractionRisk: boolean;
-  dynamicSelectorRisk: boolean;
-  repeatedSelectorRisk: boolean;
-  oversizedPageObjectRisk: boolean;
-  asyncFlowRisk: boolean;
-}
-
-export interface ConfidenceBreakdown {
-  overall: number;
-  replay: number;
-  uniqueness: number;
-  structural: number;
-  validation: number;
-  runtime: number;
+export interface DiffHunk {
+  originalStart: number;
+  originalLines: string[];
+  patchedStart: number;
+  patchedLines: string[];
 }
 
 export interface RollbackMetadata {
-  available: boolean;
-  backupId: string | null;
-  rollbackCommand: string | null;
-  lastValidState: string | null;
+  patchId: string;
+  originalExpression: string;
+  rollbackCode: string;
+  canRollback: boolean;
+  riskAssessment: string;
+}
+
+export interface HealingReviewSession {
+  id: string;
+  failure: LocatorFailure;
+  proposal: HealingProposal;
+  governance: GovernanceEvaluation;
+  governanceAnalysis?: GovernanceEvaluation;
+  replayEvidence: ReplayValidationEvidence[];
+  diff: MutationDiff;
+  rollback: RollbackMetadata;
+  rollbackMetadata?: RollbackMetadata;
+  actions: WorkflowAction[];
+  currentStage: WorkflowStage;
+  finalDecision?: 'approved' | 'rejected';
+  developerDecision?: DeveloperDecision;
+  decisionRationale?: string;
+  createdAt: number;
+  completedAt?: number;
+  originalSelector?: string;
+  proposedSelector?: string;
+  structuralRisk?: string[];
+  confidenceBreakdown?: Record<string, number>;
+  stages?: WorkflowStageHistory[];
+  locator?: string;
+}
+
+export interface ReviewErgonomicsMetrics {
+  explanationClarity: number;
+  governanceUnderstandability: number;
+  mutationReadability: number;
+  replayEvidenceUsefulness: number;
+  rollbackConfidence: number;
+  ambiguityVisibility: number;
 }
 
 export interface ReviewErgonomicsReport {
   id: string;
-  generatedAt: number;
   sessionCount: number;
-  explanationClarity: ErgonomicsScore;
-  governanceUnderstandability: ErgonomicsScore;
-  mutationReadability: ErgonomicsScore;
-  replayEvidenceUsefulness: ErgonomicsScore;
-  rollbackConfidence: ErgonomicsScore;
-  ambiguityVisibility: ErgonomicsScore;
-  overallErgonomicsScore: number;
-  improvementRecommendations: ErgonomicsRecommendation[];
+  metrics: ReviewErgonomicsMetrics;
+  score?: number;
+  overallErgonomicsScore?: number;
+  ergonomicsReport?: ErgonomicsScore;
+  summary: string;
+  recommendations: string[];
+  recommendationsList?: ErgonomicsRecommendation[];
+  generatedAt?: number;
+  createdAt: number;
 }
 
-export interface ErgonomicsScore {
-  score: number;
-  maxScore: number;
-  rating: 'excellent' | 'good' | 'acceptable' | 'poor';
-  breakdown: string[];
-}
+export type GovernanceWarningType =
+  | 'risky-recovery'
+  | 'replay-divergence'
+  | 'structural-instability'
+  | 'unsupported-pattern'
+  | 'confidence-uncertainty';
 
-export interface ErgonomicsRecommendation {
-  category: string;
-  currentState: string;
-  recommendedImprovement: string;
-  impact: 'high' | 'medium' | 'low';
+export interface GovernanceWarning {
+  type: GovernanceWarningType;
+  severity: 'low' | 'medium' | 'high' | 'critical';
+  message: string;
+  evidence: string[];
 }
 
 export interface GovernanceVisibilityReport {
   id: string;
-  generatedAt: number;
-  riskyRecoveryWarnings: GovernanceWarning[];
-  replayDivergenceWarnings: GovernanceWarning[];
-  structuralInstabilityWarnings: GovernanceWarning[];
-  unsupportedPatternWarnings: GovernanceWarning[];
-  confidenceUncertaintyIndicators: UncertaintyIndicator[];
-  developerComprehensionRate: number;
+  sessionCount: number;
+  warnings: {
+    riskyRecovery: number;
+    replayDivergence: number;
+    structuralInstability: number;
+    unsupportedPattern: number;
+    confidenceUncertainty: number;
+  };
+  warningPresentation: string[];
+  developerComprehensionScore: number;
+  governanceVisibility?: GovernanceWarning[];
+  generatedAt?: number;
+  createdAt: number;
 }
 
-export interface GovernanceWarning {
-  type: string;
-  message: string;
-  severity: 'info' | 'warning' | 'critical';
-  actionable: boolean;
-  explanation: string;
-}
-
-export interface UncertaintyIndicator {
-  indicator: string;
-  uncertaintyLevel: number;
-  affectedLocators: string[];
-  recommendation: string;
+export interface ApprovalWorkflowMetrics {
+  totalSessions: number;
+  safeApprovalCount: number;
+  riskyApprovalCount: number;
+  rejectionCount: number;
+  rollbackCount: number;
+  confidenceComprehensionEffectiveness: number;
 }
 
 export interface ApprovalWorkflowBenchmark {
   id: string;
-  generatedAt: number;
-  totalSessions: number;
   safeApprovalRate: number;
   riskyApprovalRate: number;
   rejectionPrecision: number;
-  rollbackUsageFrequency: number;
-  confidenceComprehensionEffectiveness: number;
-  approvalTimeAverage: number;
-  rejectionTimeAverage: number;
-  decisionDistribution: Record<string, number>;
+  rollbackUsageRate: number;
+  confidenceComprehensionRate: number;
+  metrics: ApprovalWorkflowMetrics;
+  recommendation: string;
+  createdAt: number;
 }
 
 export interface ReviewPackage {
   id: string;
   sessionId: string;
-  generatedAt: number;
-  patchDiff: string;
-  replayEvidence: ReplayEvidenceSummary;
-  governanceAnalysis: GovernanceDecisionSummary;
-  structuralRisk: StructuralRiskSummary;
-  confidenceBreakdown: ConfidenceBreakdown;
+  failureSummary: string;
+  patchDiff: MutationDiff;
+  governanceAnalysis: GovernanceEvaluation;
+  structuralRisk: string[];
+  confidenceBreakdown: Record<string, number>;
   rollbackMetadata: RollbackMetadata;
-  reviewInstructions: string[];
+  createdAt: number;
+}
+
+export interface DeveloperWorkflowConfig {
+  sessionCount: number;
+  approvalThreshold: number;
+  rejectionThreshold: number;
+  enableRollbackSimulation: boolean;
+}
+
+export interface WorkflowStageHistory {
+  stage: WorkflowStage;
+  timestamp: number;
+  details: string;
+}
+
+export interface GovernanceDecisionSummary {
+  riskLevel: 'low' | 'medium' | 'high' | 'critical';
+  confidenceScore: number;
+  recommendation: string;
+  warnings: string[];
+}
+
+export interface ReplayEvidenceSummary {
+  sessionId: string;
+  matched: boolean;
+  matchedElementCount: number;
+  diverged?: boolean;
+  divergenceType?: string;
+}
+
+export interface StructuralRiskSummary {
+  hasChainedLocator: boolean;
+  hasDynamicSelector: boolean;
+  hasDuplicatePattern: boolean;
+  riskScore: number;
+}
+
+export interface ConfidenceBreakdown {
+  proposalConfidence: number;
+  governanceScore: number;
+  replaySuccessRate: number;
+  riskPenalty: number;
+  overallConfidence: number;
 }
 
 export interface DeveloperWorkflowOptions {
-  corpusPath?: string;
+  sessions?: number;
   sessionCount?: number;
+  approvalThreshold?: number;
+  rejectionThreshold?: number;
+  enableRollbackSimulation?: boolean;
+  enableRollback?: boolean;
+  outputPath?: string;
+  sessionId?: string;
   verbose?: boolean;
 }
 
 export interface WorkflowSimulationResult {
   sessions: HealingReviewSession[];
-  ergonomicsReport: ReviewErgonomicsReport;
-  governanceVisibility: GovernanceVisibilityReport;
-  approvalBenchmark: ApprovalWorkflowBenchmark;
-  reviewPackages: ReviewPackage[];
+  ergonomics: ReviewErgonomicsReport;
+  visibility: GovernanceVisibilityReport;
+  benchmark: ApprovalWorkflowBenchmark;
 }
+
+export interface ErgonomicsScore {
+  explanationClarity: number;
+  governanceUnderstandability: number;
+  mutationReadability: number;
+  replayEvidenceUsefulness: number;
+  rollbackConfidence: number;
+  ambiguityVisibility: number;
+}
+
+export interface ErgonomicsRecommendation {
+  area: string;
+  recommendation: string;
+  priority: 'low' | 'medium' | 'high';
+}
+
+export interface UncertaintyIndicator {
+  type: string;
+  message: string;
+  severity: 'low' | 'medium' | 'high' | 'critical';
+}
+
+export type DeveloperDecision = 'approved' | 'rejected' | 'rolled-back' | 'mutation-reviewed' | 'needs-more-info';

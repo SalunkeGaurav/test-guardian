@@ -1,0 +1,126 @@
+{
+  "id": "pattern-intel-1778829936911-vl5j3v",
+  "generatedAt": 1778829937085,
+  "repositoryPath": "C:\\Users\\Hp\\Automation Tools\\Tool Testing Data\\benchmark-repositories\\playwright_typescript_api",
+  "locatorIntelligence": {
+    "totalLocators": 0,
+    "strategyFrequency": {},
+    "strategyPercentages": {},
+    "chainedLocatorDepth": {
+      "count": 0,
+      "maxDepth": 0,
+      "depthDistribution": {},
+      "averageDepth": 0
+    },
+    "dynamicLocators": {
+      "count": 0,
+      "percentage": 0,
+      "types": {}
+    },
+    "duplicateSelectors": 0,
+    "unstablePatterns": {
+      "count": 0,
+      "percentage": 0,
+      "patterns": []
+    },
+    "wrapperGenerated": 0,
+    "customAbstractions": {
+      "count": 0,
+      "wrapperTypes": []
+    }
+  },
+  "pageObjectIntelligence": {
+    "totalPageObjects": 0,
+    "sizeDistribution": {
+      "small": 0,
+      "medium": 0,
+      "large": 0,
+      "giant": 0
+    },
+    "locatorDensity": {
+      "averageLocatorsPerPO": 0,
+      "minLocators": 0,
+      "maxLocators": 0
+    },
+    "inheritancePatterns": [],
+    "compositionPatterns": [],
+    "wrapperAbstractions": {
+      "count": 0,
+      "wrapperTypes": [],
+      "indirectionLayers": 0
+    },
+    "antiPatternClusters": []
+  },
+  "mutationRiskIntelligence": {
+    "overallRiskScore": 13,
+    "riskCategories": [
+      {
+        "category": "Dynamic Selectors",
+        "score": 0,
+        "affectedFiles": []
+      },
+      {
+        "category": "Computed Locators",
+        "score": 0,
+        "affectedFiles": []
+      },
+      {
+        "category": "Indirect Wrappers",
+        "score": 2,
+        "affectedFiles": []
+      },
+      {
+        "category": "Runtime Composition",
+        "score": 0,
+        "affectedFiles": []
+      },
+      {
+        "category": "AST Ambiguity",
+        "score": 0,
+        "affectedFiles": []
+      },
+      {
+        "category": "Compile Fragile",
+        "score": 0,
+        "affectedFiles": []
+      }
+    ],
+    "dynamicSelectorRisk": 0,
+    "computedLocatorRisk": 0,
+    "indirectWrapperRisk": 2,
+    "runtimeCompositionRisk": 0,
+    "astAmbiguityRisk": 0,
+    "compileFragileRisk": 0
+  },
+  "replayRiskIntelligence": {
+    "overallRiskScore": 10,
+    "navigationRisks": [
+      {
+        "type": "Wait For Selector",
+        "severity": "low",
+        "count": 0
+      }
+    ],
+    "selectorRisks": [
+      {
+        "type": "nth-child Usage",
+        "severity": "medium",
+        "count": 0
+      }
+    ],
+    "modalHeavyFlows": 0,
+    "dynamicRenderingRisks": 0,
+    "iframeUsage": 0,
+    "asyncInteractionChains": 2
+  },
+  "compatibilityTaxonomy": {
+    "tier": "fully-supported",
+    "supportedFeatures": [
+      "Predictable selectors"
+    ],
+    "partiallySupportedFeatures": [],
+    "unsupportedFeatures": [],
+    "riskFactors": [],
+    "recommendations": []
+  }
+}

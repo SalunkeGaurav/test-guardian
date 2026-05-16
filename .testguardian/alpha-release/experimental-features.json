@@ -1,0 +1,50 @@
+{
+  "generatedAt": 0,
+  "features": [
+    {
+      "name": "Confidence Calibration",
+      "status": "experimental",
+      "description": "Confidence score calibration and validation"
+    },
+    {
+      "name": "Healing Benchmark",
+      "status": "experimental",
+      "description": "Healing strategy benchmarking"
+    },
+    {
+      "name": "Healing Intelligence",
+      "status": "experimental",
+      "description": "Pattern-based healing intelligence"
+    },
+    {
+      "name": "Pattern Intelligence",
+      "status": "experimental",
+      "description": "Test pattern analysis and intelligence"
+    },
+    {
+      "name": "Adversarial Testing",
+      "status": "experimental",
+      "description": "Adversarial test generation and execution"
+    },
+    {
+      "name": "Developer Workflow",
+      "status": "experimental",
+      "description": "Developer workflow orchestration"
+    },
+    {
+      "name": "CI Failure Validation",
+      "status": "experimental",
+      "description": "CI failure classification and validation"
+    },
+    {
+      "name": "Architecture Cohesion Audit",
+      "status": "experimental",
+      "description": "Architecture cohesion and dependency analysis"
+    },
+    {
+      "name": "Risk Discrimination",
+      "status": "experimental",
+      "description": "Risk-based mutation and discrimination"
+    }
+  ]
+}

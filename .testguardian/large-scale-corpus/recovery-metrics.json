@@ -1,0 +1,23 @@
+[
+  {
+    "metric": "parser-survivability",
+    "avgValue": 100,
+    "minValue": 100,
+    "maxValue": 100,
+    "repositoryCount": 105
+  },
+  {
+    "metric": "compile-stability",
+    "avgValue": 99.859,
+    "minValue": 88.9,
+    "maxValue": 100,
+    "repositoryCount": 104
+  },
+  {
+    "metric": "healing-recovery-rate",
+    "avgValue": 1,
+    "minValue": 1,
+    "maxValue": 1,
+    "repositoryCount": 105
+  }
+]

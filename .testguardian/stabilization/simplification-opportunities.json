@@ -1,0 +1,239 @@
+{
+  "reportId": "simplification-1",
+  "opportunities": [
+    {
+      "opportunity": "Duplicate schema: ArchitecturalWeakPoint",
+      "type": "duplicate-schemas",
+      "affectedModules": [
+        "adversarial-tester/types.ts",
+        "healing-benchmark/types.ts"
+      ],
+      "impact": "medium",
+      "description": "Interface ArchitecturalWeakPoint is defined in 2 locations",
+      "recommendation": "Consolidate ArchitecturalWeakPoint into a shared types module"
+    },
+    {
+      "opportunity": "Duplicate schema: BenchmarkResult",
+      "type": "duplicate-schemas",
+      "affectedModules": [
+        "confidence-calibration/engine.ts",
+        "developer-workflow/engine.ts",
+        "healing-benchmark/types.ts"
+      ],
+      "impact": "high",
+      "description": "Interface BenchmarkResult is defined in 3 locations",
+      "recommendation": "Consolidate BenchmarkResult into a shared types module"
+    },
+    {
+      "opportunity": "Duplicate schema: ConfidenceCalibrationReport",
+      "type": "duplicate-schemas",
+      "affectedModules": [
+        "confidence-calibration/types.ts",
+        "healing-intelligence/types.ts"
+      ],
+      "impact": "medium",
+      "description": "Interface ConfidenceCalibrationReport is defined in 2 locations",
+      "recommendation": "Consolidate ConfidenceCalibrationReport into a shared types module"
+    },
+    {
+      "opportunity": "Duplicate schema: ConfidenceReliability",
+      "type": "duplicate-schemas",
+      "affectedModules": [
+        "healing-benchmark/types.ts",
+        "healing-intelligence/types.ts"
+      ],
+      "impact": "medium",
+      "description": "Interface ConfidenceReliability is defined in 2 locations",
+      "recommendation": "Consolidate ConfidenceReliability into a shared types module"
+    },
+    {
+      "opportunity": "Duplicate schema: DiffHunk",
+      "type": "duplicate-schemas",
+      "affectedModules": [
+        "developer-workflow/types.ts",
+        "patcher/patch-diff-engine.ts"
+      ],
+      "impact": "medium",
+      "description": "Interface DiffHunk is defined in 2 locations",
+      "recommendation": "Consolidate DiffHunk into a shared types module"
+    },
+    {
+      "opportunity": "Duplicate schema: GovernanceWeakness",
+      "type": "duplicate-schemas",
+      "affectedModules": [
+        "corpus-execution/types.ts",
+        "stabilization/types.ts"
+      ],
+      "impact": "medium",
+      "description": "Interface GovernanceWeakness is defined in 2 locations",
+      "recommendation": "Consolidate GovernanceWeakness into a shared types module"
+    },
+    {
+      "opportunity": "Duplicate schema: HealingIntelReport",
+      "type": "duplicate-schemas",
+      "affectedModules": [
+        "confidence-calibration/engine.ts",
+        "developer-workflow/engine.ts"
+      ],
+      "impact": "medium",
+      "description": "Interface HealingIntelReport is defined in 2 locations",
+      "recommendation": "Consolidate HealingIntelReport into a shared types module"
+    },
+    {
+      "opportunity": "Duplicate schema: PackagingReadinessSummary",
+      "type": "duplicate-schemas",
+      "affectedModules": [
+        "production-readiness/types.ts"
+      ],
+      "impact": "medium",
+      "description": "Interface PackagingReadinessSummary is defined in 2 locations",
+      "recommendation": "Consolidate PackagingReadinessSummary into a shared types module"
+    },
+    {
+      "opportunity": "Duplicate schema: PatternReport",
+      "type": "duplicate-schemas",
+      "affectedModules": [
+        "confidence-calibration/engine.ts",
+        "developer-workflow/engine.ts"
+      ],
+      "impact": "medium",
+      "description": "Interface PatternReport is defined in 2 locations",
+      "recommendation": "Consolidate PatternReport into a shared types module"
+    },
+    {
+      "opportunity": "Duplicate schema: RepositoryExecutionResult",
+      "type": "duplicate-schemas",
+      "affectedModules": [
+        "execution-lab/types.ts",
+        "large-scale-corpus/types.ts"
+      ],
+      "impact": "medium",
+      "description": "Interface RepositoryExecutionResult is defined in 2 locations",
+      "recommendation": "Consolidate RepositoryExecutionResult into a shared types module"
+    },
+    {
+      "opportunity": "Duplicate schema: UnsupportedPattern",
+      "type": "duplicate-schemas",
+      "affectedModules": [
+        "corpus-execution/types.ts",
+        "execution-lab/types.ts"
+      ],
+      "impact": "medium",
+      "description": "Interface UnsupportedPattern is defined in 2 locations",
+      "recommendation": "Consolidate UnsupportedPattern into a shared types module"
+    },
+    {
+      "opportunity": "Duplicate schema: UnsupportedStructure",
+      "type": "duplicate-schemas",
+      "affectedModules": [
+        "healing-intelligence/types.ts",
+        "stabilization/types.ts"
+      ],
+      "impact": "medium",
+      "description": "Interface UnsupportedStructure is defined in 2 locations",
+      "recommendation": "Consolidate UnsupportedStructure into a shared types module"
+    },
+    {
+      "opportunity": "Duplicate schema: ValidationReport",
+      "type": "duplicate-schemas",
+      "affectedModules": [
+        "confidence-calibration/engine.ts",
+        "developer-workflow/engine.ts"
+      ],
+      "impact": "medium",
+      "description": "Interface ValidationReport is defined in 2 locations",
+      "recommendation": "Consolidate ValidationReport into a shared types module"
+    },
+    {
+      "opportunity": "Merge healing-* modules",
+      "type": "merge-modules",
+      "affectedModules": [
+        "healing",
+        "healing-benchmark",
+        "healing-intelligence"
+      ],
+      "impact": "high",
+      "description": "3 modules share the healing prefix",
+      "recommendation": "Consider consolidating healing, healing-benchmark, healing-intelligence into a single module"
+    },
+    {
+      "opportunity": "Merge runtime-* modules",
+      "type": "merge-modules",
+      "affectedModules": [
+        "runtime",
+        "runtime-hardening",
+        "runtime-healing-loop"
+      ],
+      "impact": "high",
+      "description": "3 modules share the runtime prefix",
+      "recommendation": "Consider consolidating runtime, runtime-hardening, runtime-healing-loop into a single module"
+    },
+    {
+      "opportunity": "Redundant persistence utilities",
+      "type": "redundant-persistence",
+      "affectedModules": [
+        "adversarial-tester",
+        "architecture-cohesion-audit",
+        "ci-failure-validation",
+        "developer-review",
+        "developer-workflow",
+        "dom",
+        "execution-lab",
+        "healing-benchmark",
+        "healing-intelligence",
+        "large-scale-corpus",
+        "operational-reliability",
+        "patcher",
+        "pattern-intelligence",
+        "pipeline",
+        "production-readiness",
+        "replay",
+        "repository-validator",
+        "risk-discrimination",
+        "runtime",
+        "runtime-hardening",
+        "runtime-healing-loop",
+        "sandbox",
+        "stabilization",
+        "storage",
+        "unified-runtime"
+      ],
+      "impact": "high",
+      "description": "25 modules have their own persistence logic",
+      "recommendation": "Centralize persistence into src/core/storage utilities"
+    },
+    {
+      "opportunity": "Unstable exports in healing",
+      "type": "unstable-exports",
+      "affectedModules": [
+        "healing"
+      ],
+      "impact": "medium",
+      "description": "healing exports 1 internal/private items",
+      "recommendation": "Remove internal/private exports from healing/index.ts"
+    },
+    {
+      "opportunity": "Unstable exports in replay",
+      "type": "unstable-exports",
+      "affectedModules": [
+        "replay"
+      ],
+      "impact": "medium",
+      "description": "replay exports 1 internal/private items",
+      "recommendation": "Remove internal/private exports from replay/index.ts"
+    },
+    {
+      "opportunity": "Unstable exports in runtime",
+      "type": "unstable-exports",
+      "affectedModules": [
+        "runtime"
+      ],
+      "impact": "medium",
+      "description": "runtime exports 1 internal/private items",
+      "recommendation": "Remove internal/private exports from runtime/index.ts"
+    }
+  ],
+  "totalOpportunities": 19,
+  "highImpactOpportunities": 4,
+  "generatedAt": 0
+}

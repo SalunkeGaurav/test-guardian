@@ -6,50 +6,58 @@ Reason:
 Browser automation ecosystems and AI ecosystems have different strengths.
 
 ---
+# Language Boundary Rules
 
-# TypeScript Responsibilities
+## TypeScript Responsibilities
 
-TypeScript owns:
-- CLI
-- framework adapters
-- Playwright integration
-- Selenium integration
-- Cypress integration
-- AST parsing
-- execution tracing
-- filesystem operations
-- runtime hooks
-- patch generation
-- framework analysis
-- project scanning
-- storage management
+The following systems MUST remain in TypeScript:
 
----
+* framework adapters
+* Playwright integration
+* AST parsing
+* execution tracing
+* replay modeling
+* DOM normalization
+* DOM comparison
+* locator survivability
+* deterministic scoring
+* storage systems
+* patch generation
+* CLI orchestration
 
-# Why TypeScript?
-
-Reasons:
-- strongest browser automation ecosystem
-- native Playwright ecosystem
-- strong AST tooling
-- excellent CLI tooling
-- shared browser/runtime language
-- strong static typing support
+Reason:
+These systems are tightly coupled to browser automation runtimes and deterministic infrastructure workflows.
 
 ---
 
-# Python Responsibilities (Future)
+## Python Responsibilities (Future Only)
 
-Python owns:
-- advanced semantic analysis
-- embeddings
-- ranking systems
-- ML pipelines
-- AI reasoning
-- semantic DOM similarity
-- advanced healing intelligence
+Python is reserved ONLY for:
 
-Python services are NOT part of the initial milestone.
+* semantic embeddings
+* vector similarity
+* LLM orchestration
+* ML ranking systems
+* adaptive confidence models
+* semantic DOM reasoning
+* advanced AI-assisted healing
+
+Python services must remain isolated from core runtime infrastructure.
+
+---
+
+## Forbidden Architecture Violations
+
+Do NOT:
+
+* mix Python into deterministic runtime layers
+* create shared mutable runtime state across languages
+* place browser automation hooks inside Python services
+* move replay/tracing infrastructure into Python
+* implement deterministic DOM infrastructure in Python
+
+Core infrastructure remains TypeScript-first.
+
 
 ---
 

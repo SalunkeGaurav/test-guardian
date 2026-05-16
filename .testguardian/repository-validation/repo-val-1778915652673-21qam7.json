@@ -1,0 +1,60 @@
+{
+  "id": "repo-val-1778915652673-21qam7",
+  "repositoryPath": "C:\\Users\\Hp\\Automation Tools\\test-guardian\\tests\\fixtures\\adversarial-repos",
+  "analyzedAt": 1778915652673,
+  "compatibilityStatus": "supported",
+  "parserResults": {
+    "totalFiles": 6,
+    "successfullyParsed": 6,
+    "failedFiles": [],
+    "unsupportedSyntax": [],
+    "parseDurationMs": 301
+  },
+  "locatorPatternStats": {
+    "totalLocators": 43,
+    "strategyBreakdown": {
+      "css": 35,
+      "role": 2,
+      "text": 1,
+      "label": 1,
+      "placeholder": 1,
+      "testid": 1,
+      "xpath": 2
+    },
+    "dynamicSelectors": 0,
+    "unstableSelectors": 22,
+    "chainedLocators": 43,
+    "pageObjects": [],
+    "customWrappers": 0,
+    "mixedFrameworkConventions": []
+  },
+  "mutationSafetyResults": {
+    "totalTestFiles": 6,
+    "successfullyMutated": 5,
+    "failedMutations": [
+      {
+        "file": "broken.spec.ts",
+        "mutationType": "ast-modification",
+        "error": "Failed preconditions validation"
+      }
+    ],
+    "compileSuccessRate": 83.33333333333334,
+    "rollbackSuccessRate": 83.33333333333334,
+    "formattingPreserved": true,
+    "importPreserved": true
+  },
+  "stabilityMetrics": {
+    "parserSurvivability": 100,
+    "compileStability": 83.3,
+    "replayStability": 100,
+    "overallCompatibilityScore": 94.4
+  },
+  "architecturalRisks": [
+    {
+      "category": "Locator Stability",
+      "severity": "medium",
+      "description": "High proportion (22) of unstable selectors detected",
+      "affectedFiles": []
+    }
+  ]
+}

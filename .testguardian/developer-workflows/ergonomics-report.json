@@ -1,0 +1,92 @@
+{
+  "id": "dwf-1778835734823-8ycl11h",
+  "generatedAt": 1778835734823,
+  "sessionCount": 20,
+  "explanationClarity": {
+    "score": 73.52389253804354,
+    "maxScore": 100,
+    "rating": "good",
+    "breakdown": [
+      "Clear explanations",
+      "Visual diff helpful",
+      "Evidence accessible"
+    ]
+  },
+  "governanceUnderstandability": {
+    "score": 71.39976191228153,
+    "maxScore": 100,
+    "rating": "good",
+    "breakdown": [
+      "Clear explanations",
+      "Visual diff helpful",
+      "Evidence accessible"
+    ]
+  },
+  "mutationReadability": {
+    "score": 79.7434338032273,
+    "maxScore": 100,
+    "rating": "good",
+    "breakdown": [
+      "Clear explanations",
+      "Visual diff helpful",
+      "Evidence accessible"
+    ]
+  },
+  "replayEvidenceUsefulness": {
+    "score": 69.4473261496622,
+    "maxScore": 100,
+    "rating": "acceptable",
+    "breakdown": [
+      "Clear explanations",
+      "Visual diff helpful",
+      "Evidence accessible"
+    ]
+  },
+  "rollbackConfidence": {
+    "score": 74.1813871458056,
+    "maxScore": 100,
+    "rating": "good",
+    "breakdown": [
+      "Clear explanations",
+      "Visual diff helpful",
+      "Evidence accessible"
+    ]
+  },
+  "ambiguityVisibility": {
+    "score": 46.608251320362896,
+    "maxScore": 100,
+    "rating": "poor",
+    "breakdown": [
+      "Clear explanations",
+      "Visual diff helpful",
+      "Evidence accessible"
+    ]
+  },
+  "overallErgonomicsScore": 69.79276771618291,
+  "improvementRecommendations": [
+    {
+      "category": "governance-understandability",
+      "currentState": "Warnings are technical and unclear",
+      "recommendedImprovement": "Add plain-language explanations for governance decisions",
+      "impact": "high"
+    },
+    {
+      "category": "ambiguity-visibility",
+      "currentState": "Low confidence signals not clearly highlighted",
+      "recommendedImprovement": "Add visual indicators for uncertain healing proposals",
+      "impact": "high"
+    },
+    {
+      "category": "replay-evidence",
+      "currentState": "Divergence details hard to interpret",
+      "recommendedImprovement": "Show visual side-by-side comparison with highlights",
+      "impact": "medium"
+    },
+    {
+      "category": "rollback-confidence",
+      "currentState": "Rollback metadata not easily accessible",
+      "recommendedImprovement": "Add one-click rollback with clear state preview",
+      "impact": "medium"
+    }
+  ]
+}

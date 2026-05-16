@@ -1,60 +1,113 @@
-import { resolve } from 'node:path';
-import { writeFile, mkdir } from 'node:fs/promises';
+/**
+ * Developer Workflow CLI Command
+ *
+ * Implements Developer Workflow Simulation v1.
+ * Simulates end-to-end developer healing workflows, generates review sessions,
+ * surfaces governance decisions, and tracks approval/rejection flows.
+ */
+
 import { info, error } from '../../src/logger/index.js';
-import {
-  runDeveloperWorkflowSimulation,
-  generateWorkflowSummary,
-} from '../../src/core/developer-workflow/index.js';
+import { DeveloperWorkflowOrchestrator } from '../../src/core/developer-workflow/orchestrator.js';
+import { DeveloperWorkflowStorage } from '../../src/core/developer-workflow/storage.js';
+import type { DeveloperWorkflowConfig } from '../../src/core/developer-workflow/types.js';
+import { MutationReviewPackager } from '../../src/core/developer-workflow/review-packaging.js';
 
 export interface DeveloperWorkflowOptions {
-  corpusPath?: string;
-  outputPath?: string;
-  sessionCount?: number;
+  sessions?: number;
+  approvalThreshold?: number;
+  rejectionThreshold?: number;
+  enableRollback?: boolean;
+  sessionId?: string;
   verbose?: boolean;
 }
 
-const DEFAULT_OUTPUT_PATH = '.testguardian/developer-workflows';
-
 export async function runWorkflowSimulation(options: DeveloperWorkflowOptions): Promise<void> {
-  const outputPath = options.outputPath || resolve(DEFAULT_OUTPUT_PATH);
-
-  info('CLI', 'Starting Developer Workflow Simulation v1');
-  info('CLI', `Sessions: ${options.sessionCount || 20}`);
+  info('CLI', 'Developer Workflow Simulation v1');
 
   try {
-    await mkdir(outputPath, { recursive: true });
+    const config: DeveloperWorkflowConfig = {
+      sessionCount: options.sessions || 20,
+      approvalThreshold: options.approvalThreshold || 0.7,
+      rejectionThreshold: options.rejectionThreshold || 0.3,
+      enableRollbackSimulation: options.enableRollback || false,
+    };
 
-    const result = await runDeveloperWorkflowSimulation({
-      sessionCount: options.sessionCount,
-      verbose: options.verbose,
-    });
+    const orchestrator = new DeveloperWorkflowOrchestrator();
+    const storage = new DeveloperWorkflowStorage(process.cwd());
+    const packager = new MutationReviewPackager();
+
+    if (options.sessionId) {
+      const sessions = storage.listSessions();
+      const session = sessions.find(s => s.id === options.sessionId);
+
+      if (!session) {
+        error('CLI', `Session ${options.sessionId} not found`);
+        return;
+      }
+
+      const pkg = packager.package(session);
+      console.log(packager.formatForDisplay(pkg));
+      storage.saveReviewPackage(pkg);
+
+      info('CLI', 'Review package generated and saved');
+      return;
+    }
+
+    info('CLI', `Simulating ${config.sessionCount} developer review sessions...`);
+
+    const result = orchestrator.simulateWorkflow(config);
+
+    for (const session of result.sessions) {
+      storage.saveSession(session);
+    }
+
+    storage.saveErgonomicsReport(result.ergonomics);
+    storage.saveVisibilityReport(result.visibility);
+    storage.saveBenchmark(result.benchmark);
 
     console.log('');
-    console.log(generateWorkflowSummary(result));
+    console.log('═'.repeat(60));
+    console.log('DEVELOPER WORKFLOW SIMULATION RESULTS');
+    console.log('═'.repeat(60));
+    console.log('');
 
-    const sessionsPath = resolve(outputPath, 'review-sessions.json');
-    await writeFile(sessionsPath, JSON.stringify(result.sessions, null, 2), 'utf-8');
-    info('CLI', `Review sessions saved to: ${sessionsPath}`);
+    console.log('REVIEW ERGONOMICS:');
+    console.log(`  Sessions Analyzed: ${result.ergonomics.sessionCount}`);
+    console.log(`  Explanation Clarity: ${(result.ergonomics.metrics.explanationClarity * 100).toFixed(0)}%`);
+    console.log(`  Governance Understandability: ${(result.ergonomics.metrics.governanceUnderstandability * 100).toFixed(0)}%`);
+    console.log(`  Mutation Readability: ${(result.ergonomics.metrics.mutationReadability * 100).toFixed(0)}%`);
+    console.log(`  Replay Evidence Usefulness: ${(result.ergonomics.metrics.replayEvidenceUsefulness * 100).toFixed(0)}%`);
+    console.log(`  Rollback Confidence: ${(result.ergonomics.metrics.rollbackConfidence * 100).toFixed(0)}%`);
+    console.log(`  Ambiguity Visibility: ${(result.ergonomics.metrics.ambiguityVisibility * 100).toFixed(0)}%`);
+    console.log('');
 
-    const ergonomicsPath = resolve(outputPath, 'ergonomics-report.json');
-    await writeFile(ergonomicsPath, JSON.stringify(result.ergonomicsReport, null, 2), 'utf-8');
-    info('CLI', `Ergonomics report saved to: ${ergonomicsPath}`);
+    console.log('GOVERNANCE VISIBILITY:');
+    console.log(`  Risky Recovery Warnings: ${result.visibility.warnings.riskyRecovery}`);
+    console.log(`  Replay Divergence Warnings: ${result.visibility.warnings.replayDivergence}`);
+    console.log(`  Structural Instability Warnings: ${result.visibility.warnings.structuralInstability}`);
+    console.log(`  Unsupported Pattern Warnings: ${result.visibility.warnings.unsupportedPattern}`);
+    console.log(`  Confidence Uncertainty: ${result.visibility.warnings.confidenceUncertainty}`);
+    console.log(`  Developer Comprehension Score: ${(result.visibility.developerComprehensionScore * 100).toFixed(0)}%`);
+    console.log('');
 
-    const governancePath = resolve(outputPath, 'governance-visibility.json');
-    await writeFile(governancePath, JSON.stringify(result.governanceVisibility, null, 2), 'utf-8');
-    info('CLI', `Governance visibility saved to: ${governancePath}`);
+    console.log('APPROVAL WORKFLOW BENCHMARK:');
+    console.log(`  Safe Approval Rate: ${(result.benchmark.safeApprovalRate * 100).toFixed(1)}%`);
+    console.log(`  Risky Approval Rate: ${(result.benchmark.riskyApprovalRate * 100).toFixed(1)}%`);
+    console.log(`  Rejection Precision: ${(result.benchmark.rejectionPrecision * 100).toFixed(0)}%`);
+    console.log(`  Rollback Usage Rate: ${(result.benchmark.rollbackUsageRate * 100).toFixed(1)}%`);
+    console.log(`  Confidence Comprehension: ${(result.benchmark.confidenceComprehensionRate * 100).toFixed(0)}%`);
+    console.log('');
 
-    const benchmarkPath = resolve(outputPath, 'approval-benchmark.json');
-    await writeFile(benchmarkPath, JSON.stringify(result.approvalBenchmark, null, 2), 'utf-8');
-    info('CLI', `Approval benchmark saved to: ${benchmarkPath}`);
+    console.log('RECOMMENDATION:');
+    console.log(`  ${result.benchmark.recommendation}`);
+    console.log('');
 
-    const packagesPath = resolve(outputPath, 'review-packages.json');
-    await writeFile(packagesPath, JSON.stringify(result.reviewPackages, null, 2), 'utf-8');
-    info('CLI', `Review packages saved to: ${packagesPath}`);
+    console.log('═'.repeat(60));
 
-    info('CLI', 'Developer workflow simulation complete');
+    info('CLI', `Simulation complete. ${config.sessionCount} sessions analyzed.`);
+    info('CLI', `Reports saved to .testguardian/developer-workflows/`);
   } catch (err) {
-    error('CLI', `Simulation failed: ${err instanceof Error ? err.message : String(err)}`);
+    error('CLI', `Workflow simulation failed: ${err instanceof Error ? err.message : String(err)}`);
     process.exit(1);
   }
 }

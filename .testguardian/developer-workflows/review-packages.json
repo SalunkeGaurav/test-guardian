@@ -1,0 +1,1152 @@
+[
+  {
+    "id": "dwf-1778835734828-4mqtz03",
+    "sessionId": "dwf-1778835734807-82pbzk8",
+    "generatedAt": 1778835734828,
+    "patchDiff": "--- #login-btn\n+++ [data-testid=\"login-button\"]\n",
+    "replayEvidence": {
+      "validated": false,
+      "diverged": true,
+      "divergenceType": "selector-mismatch",
+      "comparisonUrl": "/replay/compare/123",
+      "validationScore": 73.9072573290854
+    },
+    "governanceAnalysis": {
+      "passed": false,
+      "rejected": false,
+      "reasons": [
+        "High structural risk",
+        "Chained locator detected"
+      ],
+      "warnings": [
+        "Chained locator may fail on DOM changes",
+        "Computed selector unstable"
+      ],
+      "riskyRecoveryIndicators": [
+        {
+          "indicator": "chained-locator",
+          "severity": "high",
+          "description": "Deep locator chain detected"
+        },
+        {
+          "indicator": "dynamic-class",
+          "severity": "medium",
+          "description": "Class may regenerate"
+        }
+      ],
+      "confidenceScore": 66.57121499236621
+    },
+    "structuralRisk": {
+      "overallRisk": "high",
+      "chainedLocatorRisk": true,
+      "wrapperAbstractionRisk": true,
+      "dynamicSelectorRisk": true,
+      "repeatedSelectorRisk": true,
+      "oversizedPageObjectRisk": true,
+      "asyncFlowRisk": true
+    },
+    "confidenceBreakdown": {
+      "overall": 66.57121499236621,
+      "replay": 65.2337832476076,
+      "uniqueness": 60.54842220934795,
+      "structural": 65.00840380077764,
+      "validation": 67.16290299668643,
+      "runtime": 68.19471298821782
+    },
+    "rollbackMetadata": {
+      "available": true,
+      "backupId": "backup-1778835734807-0",
+      "rollbackCommand": "tg rollback --id=backup-123",
+      "lastValidState": "#login-btn"
+    },
+    "reviewInstructions": [
+      "1. Review the mutation diff above",
+      "2. Check replay validation evidence",
+      "3. Consider governance warnings",
+      "4. Evaluate structural risk factors",
+      "5. Make approval decision or request more info"
+    ]
+  },
+  {
+    "id": "dwf-1778835734828-29o4g8m",
+    "sessionId": "dwf-1778835734807-9jg2w8r",
+    "generatedAt": 1778835734828,
+    "patchDiff": "--- .menu-item:nth-child(2)\n+++ button:has-text(\"Settings\")\n",
+    "replayEvidence": {
+      "validated": true,
+      "diverged": false,
+      "divergenceType": null,
+      "comparisonUrl": "/replay/compare/123",
+      "validationScore": 83.83025276668259
+    },
+    "governanceAnalysis": {
+      "passed": true,
+      "rejected": false,
+      "reasons": [
+        "Safe mutation",
+        "Low risk"
+      ],
+      "warnings": [],
+      "riskyRecoveryIndicators": [],
+      "confidenceScore": 82.11605991378127
+    },
+    "structuralRisk": {
+      "overallRisk": "low",
+      "chainedLocatorRisk": false,
+      "wrapperAbstractionRisk": false,
+      "dynamicSelectorRisk": false,
+      "repeatedSelectorRisk": false,
+      "oversizedPageObjectRisk": false,
+      "asyncFlowRisk": false
+    },
+    "confidenceBreakdown": {
+      "overall": 82.11605991378127,
+      "replay": 80.12170078592455,
+      "uniqueness": 81.55395221859484,
+      "structural": 72.46785099083499,
+      "validation": 83.30098319483909,
+      "runtime": 84.96430835732866
+    },
+    "rollbackMetadata": {
+      "available": true,
+      "backupId": "backup-1778835734807-1",
+      "rollbackCommand": "tg rollback --id=backup-123",
+      "lastValidState": ".menu-item:nth-child(2)"
+    },
+    "reviewInstructions": [
+      "1. Review the mutation diff above",
+      "2. Check replay validation evidence",
+      "3. Consider governance warnings",
+      "4. Evaluate structural risk factors",
+      "5. Make approval decision or request more info"
+    ]
+  },
+  {
+    "id": "dwf-1778835734828-2hn7gn4",
+    "sessionId": "dwf-1778835734808-2yk780c",
+    "generatedAt": 1778835734828,
+    "patchDiff": "--- div.container > span\n+++ [class*=\"header\"]\n",
+    "replayEvidence": {
+      "validated": true,
+      "diverged": false,
+      "divergenceType": null,
+      "comparisonUrl": "/replay/compare/123",
+      "validationScore": 82.90065100797611
+    },
+    "governanceAnalysis": {
+      "passed": true,
+      "rejected": false,
+      "reasons": [
+        "Safe mutation",
+        "Low risk"
+      ],
+      "warnings": [],
+      "riskyRecoveryIndicators": [],
+      "confidenceScore": 84.48641865185743
+    },
+    "structuralRisk": {
+      "overallRisk": "low",
+      "chainedLocatorRisk": false,
+      "wrapperAbstractionRisk": false,
+      "dynamicSelectorRisk": false,
+      "repeatedSelectorRisk": false,
+      "oversizedPageObjectRisk": false,
+      "asyncFlowRisk": false
+    },
+    "confidenceBreakdown": {
+      "overall": 84.48641865185743,
+      "replay": 81.27366039248793,
+      "uniqueness": 80.15180865032633,
+      "structural": 87.6664173686982,
+      "validation": 88.28830946992309,
+      "runtime": 82.21091699432203
+    },
+    "rollbackMetadata": {
+      "available": true,
+      "backupId": "backup-1778835734808-2",
+      "rollbackCommand": "tg rollback --id=backup-123",
+      "lastValidState": "div.container > span"
+    },
+    "reviewInstructions": [
+      "1. Review the mutation diff above",
+      "2. Check replay validation evidence",
+      "3. Consider governance warnings",
+      "4. Evaluate structural risk factors",
+      "5. Make approval decision or request more info"
+    ]
+  },
+  {
+    "id": "dwf-1778835734828-wt5sbg6",
+    "sessionId": "dwf-1778835734808-i7wnnl5",
+    "generatedAt": 1778835734828,
+    "patchDiff": "--- a[href=\"/profile\"]\n+++ nav >> text=Profile\n",
+    "replayEvidence": {
+      "validated": true,
+      "diverged": false,
+      "divergenceType": null,
+      "comparisonUrl": "/replay/compare/123",
+      "validationScore": 80.6899282621242
+    },
+    "governanceAnalysis": {
+      "passed": true,
+      "rejected": false,
+      "reasons": [
+        "Safe mutation",
+        "Low risk"
+      ],
+      "warnings": [],
+      "riskyRecoveryIndicators": [],
+      "confidenceScore": 76.49414442242795
+    },
+    "structuralRisk": {
+      "overallRisk": "low",
+      "chainedLocatorRisk": true,
+      "wrapperAbstractionRisk": false,
+      "dynamicSelectorRisk": false,
+      "repeatedSelectorRisk": false,
+      "oversizedPageObjectRisk": false,
+      "asyncFlowRisk": false
+    },
+    "confidenceBreakdown": {
+      "overall": 76.49414442242795,
+      "replay": 72.52253860046412,
+      "uniqueness": 70.87750405192072,
+      "structural": 78.47855451288933,
+      "validation": 77.74500984589164,
+      "runtime": 80.88210178164873
+    },
+    "rollbackMetadata": {
+      "available": true,
+      "backupId": "backup-1778835734808-3",
+      "rollbackCommand": "tg rollback --id=backup-123",
+      "lastValidState": "a[href=\"/profile\"]"
+    },
+    "reviewInstructions": [
+      "1. Review the mutation diff above",
+      "2. Check replay validation evidence",
+      "3. Consider governance warnings",
+      "4. Evaluate structural risk factors",
+      "5. Make approval decision or request more info"
+    ]
+  },
+  {
+    "id": "dwf-1778835734828-weov7ip",
+    "sessionId": "dwf-1778835734808-i0uqoaz",
+    "generatedAt": 1778835734828,
+    "patchDiff": "--- #submit-form button\n+++ button[type=\"submit\"]\n",
+    "replayEvidence": {
+      "validated": true,
+      "diverged": false,
+      "divergenceType": "selector-mismatch",
+      "comparisonUrl": "/replay/compare/123",
+      "validationScore": 76.64213765737263
+    },
+    "governanceAnalysis": {
+      "passed": false,
+      "rejected": true,
+      "reasons": [
+        "High structural risk",
+        "Chained locator detected"
+      ],
+      "warnings": [
+        "Chained locator may fail on DOM changes",
+        "Computed selector unstable"
+      ],
+      "riskyRecoveryIndicators": [
+        {
+          "indicator": "chained-locator",
+          "severity": "high",
+          "description": "Deep locator chain detected"
+        },
+        {
+          "indicator": "dynamic-class",
+          "severity": "medium",
+          "description": "Class may regenerate"
+        }
+      ],
+      "confidenceScore": 55.383250390240406
+    },
+    "structuralRisk": {
+      "overallRisk": "high",
+      "chainedLocatorRisk": false,
+      "wrapperAbstractionRisk": false,
+      "dynamicSelectorRisk": true,
+      "repeatedSelectorRisk": false,
+      "oversizedPageObjectRisk": false,
+      "asyncFlowRisk": false
+    },
+    "confidenceBreakdown": {
+      "overall": 55.383250390240406,
+      "replay": 51.78456415223366,
+      "uniqueness": 50.42783508637323,
+      "structural": 46.37563277155377,
+      "validation": 53.28290220387316,
+      "runtime": 60.58127197972577
+    },
+    "rollbackMetadata": {
+      "available": true,
+      "backupId": "backup-1778835734808-4",
+      "rollbackCommand": "tg rollback --id=backup-123",
+      "lastValidState": "#submit-form button"
+    },
+    "reviewInstructions": [
+      "1. Review the mutation diff above",
+      "2. Check replay validation evidence",
+      "3. Consider governance warnings",
+      "4. Evaluate structural risk factors",
+      "5. Make approval decision or request more info"
+    ]
+  },
+  {
+    "id": "dwf-1778835734828-g7471z7",
+    "sessionId": "dwf-1778835734808-tqhwlrb",
+    "generatedAt": 1778835734828,
+    "patchDiff": "--- #login-btn\n+++ [data-testid=\"login-button\"]\n",
+    "replayEvidence": {
+      "validated": true,
+      "diverged": false,
+      "divergenceType": null,
+      "comparisonUrl": "/replay/compare/123",
+      "validationScore": 84.860612820298
+    },
+    "governanceAnalysis": {
+      "passed": true,
+      "rejected": false,
+      "reasons": [
+        "Safe mutation",
+        "Low risk"
+      ],
+      "warnings": [],
+      "riskyRecoveryIndicators": [],
+      "confidenceScore": 74.15825217883285
+    },
+    "structuralRisk": {
+      "overallRisk": "low",
+      "chainedLocatorRisk": false,
+      "wrapperAbstractionRisk": true,
+      "dynamicSelectorRisk": false,
+      "repeatedSelectorRisk": false,
+      "oversizedPageObjectRisk": false,
+      "asyncFlowRisk": false
+    },
+    "confidenceBreakdown": {
+      "overall": 74.15825217883285,
+      "replay": 76.90212849329683,
+      "uniqueness": 74.21535664248157,
+      "structural": 65.62330595739111,
+      "validation": 74.7477142216029,
+      "runtime": 76.35746988508286
+    },
+    "rollbackMetadata": {
+      "available": true,
+      "backupId": "backup-1778835734808-5",
+      "rollbackCommand": "tg rollback --id=backup-123",
+      "lastValidState": "#login-btn"
+    },
+    "reviewInstructions": [
+      "1. Review the mutation diff above",
+      "2. Check replay validation evidence",
+      "3. Consider governance warnings",
+      "4. Evaluate structural risk factors",
+      "5. Make approval decision or request more info"
+    ]
+  },
+  {
+    "id": "dwf-1778835734828-5ttg1kt",
+    "sessionId": "dwf-1778835734808-6jdaezl",
+    "generatedAt": 1778835734828,
+    "patchDiff": "--- .menu-item:nth-child(2)\n+++ button:has-text(\"Settings\")\n",
+    "replayEvidence": {
+      "validated": true,
+      "diverged": false,
+      "divergenceType": null,
+      "comparisonUrl": "/replay/compare/123",
+      "validationScore": 80.36804871451059
+    },
+    "governanceAnalysis": {
+      "passed": true,
+      "rejected": false,
+      "reasons": [
+        "Safe mutation",
+        "Low risk"
+      ],
+      "warnings": [],
+      "riskyRecoveryIndicators": [],
+      "confidenceScore": 88.30620411423709
+    },
+    "structuralRisk": {
+      "overallRisk": "low",
+      "chainedLocatorRisk": true,
+      "wrapperAbstractionRisk": false,
+      "dynamicSelectorRisk": false,
+      "repeatedSelectorRisk": true,
+      "oversizedPageObjectRisk": false,
+      "asyncFlowRisk": false
+    },
+    "confidenceBreakdown": {
+      "overall": 88.30620411423709,
+      "replay": 87.0887736236495,
+      "uniqueness": 90.32074101967414,
+      "structural": 79.47432518542473,
+      "validation": 86.18920243932457,
+      "runtime": 87.72654300924833
+    },
+    "rollbackMetadata": {
+      "available": true,
+      "backupId": "backup-1778835734822-6",
+      "rollbackCommand": "tg rollback --id=backup-123",
+      "lastValidState": ".menu-item:nth-child(2)"
+    },
+    "reviewInstructions": [
+      "1. Review the mutation diff above",
+      "2. Check replay validation evidence",
+      "3. Consider governance warnings",
+      "4. Evaluate structural risk factors",
+      "5. Make approval decision or request more info"
+    ]
+  },
+  {
+    "id": "dwf-1778835734828-j7ps9kw",
+    "sessionId": "dwf-1778835734822-i5f28bs",
+    "generatedAt": 1778835734828,
+    "patchDiff": "--- div.container > span\n+++ [class*=\"header\"]\n",
+    "replayEvidence": {
+      "validated": true,
+      "diverged": false,
+      "divergenceType": null,
+      "comparisonUrl": "/replay/compare/123",
+      "validationScore": 81.1735735563512
+    },
+    "governanceAnalysis": {
+      "passed": true,
+      "rejected": false,
+      "reasons": [
+        "Safe mutation",
+        "Low risk"
+      ],
+      "warnings": [],
+      "riskyRecoveryIndicators": [],
+      "confidenceScore": 79.05104149244761
+    },
+    "structuralRisk": {
+      "overallRisk": "low",
+      "chainedLocatorRisk": false,
+      "wrapperAbstractionRisk": false,
+      "dynamicSelectorRisk": false,
+      "repeatedSelectorRisk": false,
+      "oversizedPageObjectRisk": true,
+      "asyncFlowRisk": false
+    },
+    "confidenceBreakdown": {
+      "overall": 79.05104149244761,
+      "replay": 77.30422339686423,
+      "uniqueness": 82.84211062438202,
+      "structural": 74.10068619356655,
+      "validation": 81.52930154357837,
+      "runtime": 67.1454358725146
+    },
+    "rollbackMetadata": {
+      "available": true,
+      "backupId": "backup-1778835734822-7",
+      "rollbackCommand": "tg rollback --id=backup-123",
+      "lastValidState": "div.container > span"
+    },
+    "reviewInstructions": [
+      "1. Review the mutation diff above",
+      "2. Check replay validation evidence",
+      "3. Consider governance warnings",
+      "4. Evaluate structural risk factors",
+      "5. Make approval decision or request more info"
+    ]
+  },
+  {
+    "id": "dwf-1778835734828-eua9xq0",
+    "sessionId": "dwf-1778835734822-idsmjay",
+    "generatedAt": 1778835734828,
+    "patchDiff": "--- a[href=\"/profile\"]\n+++ nav >> text=Profile\n",
+    "replayEvidence": {
+      "validated": true,
+      "diverged": true,
+      "divergenceType": "selector-mismatch",
+      "comparisonUrl": "/replay/compare/123",
+      "validationScore": 72.24322210366532
+    },
+    "governanceAnalysis": {
+      "passed": false,
+      "rejected": true,
+      "reasons": [
+        "High structural risk",
+        "Chained locator detected"
+      ],
+      "warnings": [
+        "Chained locator may fail on DOM changes",
+        "Computed selector unstable"
+      ],
+      "riskyRecoveryIndicators": [
+        {
+          "indicator": "chained-locator",
+          "severity": "high",
+          "description": "Deep locator chain detected"
+        },
+        {
+          "indicator": "dynamic-class",
+          "severity": "medium",
+          "description": "Class may regenerate"
+        }
+      ],
+      "confidenceScore": 58.73661422968735
+    },
+    "structuralRisk": {
+      "overallRisk": "high",
+      "chainedLocatorRisk": false,
+      "wrapperAbstractionRisk": false,
+      "dynamicSelectorRisk": true,
+      "repeatedSelectorRisk": false,
+      "oversizedPageObjectRisk": false,
+      "asyncFlowRisk": true
+    },
+    "confidenceBreakdown": {
+      "overall": 58.73661422968735,
+      "replay": 59.261829370542436,
+      "uniqueness": 58.505752739877096,
+      "structural": 49.78763823119293,
+      "validation": 55.861122817935204,
+      "runtime": 56.906193639129604
+    },
+    "rollbackMetadata": {
+      "available": true,
+      "backupId": "backup-1778835734822-8",
+      "rollbackCommand": "tg rollback --id=backup-123",
+      "lastValidState": "a[href=\"/profile\"]"
+    },
+    "reviewInstructions": [
+      "1. Review the mutation diff above",
+      "2. Check replay validation evidence",
+      "3. Consider governance warnings",
+      "4. Evaluate structural risk factors",
+      "5. Make approval decision or request more info"
+    ]
+  },
+  {
+    "id": "dwf-1778835734828-pjk1eox",
+    "sessionId": "dwf-1778835734822-a2inkm1",
+    "generatedAt": 1778835734828,
+    "patchDiff": "--- #submit-form button\n+++ button[type=\"submit\"]\n",
+    "replayEvidence": {
+      "validated": true,
+      "diverged": false,
+      "divergenceType": null,
+      "comparisonUrl": "/replay/compare/123",
+      "validationScore": 84.11871454060362
+    },
+    "governanceAnalysis": {
+      "passed": true,
+      "rejected": false,
+      "reasons": [
+        "Safe mutation",
+        "Low risk"
+      ],
+      "warnings": [],
+      "riskyRecoveryIndicators": [],
+      "confidenceScore": 72.19519307091588
+    },
+    "structuralRisk": {
+      "overallRisk": "low",
+      "chainedLocatorRisk": true,
+      "wrapperAbstractionRisk": false,
+      "dynamicSelectorRisk": false,
+      "repeatedSelectorRisk": false,
+      "oversizedPageObjectRisk": false,
+      "asyncFlowRisk": false
+    },
+    "confidenceBreakdown": {
+      "overall": 72.19519307091588,
+      "replay": 69.7474356504538,
+      "uniqueness": 69.27640333108059,
+      "structural": 72.73137968368053,
+      "validation": 73.42441569970991,
+      "runtime": 64.24387396273309
+    },
+    "rollbackMetadata": {
+      "available": true,
+      "backupId": "backup-1778835734822-9",
+      "rollbackCommand": "tg rollback --id=backup-123",
+      "lastValidState": "#submit-form button"
+    },
+    "reviewInstructions": [
+      "1. Review the mutation diff above",
+      "2. Check replay validation evidence",
+      "3. Consider governance warnings",
+      "4. Evaluate structural risk factors",
+      "5. Make approval decision or request more info"
+    ]
+  },
+  {
+    "id": "dwf-1778835734828-3f7wgt5",
+    "sessionId": "dwf-1778835734822-hr09vu5",
+    "generatedAt": 1778835734828,
+    "patchDiff": "--- #login-btn\n+++ [data-testid=\"login-button\"]\n",
+    "replayEvidence": {
+      "validated": true,
+      "diverged": false,
+      "divergenceType": null,
+      "comparisonUrl": "/replay/compare/123",
+      "validationScore": 89.58253411502153
+    },
+    "governanceAnalysis": {
+      "passed": true,
+      "rejected": false,
+      "reasons": [
+        "Safe mutation",
+        "Low risk"
+      ],
+      "warnings": [],
+      "riskyRecoveryIndicators": [],
+      "confidenceScore": 82.54200650929708
+    },
+    "structuralRisk": {
+      "overallRisk": "low",
+      "chainedLocatorRisk": false,
+      "wrapperAbstractionRisk": true,
+      "dynamicSelectorRisk": false,
+      "repeatedSelectorRisk": false,
+      "oversizedPageObjectRisk": false,
+      "asyncFlowRisk": false
+    },
+    "confidenceBreakdown": {
+      "overall": 82.54200650929708,
+      "replay": 79.24264022806825,
+      "uniqueness": 75.86699570304677,
+      "structural": 81.08032654444018,
+      "validation": 86.8457435695254,
+      "runtime": 70.75155458293871
+    },
+    "rollbackMetadata": {
+      "available": true,
+      "backupId": "backup-1778835734822-10",
+      "rollbackCommand": "tg rollback --id=backup-123",
+      "lastValidState": "#login-btn"
+    },
+    "reviewInstructions": [
+      "1. Review the mutation diff above",
+      "2. Check replay validation evidence",
+      "3. Consider governance warnings",
+      "4. Evaluate structural risk factors",
+      "5. Make approval decision or request more info"
+    ]
+  },
+  {
+    "id": "dwf-1778835734828-w0wt3rc",
+    "sessionId": "dwf-1778835734822-9ng5j4a",
+    "generatedAt": 1778835734828,
+    "patchDiff": "--- .menu-item:nth-child(2)\n+++ button:has-text(\"Settings\")\n",
+    "replayEvidence": {
+      "validated": true,
+      "diverged": false,
+      "divergenceType": null,
+      "comparisonUrl": "/replay/compare/123",
+      "validationScore": 94.09023716822264
+    },
+    "governanceAnalysis": {
+      "passed": true,
+      "rejected": false,
+      "reasons": [
+        "Safe mutation",
+        "Low risk"
+      ],
+      "warnings": [],
+      "riskyRecoveryIndicators": [],
+      "confidenceScore": 70.8956483557493
+    },
+    "structuralRisk": {
+      "overallRisk": "low",
+      "chainedLocatorRisk": false,
+      "wrapperAbstractionRisk": false,
+      "dynamicSelectorRisk": false,
+      "repeatedSelectorRisk": false,
+      "oversizedPageObjectRisk": false,
+      "asyncFlowRisk": false
+    },
+    "confidenceBreakdown": {
+      "overall": 70.8956483557493,
+      "replay": 68.03471184305424,
+      "uniqueness": 66.97994539587177,
+      "structural": 67.3001895791718,
+      "validation": 70.68677593033009,
+      "runtime": 59.090196945528135
+    },
+    "rollbackMetadata": {
+      "available": true,
+      "backupId": "backup-1778835734822-11",
+      "rollbackCommand": "tg rollback --id=backup-123",
+      "lastValidState": ".menu-item:nth-child(2)"
+    },
+    "reviewInstructions": [
+      "1. Review the mutation diff above",
+      "2. Check replay validation evidence",
+      "3. Consider governance warnings",
+      "4. Evaluate structural risk factors",
+      "5. Make approval decision or request more info"
+    ]
+  },
+  {
+    "id": "dwf-1778835734828-ndhiwce",
+    "sessionId": "dwf-1778835734822-05qh782",
+    "generatedAt": 1778835734828,
+    "patchDiff": "--- div.container > span\n+++ [class*=\"header\"]\n",
+    "replayEvidence": {
+      "validated": true,
+      "diverged": false,
+      "divergenceType": "selector-mismatch",
+      "comparisonUrl": "/replay/compare/123",
+      "validationScore": 67.65427076455337
+    },
+    "governanceAnalysis": {
+      "passed": false,
+      "rejected": true,
+      "reasons": [
+        "High structural risk",
+        "Chained locator detected"
+      ],
+      "warnings": [
+        "Chained locator may fail on DOM changes",
+        "Computed selector unstable"
+      ],
+      "riskyRecoveryIndicators": [
+        {
+          "indicator": "chained-locator",
+          "severity": "high",
+          "description": "Deep locator chain detected"
+        },
+        {
+          "indicator": "dynamic-class",
+          "severity": "medium",
+          "description": "Class may regenerate"
+        }
+      ],
+      "confidenceScore": 62.066201339148115
+    },
+    "structuralRisk": {
+      "overallRisk": "high",
+      "chainedLocatorRisk": true,
+      "wrapperAbstractionRisk": false,
+      "dynamicSelectorRisk": true,
+      "repeatedSelectorRisk": true,
+      "oversizedPageObjectRisk": false,
+      "asyncFlowRisk": false
+    },
+    "confidenceBreakdown": {
+      "overall": 62.066201339148115,
+      "replay": 57.65383356384975,
+      "uniqueness": 65.8070653731835,
+      "structural": 60.3949046504669,
+      "validation": 61.495713578715495,
+      "runtime": 64.96801188474626
+    },
+    "rollbackMetadata": {
+      "available": true,
+      "backupId": "backup-1778835734822-12",
+      "rollbackCommand": "tg rollback --id=backup-123",
+      "lastValidState": "div.container > span"
+    },
+    "reviewInstructions": [
+      "1. Review the mutation diff above",
+      "2. Check replay validation evidence",
+      "3. Consider governance warnings",
+      "4. Evaluate structural risk factors",
+      "5. Make approval decision or request more info"
+    ]
+  },
+  {
+    "id": "dwf-1778835734828-o5hsjtk",
+    "sessionId": "dwf-1778835734822-kll5vlw",
+    "generatedAt": 1778835734828,
+    "patchDiff": "--- a[href=\"/profile\"]\n+++ nav >> text=Profile\n",
+    "replayEvidence": {
+      "validated": true,
+      "diverged": false,
+      "divergenceType": null,
+      "comparisonUrl": "/replay/compare/123",
+      "validationScore": 92.34489928217819
+    },
+    "governanceAnalysis": {
+      "passed": true,
+      "rejected": false,
+      "reasons": [
+        "Safe mutation",
+        "Low risk"
+      ],
+      "warnings": [],
+      "riskyRecoveryIndicators": [],
+      "confidenceScore": 76.1065040292085
+    },
+    "structuralRisk": {
+      "overallRisk": "low",
+      "chainedLocatorRisk": false,
+      "wrapperAbstractionRisk": false,
+      "dynamicSelectorRisk": false,
+      "repeatedSelectorRisk": false,
+      "oversizedPageObjectRisk": false,
+      "asyncFlowRisk": false
+    },
+    "confidenceBreakdown": {
+      "overall": 76.1065040292085,
+      "replay": 75.77267774646205,
+      "uniqueness": 68.10819868140126,
+      "structural": 80.59350920522297,
+      "validation": 78.02179430476104,
+      "runtime": 75.3130521516622
+    },
+    "rollbackMetadata": {
+      "available": true,
+      "backupId": "backup-1778835734822-13",
+      "rollbackCommand": "tg rollback --id=backup-123",
+      "lastValidState": "a[href=\"/profile\"]"
+    },
+    "reviewInstructions": [
+      "1. Review the mutation diff above",
+      "2. Check replay validation evidence",
+      "3. Consider governance warnings",
+      "4. Evaluate structural risk factors",
+      "5. Make approval decision or request more info"
+    ]
+  },
+  {
+    "id": "dwf-1778835734828-oibffpj",
+    "sessionId": "dwf-1778835734822-4cmy4hg",
+    "generatedAt": 1778835734828,
+    "patchDiff": "--- #submit-form button\n+++ button[type=\"submit\"]\n",
+    "replayEvidence": {
+      "validated": true,
+      "diverged": false,
+      "divergenceType": null,
+      "comparisonUrl": "/replay/compare/123",
+      "validationScore": 91.41750684614192
+    },
+    "governanceAnalysis": {
+      "passed": true,
+      "rejected": false,
+      "reasons": [
+        "Safe mutation",
+        "Low risk"
+      ],
+      "warnings": [],
+      "riskyRecoveryIndicators": [],
+      "confidenceScore": 75.16377185350488
+    },
+    "structuralRisk": {
+      "overallRisk": "low",
+      "chainedLocatorRisk": false,
+      "wrapperAbstractionRisk": false,
+      "dynamicSelectorRisk": false,
+      "repeatedSelectorRisk": false,
+      "oversizedPageObjectRisk": true,
+      "asyncFlowRisk": false
+    },
+    "confidenceBreakdown": {
+      "overall": 75.16377185350488,
+      "replay": 71.01920554201318,
+      "uniqueness": 72.94846224291874,
+      "structural": 75.2902888380358,
+      "validation": 79.75142896783655,
+      "runtime": 71.51167353847002
+    },
+    "rollbackMetadata": {
+      "available": true,
+      "backupId": "backup-1778835734822-14",
+      "rollbackCommand": "tg rollback --id=backup-123",
+      "lastValidState": "#submit-form button"
+    },
+    "reviewInstructions": [
+      "1. Review the mutation diff above",
+      "2. Check replay validation evidence",
+      "3. Consider governance warnings",
+      "4. Evaluate structural risk factors",
+      "5. Make approval decision or request more info"
+    ]
+  },
+  {
+    "id": "dwf-1778835734828-dcz8bwt",
+    "sessionId": "dwf-1778835734822-q9vujm3",
+    "generatedAt": 1778835734828,
+    "patchDiff": "--- #login-btn\n+++ [data-testid=\"login-button\"]\n",
+    "replayEvidence": {
+      "validated": true,
+      "diverged": false,
+      "divergenceType": null,
+      "comparisonUrl": "/replay/compare/123",
+      "validationScore": 86.77941122950665
+    },
+    "governanceAnalysis": {
+      "passed": true,
+      "rejected": false,
+      "reasons": [
+        "Safe mutation",
+        "Low risk"
+      ],
+      "warnings": [],
+      "riskyRecoveryIndicators": [],
+      "confidenceScore": 75.34125906335386
+    },
+    "structuralRisk": {
+      "overallRisk": "low",
+      "chainedLocatorRisk": true,
+      "wrapperAbstractionRisk": true,
+      "dynamicSelectorRisk": false,
+      "repeatedSelectorRisk": false,
+      "oversizedPageObjectRisk": false,
+      "asyncFlowRisk": false
+    },
+    "confidenceBreakdown": {
+      "overall": 75.34125906335386,
+      "replay": 79.97308504672492,
+      "uniqueness": 79.21331478983421,
+      "structural": 68.09707530369352,
+      "validation": 72.6014765888664,
+      "runtime": 79.19182639665542
+    },
+    "rollbackMetadata": {
+      "available": true,
+      "backupId": "backup-1778835734822-15",
+      "rollbackCommand": "tg rollback --id=backup-123",
+      "lastValidState": "#login-btn"
+    },
+    "reviewInstructions": [
+      "1. Review the mutation diff above",
+      "2. Check replay validation evidence",
+      "3. Consider governance warnings",
+      "4. Evaluate structural risk factors",
+      "5. Make approval decision or request more info"
+    ]
+  },
+  {
+    "id": "dwf-1778835734828-4co2le8",
+    "sessionId": "dwf-1778835734822-qcjjf0b",
+    "generatedAt": 1778835734828,
+    "patchDiff": "--- .menu-item:nth-child(2)\n+++ button:has-text(\"Settings\")\n",
+    "replayEvidence": {
+      "validated": false,
+      "diverged": true,
+      "divergenceType": "selector-mismatch",
+      "comparisonUrl": "/replay/compare/123",
+      "validationScore": 76.37948137940988
+    },
+    "governanceAnalysis": {
+      "passed": false,
+      "rejected": true,
+      "reasons": [
+        "High structural risk",
+        "Chained locator detected"
+      ],
+      "warnings": [
+        "Chained locator may fail on DOM changes",
+        "Computed selector unstable"
+      ],
+      "riskyRecoveryIndicators": [
+        {
+          "indicator": "chained-locator",
+          "severity": "high",
+          "description": "Deep locator chain detected"
+        },
+        {
+          "indicator": "dynamic-class",
+          "severity": "medium",
+          "description": "Class may regenerate"
+        }
+      ],
+      "confidenceScore": 55.40628629082033
+    },
+    "structuralRisk": {
+      "overallRisk": "high",
+      "chainedLocatorRisk": false,
+      "wrapperAbstractionRisk": false,
+      "dynamicSelectorRisk": true,
+      "repeatedSelectorRisk": false,
+      "oversizedPageObjectRisk": false,
+      "asyncFlowRisk": true
+    },
+    "confidenceBreakdown": {
+      "overall": 55.40628629082033,
+      "replay": 59.4225400066524,
+      "uniqueness": 51.960934814918026,
+      "structural": 57.31881391094936,
+      "validation": 58.501673188643984,
+      "runtime": 46.65841354158912
+    },
+    "rollbackMetadata": {
+      "available": true,
+      "backupId": "backup-1778835734822-16",
+      "rollbackCommand": "tg rollback --id=backup-123",
+      "lastValidState": ".menu-item:nth-child(2)"
+    },
+    "reviewInstructions": [
+      "1. Review the mutation diff above",
+      "2. Check replay validation evidence",
+      "3. Consider governance warnings",
+      "4. Evaluate structural risk factors",
+      "5. Make approval decision or request more info"
+    ]
+  },
+  {
+    "id": "dwf-1778835734828-ekj8cu5",
+    "sessionId": "dwf-1778835734822-jblypwh",
+    "generatedAt": 1778835734828,
+    "patchDiff": "--- div.container > span\n+++ [class*=\"header\"]\n",
+    "replayEvidence": {
+      "validated": true,
+      "diverged": false,
+      "divergenceType": null,
+      "comparisonUrl": "/replay/compare/123",
+      "validationScore": 87.16671519044803
+    },
+    "governanceAnalysis": {
+      "passed": true,
+      "rejected": false,
+      "reasons": [
+        "Safe mutation",
+        "Low risk"
+      ],
+      "warnings": [],
+      "riskyRecoveryIndicators": [],
+      "confidenceScore": 76.5036134707775
+    },
+    "structuralRisk": {
+      "overallRisk": "low",
+      "chainedLocatorRisk": false,
+      "wrapperAbstractionRisk": false,
+      "dynamicSelectorRisk": false,
+      "repeatedSelectorRisk": false,
+      "oversizedPageObjectRisk": false,
+      "asyncFlowRisk": false
+    },
+    "confidenceBreakdown": {
+      "overall": 76.5036134707775,
+      "replay": 80.73777976186022,
+      "uniqueness": 72.2331483597662,
+      "structural": 75.39961958474238,
+      "validation": 77.10022613681508,
+      "runtime": 68.49606967864707
+    },
+    "rollbackMetadata": {
+      "available": true,
+      "backupId": "backup-1778835734822-17",
+      "rollbackCommand": "tg rollback --id=backup-123",
+      "lastValidState": "div.container > span"
+    },
+    "reviewInstructions": [
+      "1. Review the mutation diff above",
+      "2. Check replay validation evidence",
+      "3. Consider governance warnings",
+      "4. Evaluate structural risk factors",
+      "5. Make approval decision or request more info"
+    ]
+  },
+  {
+    "id": "dwf-1778835734828-eb2zxmy",
+    "sessionId": "dwf-1778835734822-pzh5y88",
+    "generatedAt": 1778835734828,
+    "patchDiff": "--- a[href=\"/profile\"]\n+++ nav >> text=Profile\n",
+    "replayEvidence": {
+      "validated": true,
+      "diverged": false,
+      "divergenceType": null,
+      "comparisonUrl": "/replay/compare/123",
+      "validationScore": 88.94735210231279
+    },
+    "governanceAnalysis": {
+      "passed": true,
+      "rejected": false,
+      "reasons": [
+        "Safe mutation",
+        "Low risk"
+      ],
+      "warnings": [],
+      "riskyRecoveryIndicators": [],
+      "confidenceScore": 86.7450286653493
+    },
+    "structuralRisk": {
+      "overallRisk": "low",
+      "chainedLocatorRisk": true,
+      "wrapperAbstractionRisk": false,
+      "dynamicSelectorRisk": false,
+      "repeatedSelectorRisk": true,
+      "oversizedPageObjectRisk": false,
+      "asyncFlowRisk": false
+    },
+    "confidenceBreakdown": {
+      "overall": 86.7450286653493,
+      "replay": 83.02375214727985,
+      "uniqueness": 82.07302491339527,
+      "structural": 83.61566275786078,
+      "validation": 86.75929594526045,
+      "runtime": 82.60808206351044
+    },
+    "rollbackMetadata": {
+      "available": true,
+      "backupId": "backup-1778835734822-18",
+      "rollbackCommand": "tg rollback --id=backup-123",
+      "lastValidState": "a[href=\"/profile\"]"
+    },
+    "reviewInstructions": [
+      "1. Review the mutation diff above",
+      "2. Check replay validation evidence",
+      "3. Consider governance warnings",
+      "4. Evaluate structural risk factors",
+      "5. Make approval decision or request more info"
+    ]
+  },
+  {
+    "id": "dwf-1778835734828-kae9jzp",
+    "sessionId": "dwf-1778835734822-a64ndmc",
+    "generatedAt": 1778835734828,
+    "patchDiff": "--- #submit-form button\n+++ button[type=\"submit\"]\n",
+    "replayEvidence": {
+      "validated": true,
+      "diverged": false,
+      "divergenceType": null,
+      "comparisonUrl": "/replay/compare/123",
+      "validationScore": 88.1779263221096
+    },
+    "governanceAnalysis": {
+      "passed": true,
+      "rejected": false,
+      "reasons": [
+        "Safe mutation",
+        "Low risk"
+      ],
+      "warnings": [],
+      "riskyRecoveryIndicators": [],
+      "confidenceScore": 72.73553474060343
+    },
+    "structuralRisk": {
+      "overallRisk": "low",
+      "chainedLocatorRisk": false,
+      "wrapperAbstractionRisk": false,
+      "dynamicSelectorRisk": false,
+      "repeatedSelectorRisk": false,
+      "oversizedPageObjectRisk": false,
+      "asyncFlowRisk": false
+    },
+    "confidenceBreakdown": {
+      "overall": 72.73553474060343,
+      "replay": 68.9824029456677,
+      "uniqueness": 74.13489544017973,
+      "structural": 76.96508298150663,
+      "validation": 72.62088916275434,
+      "runtime": 65.26964371323511
+    },
+    "rollbackMetadata": {
+      "available": true,
+      "backupId": "backup-1778835734822-19",
+      "rollbackCommand": "tg rollback --id=backup-123",
+      "lastValidState": "#submit-form button"
+    },
+    "reviewInstructions": [
+      "1. Review the mutation diff above",
+      "2. Check replay validation evidence",
+      "3. Consider governance warnings",
+      "4. Evaluate structural risk factors",
+      "5. Make approval decision or request more info"
+    ]
+  }
+]

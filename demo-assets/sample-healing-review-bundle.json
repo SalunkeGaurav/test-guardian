@@ -1,0 +1,163 @@
+{
+  "reportId": "demo-review-bundle-1",
+  "generatedAt": 0,
+  "sourceReport": "demo-pipeline-1",
+  "summary": {
+    "totalProposals": 5,
+    "accepted": 3,
+    "rejected": 2,
+    "averageConfidence": 0.82,
+    "safetyPassRate": 1.0
+  },
+  "proposals": [
+    {
+      "id": "patch-1",
+      "testFile": "tests/login.spec.ts",
+      "line": 5,
+      "originalLocator": "page.locator('#username')",
+      "proposedLocator": "page.locator('[data-testid=\"username\"]')",
+      "confidence": 0.92,
+      "safetyPassed": true,
+      "status": "accepted",
+      "explanation": {
+        "reason": "More specific selector with test ID attribute",
+        "evidence": {
+          "domMatch": true,
+          "uniqueMatch": true,
+          "semanticMatch": "high"
+        },
+        "riskAssessment": "low"
+      },
+      "diff": {
+        "original": "await page.locator('#username').fill('testuser');",
+        "patched": "await page.locator('[data-testid=\"username\"]').fill('testuser');",
+        "hunks": [
+          {
+            "originalStart": 5,
+            "originalLines": ["await page.locator('#username').fill('testuser');"],
+            "patchedStart": 5,
+            "patchedLines": ["await page.locator('[data-testid=\"username\"]').fill('testuser');"],
+            "type": "modify"
+          }
+        ]
+      }
+    },
+    {
+      "id": "patch-2",
+      "testFile": "tests/login.spec.ts",
+      "line": 6,
+      "originalLocator": "page.locator('#password')",
+      "proposedLocator": "page.locator('[data-testid=\"password\"]')",
+      "confidence": 0.90,
+      "safetyPassed": true,
+      "status": "accepted",
+      "explanation": {
+        "reason": "More specific selector with test ID attribute",
+        "evidence": {
+          "domMatch": true,
+          "uniqueMatch": true,
+          "semanticMatch": "high"
+        },
+        "riskAssessment": "low"
+      },
+      "diff": {
+        "original": "await page.locator('#password').fill('password123');",
+        "patched": "await page.locator('[data-testid=\"password\"]').fill('password123');",
+        "hunks": [
+          {
+            "originalStart": 6,
+            "originalLines": ["await page.locator('#password').fill('password123');"],
+            "patchedStart": 6,
+            "patchedLines": ["await page.locator('[data-testid=\"password\"]').fill('password123');"],
+            "type": "modify"
+          }
+        ]
+      }
+    },
+    {
+      "id": "patch-3",
+      "testFile": "tests/login.spec.ts",
+      "line": 7,
+      "originalLocator": "page.locator('.btn-primary')",
+      "proposedLocator": "page.locator('button[type=\"submit\"]')",
+      "confidence": 0.85,
+      "safetyPassed": true,
+      "status": "accepted",
+      "explanation": {
+        "reason": "Semantic selector more resilient to style changes",
+        "evidence": {
+          "domMatch": true,
+          "uniqueMatch": true,
+          "semanticMatch": "high"
+        },
+        "riskAssessment": "low"
+      },
+      "diff": {
+        "original": "await page.locator('.btn-primary').click();",
+        "patched": "await page.locator('button[type=\"submit\"]').click();",
+        "hunks": [
+          {
+            "originalStart": 7,
+            "originalLines": ["await page.locator('.btn-primary').click();"],
+            "patchedStart": 7,
+            "patchedLines": ["await page.locator('button[type=\"submit\"]').click();"],
+            "type": "modify"
+          }
+        ]
+      }
+    },
+    {
+      "id": "patch-4",
+      "testFile": "tests/dashboard.spec.ts",
+      "line": 12,
+      "originalLocator": "page.locator('.dashboard-card')",
+      "proposedLocator": "page.locator('[role=\"region\"][aria-label=\"Dashboard\"]')",
+      "confidence": 0.65,
+      "safetyPassed": false,
+      "status": "rejected",
+      "explanation": {
+        "reason": "Low confidence: multiple matching elements found",
+        "evidence": {
+          "domMatch": true,
+          "uniqueMatch": false,
+          "semanticMatch": "medium",
+          "matchingElements": 3
+        },
+        "riskAssessment": "high"
+      },
+      "rejectionReason": "Multiple elements match proposed selector. Consider adding more specificity."
+    },
+    {
+      "id": "patch-5",
+      "testFile": "tests/dashboard.spec.ts",
+      "line": 15,
+      "originalLocator": "page.getByText('Welcome Back')",
+      "proposedLocator": "page.getByText('Welcome')",
+      "confidence": 0.58,
+      "safetyPassed": false,
+      "status": "rejected",
+      "explanation": {
+        "reason": "Text change may affect other tests",
+        "evidence": {
+          "domMatch": true,
+          "uniqueMatch": false,
+          "semanticMatch": "low",
+          "affectedTests": 2
+        },
+        "riskAssessment": "high"
+      },
+      "rejectionReason": "Proposed text change may break other tests using similar selectors."
+    }
+  ],
+  "governanceSummary": {
+    "threshold": 0.7,
+    "proposalsAboveThreshold": 3,
+    "proposalsBelowThreshold": 2,
+    "safetyFailures": 2,
+    "auditTrail": [
+      { "stage": "confidence-check", "passed": 3, "failed": 2 },
+      { "stage": "safety-validation", "passed": 3, "failed": 2 },
+      { "stage": "stability-analysis", "passed": 3, "failed": 0 }
+    ]
+  }
+}

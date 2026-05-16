@@ -1,0 +1,2052 @@
+[
+  {
+    "id": "dwf-1778835734807-82pbzk8",
+    "repositoryId": "repo-1",
+    "locator": "#login-btn",
+    "originalSelector": "#login-btn",
+    "proposedSelector": "[data-testid=\"login-button\"]",
+    "failureReason": "Element became stale due to React re-render",
+    "stages": [
+      {
+        "stage": "failure-detected",
+        "enteredAt": 1778835134806,
+        "exitedAt": 1778835194806,
+        "duration": 60000
+      },
+      {
+        "stage": "proposal-generated",
+        "enteredAt": 1778835194806,
+        "exitedAt": 1778835254806,
+        "duration": 60000
+      },
+      {
+        "stage": "governance-evaluated",
+        "enteredAt": 1778835254806,
+        "exitedAt": 1778835314806,
+        "duration": 60000
+      },
+      {
+        "stage": "replay-evidence-shown",
+        "enteredAt": 1778835314806,
+        "exitedAt": 1778835374806,
+        "duration": 60000
+      },
+      {
+        "stage": "mutation-reviewed",
+        "enteredAt": 1778835374806,
+        "exitedAt": 1778835434806,
+        "duration": 60000
+      },
+      {
+        "stage": "mutation-reviewed",
+        "enteredAt": 1778835434806,
+        "exitedAt": 1778835464806,
+        "duration": 30000
+      }
+    ],
+    "currentStage": "mutation-reviewed",
+    "governanceAnalysis": {
+      "passed": false,
+      "rejected": false,
+      "reasons": [
+        "High structural risk",
+        "Chained locator detected"
+      ],
+      "warnings": [
+        "Chained locator may fail on DOM changes",
+        "Computed selector unstable"
+      ],
+      "riskyRecoveryIndicators": [
+        {
+          "indicator": "chained-locator",
+          "severity": "high",
+          "description": "Deep locator chain detected"
+        },
+        {
+          "indicator": "dynamic-class",
+          "severity": "medium",
+          "description": "Class may regenerate"
+        }
+      ],
+      "confidenceScore": 66.57121499236621
+    },
+    "replayEvidence": {
+      "validated": false,
+      "diverged": true,
+      "divergenceType": "selector-mismatch",
+      "comparisonUrl": "/replay/compare/123",
+      "validationScore": 73.9072573290854
+    },
+    "mutationDiff": {
+      "original": "#login-btn",
+      "proposed": "[data-testid=\"login-button\"]",
+      "addedLines": 1,
+      "removedLines": 1,
+      "changedSelectors": 1,
+      "strategy": "data-testid"
+    },
+    "structuralRisk": {
+      "overallRisk": "high",
+      "chainedLocatorRisk": true,
+      "wrapperAbstractionRisk": true,
+      "dynamicSelectorRisk": true,
+      "repeatedSelectorRisk": true,
+      "oversizedPageObjectRisk": true,
+      "asyncFlowRisk": true
+    },
+    "confidenceBreakdown": {
+      "overall": 66.57121499236621,
+      "replay": 65.2337832476076,
+      "uniqueness": 60.54842220934795,
+      "structural": 65.00840380077764,
+      "validation": 67.16290299668643,
+      "runtime": 68.19471298821782
+    },
+    "rollbackMetadata": {
+      "available": true,
+      "backupId": "backup-1778835734807-0",
+      "rollbackCommand": "tg rollback --id=backup-123",
+      "lastValidState": "#login-btn"
+    },
+    "developerDecision": "needs-more-info",
+    "decisionReason": "Better alternative available manually",
+    "reviewedAt": 1778835734807
+  },
+  {
+    "id": "dwf-1778835734807-9jg2w8r",
+    "repositoryId": "repo-2",
+    "locator": ".menu-item:nth-child(2)",
+    "originalSelector": ".menu-item:nth-child(2)",
+    "proposedSelector": "button:has-text(\"Settings\")",
+    "failureReason": "Dynamic class generation changed selector",
+    "stages": [
+      {
+        "stage": "failure-detected",
+        "enteredAt": 1778835134807,
+        "exitedAt": 1778835194807,
+        "duration": 60000
+      },
+      {
+        "stage": "proposal-generated",
+        "enteredAt": 1778835194807,
+        "exitedAt": 1778835254807,
+        "duration": 60000
+      },
+      {
+        "stage": "governance-evaluated",
+        "enteredAt": 1778835254807,
+        "exitedAt": 1778835314807,
+        "duration": 60000
+      },
+      {
+        "stage": "replay-evidence-shown",
+        "enteredAt": 1778835314807,
+        "exitedAt": 1778835374807,
+        "duration": 60000
+      },
+      {
+        "stage": "mutation-reviewed",
+        "enteredAt": 1778835374807,
+        "exitedAt": 1778835434807,
+        "duration": 60000
+      },
+      {
+        "stage": "mutation-reviewed",
+        "enteredAt": 1778835434807,
+        "exitedAt": 1778835464807,
+        "duration": 30000
+      }
+    ],
+    "currentStage": "mutation-reviewed",
+    "governanceAnalysis": {
+      "passed": true,
+      "rejected": false,
+      "reasons": [
+        "Safe mutation",
+        "Low risk"
+      ],
+      "warnings": [],
+      "riskyRecoveryIndicators": [],
+      "confidenceScore": 82.11605991378127
+    },
+    "replayEvidence": {
+      "validated": true,
+      "diverged": false,
+      "divergenceType": null,
+      "comparisonUrl": "/replay/compare/123",
+      "validationScore": 83.83025276668259
+    },
+    "mutationDiff": {
+      "original": ".menu-item:nth-child(2)",
+      "proposed": "button:has-text(\"Settings\")",
+      "addedLines": 1,
+      "removedLines": 1,
+      "changedSelectors": 1,
+      "strategy": "text"
+    },
+    "structuralRisk": {
+      "overallRisk": "low",
+      "chainedLocatorRisk": false,
+      "wrapperAbstractionRisk": false,
+      "dynamicSelectorRisk": false,
+      "repeatedSelectorRisk": false,
+      "oversizedPageObjectRisk": false,
+      "asyncFlowRisk": false
+    },
+    "confidenceBreakdown": {
+      "overall": 82.11605991378127,
+      "replay": 80.12170078592455,
+      "uniqueness": 81.55395221859484,
+      "structural": 72.46785099083499,
+      "validation": 83.30098319483909,
+      "runtime": 84.96430835732866
+    },
+    "rollbackMetadata": {
+      "available": true,
+      "backupId": "backup-1778835734807-1",
+      "rollbackCommand": "tg rollback --id=backup-123",
+      "lastValidState": ".menu-item:nth-child(2)"
+    },
+    "developerDecision": "needs-more-info",
+    "decisionReason": "Clear improvement, safe to apply",
+    "reviewedAt": 1778835734807
+  },
+  {
+    "id": "dwf-1778835734808-2yk780c",
+    "repositoryId": "repo-3",
+    "locator": "div.container > span",
+    "originalSelector": "div.container > span",
+    "proposedSelector": "[class*=\"header\"]",
+    "failureReason": "Nested element structure changed",
+    "stages": [
+      {
+        "stage": "failure-detected",
+        "enteredAt": 1778835134807,
+        "exitedAt": 1778835194807,
+        "duration": 60000
+      },
+      {
+        "stage": "proposal-generated",
+        "enteredAt": 1778835194807,
+        "exitedAt": 1778835254807,
+        "duration": 60000
+      },
+      {
+        "stage": "governance-evaluated",
+        "enteredAt": 1778835254807,
+        "exitedAt": 1778835314807,
+        "duration": 60000
+      },
+      {
+        "stage": "replay-evidence-shown",
+        "enteredAt": 1778835314807,
+        "exitedAt": 1778835374807,
+        "duration": 60000
+      },
+      {
+        "stage": "mutation-reviewed",
+        "enteredAt": 1778835374807,
+        "exitedAt": 1778835434807,
+        "duration": 60000
+      },
+      {
+        "stage": "rolled-back",
+        "enteredAt": 1778835434807,
+        "exitedAt": 1778835464807,
+        "duration": 30000
+      }
+    ],
+    "currentStage": "rolled-back",
+    "governanceAnalysis": {
+      "passed": true,
+      "rejected": false,
+      "reasons": [
+        "Safe mutation",
+        "Low risk"
+      ],
+      "warnings": [],
+      "riskyRecoveryIndicators": [],
+      "confidenceScore": 84.48641865185743
+    },
+    "replayEvidence": {
+      "validated": true,
+      "diverged": false,
+      "divergenceType": null,
+      "comparisonUrl": "/replay/compare/123",
+      "validationScore": 82.90065100797611
+    },
+    "mutationDiff": {
+      "original": "div.container > span",
+      "proposed": "[class*=\"header\"]",
+      "addedLines": 1,
+      "removedLines": 1,
+      "changedSelectors": 1,
+      "strategy": "class-regex"
+    },
+    "structuralRisk": {
+      "overallRisk": "low",
+      "chainedLocatorRisk": false,
+      "wrapperAbstractionRisk": false,
+      "dynamicSelectorRisk": false,
+      "repeatedSelectorRisk": false,
+      "oversizedPageObjectRisk": false,
+      "asyncFlowRisk": false
+    },
+    "confidenceBreakdown": {
+      "overall": 84.48641865185743,
+      "replay": 81.27366039248793,
+      "uniqueness": 80.15180865032633,
+      "structural": 87.6664173686982,
+      "validation": 88.28830946992309,
+      "runtime": 82.21091699432203
+    },
+    "rollbackMetadata": {
+      "available": true,
+      "backupId": "backup-1778835734808-2",
+      "rollbackCommand": "tg rollback --id=backup-123",
+      "lastValidState": "div.container > span"
+    },
+    "developerDecision": "rollback",
+    "decisionReason": "Structural changes too risky",
+    "reviewedAt": 1778835734808
+  },
+  {
+    "id": "dwf-1778835734808-i7wnnl5",
+    "repositoryId": "repo-4",
+    "locator": "a[href=\"/profile\"]",
+    "originalSelector": "a[href=\"/profile\"]",
+    "proposedSelector": "nav >> text=Profile",
+    "failureReason": "SPA routing altered DOM hierarchy",
+    "stages": [
+      {
+        "stage": "failure-detected",
+        "enteredAt": 1778835134808,
+        "exitedAt": 1778835194808,
+        "duration": 60000
+      },
+      {
+        "stage": "proposal-generated",
+        "enteredAt": 1778835194808,
+        "exitedAt": 1778835254808,
+        "duration": 60000
+      },
+      {
+        "stage": "governance-evaluated",
+        "enteredAt": 1778835254808,
+        "exitedAt": 1778835314808,
+        "duration": 60000
+      },
+      {
+        "stage": "replay-evidence-shown",
+        "enteredAt": 1778835314808,
+        "exitedAt": 1778835374808,
+        "duration": 60000
+      },
+      {
+        "stage": "mutation-reviewed",
+        "enteredAt": 1778835374808,
+        "exitedAt": 1778835434808,
+        "duration": 60000
+      },
+      {
+        "stage": "mutation-reviewed",
+        "enteredAt": 1778835434808,
+        "exitedAt": 1778835464808,
+        "duration": 30000
+      }
+    ],
+    "currentStage": "mutation-reviewed",
+    "governanceAnalysis": {
+      "passed": true,
+      "rejected": false,
+      "reasons": [
+        "Safe mutation",
+        "Low risk"
+      ],
+      "warnings": [],
+      "riskyRecoveryIndicators": [],
+      "confidenceScore": 76.49414442242795
+    },
+    "replayEvidence": {
+      "validated": true,
+      "diverged": false,
+      "divergenceType": null,
+      "comparisonUrl": "/replay/compare/123",
+      "validationScore": 80.6899282621242
+    },
+    "mutationDiff": {
+      "original": "a[href=\"/profile\"]",
+      "proposed": "nav >> text=Profile",
+      "addedLines": 1,
+      "removedLines": 1,
+      "changedSelectors": 1,
+      "strategy": "chained"
+    },
+    "structuralRisk": {
+      "overallRisk": "low",
+      "chainedLocatorRisk": true,
+      "wrapperAbstractionRisk": false,
+      "dynamicSelectorRisk": false,
+      "repeatedSelectorRisk": false,
+      "oversizedPageObjectRisk": false,
+      "asyncFlowRisk": false
+    },
+    "confidenceBreakdown": {
+      "overall": 76.49414442242795,
+      "replay": 72.52253860046412,
+      "uniqueness": 70.87750405192072,
+      "structural": 78.47855451288933,
+      "validation": 77.74500984589164,
+      "runtime": 80.88210178164873
+    },
+    "rollbackMetadata": {
+      "available": true,
+      "backupId": "backup-1778835734808-3",
+      "rollbackCommand": "tg rollback --id=backup-123",
+      "lastValidState": "a[href=\"/profile\"]"
+    },
+    "developerDecision": "needs-more-info",
+    "decisionReason": "Unclear if replay is reliable",
+    "reviewedAt": 1778835734808
+  },
+  {
+    "id": "dwf-1778835734808-i0uqoaz",
+    "repositoryId": "repo-5",
+    "locator": "#submit-form button",
+    "originalSelector": "#submit-form button",
+    "proposedSelector": "button[type=\"submit\"]",
+    "failureReason": "Accessibility attributes updated",
+    "stages": [
+      {
+        "stage": "failure-detected",
+        "enteredAt": 1778835134808,
+        "exitedAt": 1778835194808,
+        "duration": 60000
+      },
+      {
+        "stage": "proposal-generated",
+        "enteredAt": 1778835194808,
+        "exitedAt": 1778835254808,
+        "duration": 60000
+      },
+      {
+        "stage": "governance-evaluated",
+        "enteredAt": 1778835254808,
+        "exitedAt": 1778835314808,
+        "duration": 60000
+      },
+      {
+        "stage": "replay-evidence-shown",
+        "enteredAt": 1778835314808,
+        "exitedAt": 1778835374808,
+        "duration": 60000
+      },
+      {
+        "stage": "mutation-reviewed",
+        "enteredAt": 1778835374808,
+        "exitedAt": 1778835434808,
+        "duration": 60000
+      },
+      {
+        "stage": "mutation-reviewed",
+        "enteredAt": 1778835434808,
+        "exitedAt": 1778835464808,
+        "duration": 30000
+      }
+    ],
+    "currentStage": "mutation-reviewed",
+    "governanceAnalysis": {
+      "passed": false,
+      "rejected": true,
+      "reasons": [
+        "High structural risk",
+        "Chained locator detected"
+      ],
+      "warnings": [
+        "Chained locator may fail on DOM changes",
+        "Computed selector unstable"
+      ],
+      "riskyRecoveryIndicators": [
+        {
+          "indicator": "chained-locator",
+          "severity": "high",
+          "description": "Deep locator chain detected"
+        },
+        {
+          "indicator": "dynamic-class",
+          "severity": "medium",
+          "description": "Class may regenerate"
+        }
+      ],
+      "confidenceScore": 55.383250390240406
+    },
+    "replayEvidence": {
+      "validated": true,
+      "diverged": false,
+      "divergenceType": "selector-mismatch",
+      "comparisonUrl": "/replay/compare/123",
+      "validationScore": 76.64213765737263
+    },
+    "mutationDiff": {
+      "original": "#submit-form button",
+      "proposed": "button[type=\"submit\"]",
+      "addedLines": 1,
+      "removedLines": 1,
+      "changedSelectors": 1,
+      "strategy": "type-selector"
+    },
+    "structuralRisk": {
+      "overallRisk": "high",
+      "chainedLocatorRisk": false,
+      "wrapperAbstractionRisk": false,
+      "dynamicSelectorRisk": true,
+      "repeatedSelectorRisk": false,
+      "oversizedPageObjectRisk": false,
+      "asyncFlowRisk": false
+    },
+    "confidenceBreakdown": {
+      "overall": 55.383250390240406,
+      "replay": 51.78456415223366,
+      "uniqueness": 50.42783508637323,
+      "structural": 46.37563277155377,
+      "validation": 53.28290220387316,
+      "runtime": 60.58127197972577
+    },
+    "rollbackMetadata": {
+      "available": true,
+      "backupId": "backup-1778835734808-4",
+      "rollbackCommand": "tg rollback --id=backup-123",
+      "lastValidState": "#submit-form button"
+    },
+    "developerDecision": "needs-more-info",
+    "decisionReason": "Better alternative available manually",
+    "reviewedAt": 1778835734808
+  },
+  {
+    "id": "dwf-1778835734808-tqhwlrb",
+    "repositoryId": "repo-6",
+    "locator": "#login-btn",
+    "originalSelector": "#login-btn",
+    "proposedSelector": "[data-testid=\"login-button\"]",
+    "failureReason": "Element became stale due to React re-render",
+    "stages": [
+      {
+        "stage": "failure-detected",
+        "enteredAt": 1778835134808,
+        "exitedAt": 1778835194808,
+        "duration": 60000
+      },
+      {
+        "stage": "proposal-generated",
+        "enteredAt": 1778835194808,
+        "exitedAt": 1778835254808,
+        "duration": 60000
+      },
+      {
+        "stage": "governance-evaluated",
+        "enteredAt": 1778835254808,
+        "exitedAt": 1778835314808,
+        "duration": 60000
+      },
+      {
+        "stage": "replay-evidence-shown",
+        "enteredAt": 1778835314808,
+        "exitedAt": 1778835374808,
+        "duration": 60000
+      },
+      {
+        "stage": "mutation-reviewed",
+        "enteredAt": 1778835374808,
+        "exitedAt": 1778835434808,
+        "duration": 60000
+      },
+      {
+        "stage": "rolled-back",
+        "enteredAt": 1778835434808,
+        "exitedAt": 1778835464808,
+        "duration": 30000
+      }
+    ],
+    "currentStage": "rolled-back",
+    "governanceAnalysis": {
+      "passed": true,
+      "rejected": false,
+      "reasons": [
+        "Safe mutation",
+        "Low risk"
+      ],
+      "warnings": [],
+      "riskyRecoveryIndicators": [],
+      "confidenceScore": 74.15825217883285
+    },
+    "replayEvidence": {
+      "validated": true,
+      "diverged": false,
+      "divergenceType": null,
+      "comparisonUrl": "/replay/compare/123",
+      "validationScore": 84.860612820298
+    },
+    "mutationDiff": {
+      "original": "#login-btn",
+      "proposed": "[data-testid=\"login-button\"]",
+      "addedLines": 1,
+      "removedLines": 1,
+      "changedSelectors": 1,
+      "strategy": "data-testid"
+    },
+    "structuralRisk": {
+      "overallRisk": "low",
+      "chainedLocatorRisk": false,
+      "wrapperAbstractionRisk": true,
+      "dynamicSelectorRisk": false,
+      "repeatedSelectorRisk": false,
+      "oversizedPageObjectRisk": false,
+      "asyncFlowRisk": false
+    },
+    "confidenceBreakdown": {
+      "overall": 74.15825217883285,
+      "replay": 76.90212849329683,
+      "uniqueness": 74.21535664248157,
+      "structural": 65.62330595739111,
+      "validation": 74.7477142216029,
+      "runtime": 76.35746988508286
+    },
+    "rollbackMetadata": {
+      "available": true,
+      "backupId": "backup-1778835734808-5",
+      "rollbackCommand": "tg rollback --id=backup-123",
+      "lastValidState": "#login-btn"
+    },
+    "developerDecision": "rollback",
+    "decisionReason": "Structural changes too risky",
+    "reviewedAt": 1778835734808
+  },
+  {
+    "id": "dwf-1778835734808-6jdaezl",
+    "repositoryId": "repo-1",
+    "locator": ".menu-item:nth-child(2)",
+    "originalSelector": ".menu-item:nth-child(2)",
+    "proposedSelector": "button:has-text(\"Settings\")",
+    "failureReason": "Dynamic class generation changed selector",
+    "stages": [
+      {
+        "stage": "failure-detected",
+        "enteredAt": 1778835134808,
+        "exitedAt": 1778835194808,
+        "duration": 60000
+      },
+      {
+        "stage": "proposal-generated",
+        "enteredAt": 1778835194808,
+        "exitedAt": 1778835254808,
+        "duration": 60000
+      },
+      {
+        "stage": "governance-evaluated",
+        "enteredAt": 1778835254808,
+        "exitedAt": 1778835314808,
+        "duration": 60000
+      },
+      {
+        "stage": "replay-evidence-shown",
+        "enteredAt": 1778835314808,
+        "exitedAt": 1778835374808,
+        "duration": 60000
+      },
+      {
+        "stage": "mutation-reviewed",
+        "enteredAt": 1778835374808,
+        "exitedAt": 1778835434808,
+        "duration": 60000
+      },
+      {
+        "stage": "approved",
+        "enteredAt": 1778835434808,
+        "exitedAt": 1778835464808,
+        "duration": 30000
+      }
+    ],
+    "currentStage": "approved",
+    "governanceAnalysis": {
+      "passed": true,
+      "rejected": false,
+      "reasons": [
+        "Safe mutation",
+        "Low risk"
+      ],
+      "warnings": [],
+      "riskyRecoveryIndicators": [],
+      "confidenceScore": 88.30620411423709
+    },
+    "replayEvidence": {
+      "validated": true,
+      "diverged": false,
+      "divergenceType": null,
+      "comparisonUrl": "/replay/compare/123",
+      "validationScore": 80.36804871451059
+    },
+    "mutationDiff": {
+      "original": ".menu-item:nth-child(2)",
+      "proposed": "button:has-text(\"Settings\")",
+      "addedLines": 1,
+      "removedLines": 1,
+      "changedSelectors": 1,
+      "strategy": "text"
+    },
+    "structuralRisk": {
+      "overallRisk": "low",
+      "chainedLocatorRisk": true,
+      "wrapperAbstractionRisk": false,
+      "dynamicSelectorRisk": false,
+      "repeatedSelectorRisk": true,
+      "oversizedPageObjectRisk": false,
+      "asyncFlowRisk": false
+    },
+    "confidenceBreakdown": {
+      "overall": 88.30620411423709,
+      "replay": 87.0887736236495,
+      "uniqueness": 90.32074101967414,
+      "structural": 79.47432518542473,
+      "validation": 86.18920243932457,
+      "runtime": 87.72654300924833
+    },
+    "rollbackMetadata": {
+      "available": true,
+      "backupId": "backup-1778835734822-6",
+      "rollbackCommand": "tg rollback --id=backup-123",
+      "lastValidState": ".menu-item:nth-child(2)"
+    },
+    "developerDecision": "approve",
+    "decisionReason": "Rollback needed - caused test failure",
+    "reviewedAt": 1778835734822
+  },
+  {
+    "id": "dwf-1778835734822-i5f28bs",
+    "repositoryId": "repo-2",
+    "locator": "div.container > span",
+    "originalSelector": "div.container > span",
+    "proposedSelector": "[class*=\"header\"]",
+    "failureReason": "Nested element structure changed",
+    "stages": [
+      {
+        "stage": "failure-detected",
+        "enteredAt": 1778835134822,
+        "exitedAt": 1778835194822,
+        "duration": 60000
+      },
+      {
+        "stage": "proposal-generated",
+        "enteredAt": 1778835194822,
+        "exitedAt": 1778835254822,
+        "duration": 60000
+      },
+      {
+        "stage": "governance-evaluated",
+        "enteredAt": 1778835254822,
+        "exitedAt": 1778835314822,
+        "duration": 60000
+      },
+      {
+        "stage": "replay-evidence-shown",
+        "enteredAt": 1778835314822,
+        "exitedAt": 1778835374822,
+        "duration": 60000
+      },
+      {
+        "stage": "mutation-reviewed",
+        "enteredAt": 1778835374822,
+        "exitedAt": 1778835434822,
+        "duration": 60000
+      },
+      {
+        "stage": "rejected",
+        "enteredAt": 1778835434822,
+        "exitedAt": 1778835464822,
+        "duration": 30000
+      }
+    ],
+    "currentStage": "rejected",
+    "governanceAnalysis": {
+      "passed": true,
+      "rejected": false,
+      "reasons": [
+        "Safe mutation",
+        "Low risk"
+      ],
+      "warnings": [],
+      "riskyRecoveryIndicators": [],
+      "confidenceScore": 79.05104149244761
+    },
+    "replayEvidence": {
+      "validated": true,
+      "diverged": false,
+      "divergenceType": null,
+      "comparisonUrl": "/replay/compare/123",
+      "validationScore": 81.1735735563512
+    },
+    "mutationDiff": {
+      "original": "div.container > span",
+      "proposed": "[class*=\"header\"]",
+      "addedLines": 1,
+      "removedLines": 1,
+      "changedSelectors": 1,
+      "strategy": "class-regex"
+    },
+    "structuralRisk": {
+      "overallRisk": "low",
+      "chainedLocatorRisk": false,
+      "wrapperAbstractionRisk": false,
+      "dynamicSelectorRisk": false,
+      "repeatedSelectorRisk": false,
+      "oversizedPageObjectRisk": true,
+      "asyncFlowRisk": false
+    },
+    "confidenceBreakdown": {
+      "overall": 79.05104149244761,
+      "replay": 77.30422339686423,
+      "uniqueness": 82.84211062438202,
+      "structural": 74.10068619356655,
+      "validation": 81.52930154357837,
+      "runtime": 67.1454358725146
+    },
+    "rollbackMetadata": {
+      "available": true,
+      "backupId": "backup-1778835734822-7",
+      "rollbackCommand": "tg rollback --id=backup-123",
+      "lastValidState": "div.container > span"
+    },
+    "developerDecision": "reject",
+    "decisionReason": "Structural changes too risky",
+    "reviewedAt": 1778835734822
+  },
+  {
+    "id": "dwf-1778835734822-idsmjay",
+    "repositoryId": "repo-3",
+    "locator": "a[href=\"/profile\"]",
+    "originalSelector": "a[href=\"/profile\"]",
+    "proposedSelector": "nav >> text=Profile",
+    "failureReason": "SPA routing altered DOM hierarchy",
+    "stages": [
+      {
+        "stage": "failure-detected",
+        "enteredAt": 1778835134822,
+        "exitedAt": 1778835194822,
+        "duration": 60000
+      },
+      {
+        "stage": "proposal-generated",
+        "enteredAt": 1778835194822,
+        "exitedAt": 1778835254822,
+        "duration": 60000
+      },
+      {
+        "stage": "governance-evaluated",
+        "enteredAt": 1778835254822,
+        "exitedAt": 1778835314822,
+        "duration": 60000
+      },
+      {
+        "stage": "replay-evidence-shown",
+        "enteredAt": 1778835314822,
+        "exitedAt": 1778835374822,
+        "duration": 60000
+      },
+      {
+        "stage": "mutation-reviewed",
+        "enteredAt": 1778835374822,
+        "exitedAt": 1778835434822,
+        "duration": 60000
+      },
+      {
+        "stage": "rejected",
+        "enteredAt": 1778835434822,
+        "exitedAt": 1778835464822,
+        "duration": 30000
+      }
+    ],
+    "currentStage": "rejected",
+    "governanceAnalysis": {
+      "passed": false,
+      "rejected": true,
+      "reasons": [
+        "High structural risk",
+        "Chained locator detected"
+      ],
+      "warnings": [
+        "Chained locator may fail on DOM changes",
+        "Computed selector unstable"
+      ],
+      "riskyRecoveryIndicators": [
+        {
+          "indicator": "chained-locator",
+          "severity": "high",
+          "description": "Deep locator chain detected"
+        },
+        {
+          "indicator": "dynamic-class",
+          "severity": "medium",
+          "description": "Class may regenerate"
+        }
+      ],
+      "confidenceScore": 58.73661422968735
+    },
+    "replayEvidence": {
+      "validated": true,
+      "diverged": true,
+      "divergenceType": "selector-mismatch",
+      "comparisonUrl": "/replay/compare/123",
+      "validationScore": 72.24322210366532
+    },
+    "mutationDiff": {
+      "original": "a[href=\"/profile\"]",
+      "proposed": "nav >> text=Profile",
+      "addedLines": 1,
+      "removedLines": 1,
+      "changedSelectors": 1,
+      "strategy": "chained"
+    },
+    "structuralRisk": {
+      "overallRisk": "high",
+      "chainedLocatorRisk": false,
+      "wrapperAbstractionRisk": false,
+      "dynamicSelectorRisk": true,
+      "repeatedSelectorRisk": false,
+      "oversizedPageObjectRisk": false,
+      "asyncFlowRisk": true
+    },
+    "confidenceBreakdown": {
+      "overall": 58.73661422968735,
+      "replay": 59.261829370542436,
+      "uniqueness": 58.505752739877096,
+      "structural": 49.78763823119293,
+      "validation": 55.861122817935204,
+      "runtime": 56.906193639129604
+    },
+    "rollbackMetadata": {
+      "available": true,
+      "backupId": "backup-1778835734822-8",
+      "rollbackCommand": "tg rollback --id=backup-123",
+      "lastValidState": "a[href=\"/profile\"]"
+    },
+    "developerDecision": "reject",
+    "decisionReason": "Unclear if replay is reliable",
+    "reviewedAt": 1778835734822
+  },
+  {
+    "id": "dwf-1778835734822-a2inkm1",
+    "repositoryId": "repo-4",
+    "locator": "#submit-form button",
+    "originalSelector": "#submit-form button",
+    "proposedSelector": "button[type=\"submit\"]",
+    "failureReason": "Accessibility attributes updated",
+    "stages": [
+      {
+        "stage": "failure-detected",
+        "enteredAt": 1778835134822,
+        "exitedAt": 1778835194822,
+        "duration": 60000
+      },
+      {
+        "stage": "proposal-generated",
+        "enteredAt": 1778835194822,
+        "exitedAt": 1778835254822,
+        "duration": 60000
+      },
+      {
+        "stage": "governance-evaluated",
+        "enteredAt": 1778835254822,
+        "exitedAt": 1778835314822,
+        "duration": 60000
+      },
+      {
+        "stage": "replay-evidence-shown",
+        "enteredAt": 1778835314822,
+        "exitedAt": 1778835374822,
+        "duration": 60000
+      },
+      {
+        "stage": "mutation-reviewed",
+        "enteredAt": 1778835374822,
+        "exitedAt": 1778835434822,
+        "duration": 60000
+      },
+      {
+        "stage": "approved",
+        "enteredAt": 1778835434822,
+        "exitedAt": 1778835464822,
+        "duration": 30000
+      }
+    ],
+    "currentStage": "approved",
+    "governanceAnalysis": {
+      "passed": true,
+      "rejected": false,
+      "reasons": [
+        "Safe mutation",
+        "Low risk"
+      ],
+      "warnings": [],
+      "riskyRecoveryIndicators": [],
+      "confidenceScore": 72.19519307091588
+    },
+    "replayEvidence": {
+      "validated": true,
+      "diverged": false,
+      "divergenceType": null,
+      "comparisonUrl": "/replay/compare/123",
+      "validationScore": 84.11871454060362
+    },
+    "mutationDiff": {
+      "original": "#submit-form button",
+      "proposed": "button[type=\"submit\"]",
+      "addedLines": 1,
+      "removedLines": 1,
+      "changedSelectors": 1,
+      "strategy": "type-selector"
+    },
+    "structuralRisk": {
+      "overallRisk": "low",
+      "chainedLocatorRisk": true,
+      "wrapperAbstractionRisk": false,
+      "dynamicSelectorRisk": false,
+      "repeatedSelectorRisk": false,
+      "oversizedPageObjectRisk": false,
+      "asyncFlowRisk": false
+    },
+    "confidenceBreakdown": {
+      "overall": 72.19519307091588,
+      "replay": 69.7474356504538,
+      "uniqueness": 69.27640333108059,
+      "structural": 72.73137968368053,
+      "validation": 73.42441569970991,
+      "runtime": 64.24387396273309
+    },
+    "rollbackMetadata": {
+      "available": true,
+      "backupId": "backup-1778835734822-9",
+      "rollbackCommand": "tg rollback --id=backup-123",
+      "lastValidState": "#submit-form button"
+    },
+    "developerDecision": "approve",
+    "decisionReason": "Unclear if replay is reliable",
+    "reviewedAt": 1778835734822
+  },
+  {
+    "id": "dwf-1778835734822-hr09vu5",
+    "repositoryId": "repo-5",
+    "locator": "#login-btn",
+    "originalSelector": "#login-btn",
+    "proposedSelector": "[data-testid=\"login-button\"]",
+    "failureReason": "Element became stale due to React re-render",
+    "stages": [
+      {
+        "stage": "failure-detected",
+        "enteredAt": 1778835134822,
+        "exitedAt": 1778835194822,
+        "duration": 60000
+      },
+      {
+        "stage": "proposal-generated",
+        "enteredAt": 1778835194822,
+        "exitedAt": 1778835254822,
+        "duration": 60000
+      },
+      {
+        "stage": "governance-evaluated",
+        "enteredAt": 1778835254822,
+        "exitedAt": 1778835314822,
+        "duration": 60000
+      },
+      {
+        "stage": "replay-evidence-shown",
+        "enteredAt": 1778835314822,
+        "exitedAt": 1778835374822,
+        "duration": 60000
+      },
+      {
+        "stage": "mutation-reviewed",
+        "enteredAt": 1778835374822,
+        "exitedAt": 1778835434822,
+        "duration": 60000
+      },
+      {
+        "stage": "rolled-back",
+        "enteredAt": 1778835434822,
+        "exitedAt": 1778835464822,
+        "duration": 30000
+      }
+    ],
+    "currentStage": "rolled-back",
+    "governanceAnalysis": {
+      "passed": true,
+      "rejected": false,
+      "reasons": [
+        "Safe mutation",
+        "Low risk"
+      ],
+      "warnings": [],
+      "riskyRecoveryIndicators": [],
+      "confidenceScore": 82.54200650929708
+    },
+    "replayEvidence": {
+      "validated": true,
+      "diverged": false,
+      "divergenceType": null,
+      "comparisonUrl": "/replay/compare/123",
+      "validationScore": 89.58253411502153
+    },
+    "mutationDiff": {
+      "original": "#login-btn",
+      "proposed": "[data-testid=\"login-button\"]",
+      "addedLines": 1,
+      "removedLines": 1,
+      "changedSelectors": 1,
+      "strategy": "data-testid"
+    },
+    "structuralRisk": {
+      "overallRisk": "low",
+      "chainedLocatorRisk": false,
+      "wrapperAbstractionRisk": true,
+      "dynamicSelectorRisk": false,
+      "repeatedSelectorRisk": false,
+      "oversizedPageObjectRisk": false,
+      "asyncFlowRisk": false
+    },
+    "confidenceBreakdown": {
+      "overall": 82.54200650929708,
+      "replay": 79.24264022806825,
+      "uniqueness": 75.86699570304677,
+      "structural": 81.08032654444018,
+      "validation": 86.8457435695254,
+      "runtime": 70.75155458293871
+    },
+    "rollbackMetadata": {
+      "available": true,
+      "backupId": "backup-1778835734822-10",
+      "rollbackCommand": "tg rollback --id=backup-123",
+      "lastValidState": "#login-btn"
+    },
+    "developerDecision": "rollback",
+    "decisionReason": "Clear improvement, safe to apply",
+    "reviewedAt": 1778835734822
+  },
+  {
+    "id": "dwf-1778835734822-9ng5j4a",
+    "repositoryId": "repo-6",
+    "locator": ".menu-item:nth-child(2)",
+    "originalSelector": ".menu-item:nth-child(2)",
+    "proposedSelector": "button:has-text(\"Settings\")",
+    "failureReason": "Dynamic class generation changed selector",
+    "stages": [
+      {
+        "stage": "failure-detected",
+        "enteredAt": 1778835134822,
+        "exitedAt": 1778835194822,
+        "duration": 60000
+      },
+      {
+        "stage": "proposal-generated",
+        "enteredAt": 1778835194822,
+        "exitedAt": 1778835254822,
+        "duration": 60000
+      },
+      {
+        "stage": "governance-evaluated",
+        "enteredAt": 1778835254822,
+        "exitedAt": 1778835314822,
+        "duration": 60000
+      },
+      {
+        "stage": "replay-evidence-shown",
+        "enteredAt": 1778835314822,
+        "exitedAt": 1778835374822,
+        "duration": 60000
+      },
+      {
+        "stage": "mutation-reviewed",
+        "enteredAt": 1778835374822,
+        "exitedAt": 1778835434822,
+        "duration": 60000
+      },
+      {
+        "stage": "approved",
+        "enteredAt": 1778835434822,
+        "exitedAt": 1778835464822,
+        "duration": 30000
+      }
+    ],
+    "currentStage": "approved",
+    "governanceAnalysis": {
+      "passed": true,
+      "rejected": false,
+      "reasons": [
+        "Safe mutation",
+        "Low risk"
+      ],
+      "warnings": [],
+      "riskyRecoveryIndicators": [],
+      "confidenceScore": 70.8956483557493
+    },
+    "replayEvidence": {
+      "validated": true,
+      "diverged": false,
+      "divergenceType": null,
+      "comparisonUrl": "/replay/compare/123",
+      "validationScore": 94.09023716822264
+    },
+    "mutationDiff": {
+      "original": ".menu-item:nth-child(2)",
+      "proposed": "button:has-text(\"Settings\")",
+      "addedLines": 1,
+      "removedLines": 1,
+      "changedSelectors": 1,
+      "strategy": "text"
+    },
+    "structuralRisk": {
+      "overallRisk": "low",
+      "chainedLocatorRisk": false,
+      "wrapperAbstractionRisk": false,
+      "dynamicSelectorRisk": false,
+      "repeatedSelectorRisk": false,
+      "oversizedPageObjectRisk": false,
+      "asyncFlowRisk": false
+    },
+    "confidenceBreakdown": {
+      "overall": 70.8956483557493,
+      "replay": 68.03471184305424,
+      "uniqueness": 66.97994539587177,
+      "structural": 67.3001895791718,
+      "validation": 70.68677593033009,
+      "runtime": 59.090196945528135
+    },
+    "rollbackMetadata": {
+      "available": true,
+      "backupId": "backup-1778835734822-11",
+      "rollbackCommand": "tg rollback --id=backup-123",
+      "lastValidState": ".menu-item:nth-child(2)"
+    },
+    "developerDecision": "approve",
+    "decisionReason": "Clear improvement, safe to apply",
+    "reviewedAt": 1778835734822
+  },
+  {
+    "id": "dwf-1778835734822-05qh782",
+    "repositoryId": "repo-1",
+    "locator": "div.container > span",
+    "originalSelector": "div.container > span",
+    "proposedSelector": "[class*=\"header\"]",
+    "failureReason": "Nested element structure changed",
+    "stages": [
+      {
+        "stage": "failure-detected",
+        "enteredAt": 1778835134822,
+        "exitedAt": 1778835194822,
+        "duration": 60000
+      },
+      {
+        "stage": "proposal-generated",
+        "enteredAt": 1778835194822,
+        "exitedAt": 1778835254822,
+        "duration": 60000
+      },
+      {
+        "stage": "governance-evaluated",
+        "enteredAt": 1778835254822,
+        "exitedAt": 1778835314822,
+        "duration": 60000
+      },
+      {
+        "stage": "replay-evidence-shown",
+        "enteredAt": 1778835314822,
+        "exitedAt": 1778835374822,
+        "duration": 60000
+      },
+      {
+        "stage": "mutation-reviewed",
+        "enteredAt": 1778835374822,
+        "exitedAt": 1778835434822,
+        "duration": 60000
+      },
+      {
+        "stage": "rejected",
+        "enteredAt": 1778835434822,
+        "exitedAt": 1778835464822,
+        "duration": 30000
+      }
+    ],
+    "currentStage": "rejected",
+    "governanceAnalysis": {
+      "passed": false,
+      "rejected": true,
+      "reasons": [
+        "High structural risk",
+        "Chained locator detected"
+      ],
+      "warnings": [
+        "Chained locator may fail on DOM changes",
+        "Computed selector unstable"
+      ],
+      "riskyRecoveryIndicators": [
+        {
+          "indicator": "chained-locator",
+          "severity": "high",
+          "description": "Deep locator chain detected"
+        },
+        {
+          "indicator": "dynamic-class",
+          "severity": "medium",
+          "description": "Class may regenerate"
+        }
+      ],
+      "confidenceScore": 62.066201339148115
+    },
+    "replayEvidence": {
+      "validated": true,
+      "diverged": false,
+      "divergenceType": "selector-mismatch",
+      "comparisonUrl": "/replay/compare/123",
+      "validationScore": 67.65427076455337
+    },
+    "mutationDiff": {
+      "original": "div.container > span",
+      "proposed": "[class*=\"header\"]",
+      "addedLines": 1,
+      "removedLines": 1,
+      "changedSelectors": 1,
+      "strategy": "class-regex"
+    },
+    "structuralRisk": {
+      "overallRisk": "high",
+      "chainedLocatorRisk": true,
+      "wrapperAbstractionRisk": false,
+      "dynamicSelectorRisk": true,
+      "repeatedSelectorRisk": true,
+      "oversizedPageObjectRisk": false,
+      "asyncFlowRisk": false
+    },
+    "confidenceBreakdown": {
+      "overall": 62.066201339148115,
+      "replay": 57.65383356384975,
+      "uniqueness": 65.8070653731835,
+      "structural": 60.3949046504669,
+      "validation": 61.495713578715495,
+      "runtime": 64.96801188474626
+    },
+    "rollbackMetadata": {
+      "available": true,
+      "backupId": "backup-1778835734822-12",
+      "rollbackCommand": "tg rollback --id=backup-123",
+      "lastValidState": "div.container > span"
+    },
+    "developerDecision": "reject",
+    "decisionReason": "Unclear if replay is reliable",
+    "reviewedAt": 1778835734822
+  },
+  {
+    "id": "dwf-1778835734822-kll5vlw",
+    "repositoryId": "repo-2",
+    "locator": "a[href=\"/profile\"]",
+    "originalSelector": "a[href=\"/profile\"]",
+    "proposedSelector": "nav >> text=Profile",
+    "failureReason": "SPA routing altered DOM hierarchy",
+    "stages": [
+      {
+        "stage": "failure-detected",
+        "enteredAt": 1778835134822,
+        "exitedAt": 1778835194822,
+        "duration": 60000
+      },
+      {
+        "stage": "proposal-generated",
+        "enteredAt": 1778835194822,
+        "exitedAt": 1778835254822,
+        "duration": 60000
+      },
+      {
+        "stage": "governance-evaluated",
+        "enteredAt": 1778835254822,
+        "exitedAt": 1778835314822,
+        "duration": 60000
+      },
+      {
+        "stage": "replay-evidence-shown",
+        "enteredAt": 1778835314822,
+        "exitedAt": 1778835374822,
+        "duration": 60000
+      },
+      {
+        "stage": "mutation-reviewed",
+        "enteredAt": 1778835374822,
+        "exitedAt": 1778835434822,
+        "duration": 60000
+      },
+      {
+        "stage": "mutation-reviewed",
+        "enteredAt": 1778835434822,
+        "exitedAt": 1778835464822,
+        "duration": 30000
+      }
+    ],
+    "currentStage": "mutation-reviewed",
+    "governanceAnalysis": {
+      "passed": true,
+      "rejected": false,
+      "reasons": [
+        "Safe mutation",
+        "Low risk"
+      ],
+      "warnings": [],
+      "riskyRecoveryIndicators": [],
+      "confidenceScore": 76.1065040292085
+    },
+    "replayEvidence": {
+      "validated": true,
+      "diverged": false,
+      "divergenceType": null,
+      "comparisonUrl": "/replay/compare/123",
+      "validationScore": 92.34489928217819
+    },
+    "mutationDiff": {
+      "original": "a[href=\"/profile\"]",
+      "proposed": "nav >> text=Profile",
+      "addedLines": 1,
+      "removedLines": 1,
+      "changedSelectors": 1,
+      "strategy": "chained"
+    },
+    "structuralRisk": {
+      "overallRisk": "low",
+      "chainedLocatorRisk": false,
+      "wrapperAbstractionRisk": false,
+      "dynamicSelectorRisk": false,
+      "repeatedSelectorRisk": false,
+      "oversizedPageObjectRisk": false,
+      "asyncFlowRisk": false
+    },
+    "confidenceBreakdown": {
+      "overall": 76.1065040292085,
+      "replay": 75.77267774646205,
+      "uniqueness": 68.10819868140126,
+      "structural": 80.59350920522297,
+      "validation": 78.02179430476104,
+      "runtime": 75.3130521516622
+    },
+    "rollbackMetadata": {
+      "available": true,
+      "backupId": "backup-1778835734822-13",
+      "rollbackCommand": "tg rollback --id=backup-123",
+      "lastValidState": "a[href=\"/profile\"]"
+    },
+    "developerDecision": "needs-more-info",
+    "decisionReason": "Confidence too low, needs investigation",
+    "reviewedAt": 1778835734822
+  },
+  {
+    "id": "dwf-1778835734822-4cmy4hg",
+    "repositoryId": "repo-3",
+    "locator": "#submit-form button",
+    "originalSelector": "#submit-form button",
+    "proposedSelector": "button[type=\"submit\"]",
+    "failureReason": "Accessibility attributes updated",
+    "stages": [
+      {
+        "stage": "failure-detected",
+        "enteredAt": 1778835134822,
+        "exitedAt": 1778835194822,
+        "duration": 60000
+      },
+      {
+        "stage": "proposal-generated",
+        "enteredAt": 1778835194822,
+        "exitedAt": 1778835254822,
+        "duration": 60000
+      },
+      {
+        "stage": "governance-evaluated",
+        "enteredAt": 1778835254822,
+        "exitedAt": 1778835314822,
+        "duration": 60000
+      },
+      {
+        "stage": "replay-evidence-shown",
+        "enteredAt": 1778835314822,
+        "exitedAt": 1778835374822,
+        "duration": 60000
+      },
+      {
+        "stage": "mutation-reviewed",
+        "enteredAt": 1778835374822,
+        "exitedAt": 1778835434822,
+        "duration": 60000
+      },
+      {
+        "stage": "mutation-reviewed",
+        "enteredAt": 1778835434822,
+        "exitedAt": 1778835464822,
+        "duration": 30000
+      }
+    ],
+    "currentStage": "mutation-reviewed",
+    "governanceAnalysis": {
+      "passed": true,
+      "rejected": false,
+      "reasons": [
+        "Safe mutation",
+        "Low risk"
+      ],
+      "warnings": [],
+      "riskyRecoveryIndicators": [],
+      "confidenceScore": 75.16377185350488
+    },
+    "replayEvidence": {
+      "validated": true,
+      "diverged": false,
+      "divergenceType": null,
+      "comparisonUrl": "/replay/compare/123",
+      "validationScore": 91.41750684614192
+    },
+    "mutationDiff": {
+      "original": "#submit-form button",
+      "proposed": "button[type=\"submit\"]",
+      "addedLines": 1,
+      "removedLines": 1,
+      "changedSelectors": 1,
+      "strategy": "type-selector"
+    },
+    "structuralRisk": {
+      "overallRisk": "low",
+      "chainedLocatorRisk": false,
+      "wrapperAbstractionRisk": false,
+      "dynamicSelectorRisk": false,
+      "repeatedSelectorRisk": false,
+      "oversizedPageObjectRisk": true,
+      "asyncFlowRisk": false
+    },
+    "confidenceBreakdown": {
+      "overall": 75.16377185350488,
+      "replay": 71.01920554201318,
+      "uniqueness": 72.94846224291874,
+      "structural": 75.2902888380358,
+      "validation": 79.75142896783655,
+      "runtime": 71.51167353847002
+    },
+    "rollbackMetadata": {
+      "available": true,
+      "backupId": "backup-1778835734822-14",
+      "rollbackCommand": "tg rollback --id=backup-123",
+      "lastValidState": "#submit-form button"
+    },
+    "developerDecision": "needs-more-info",
+    "decisionReason": "Confidence too low, needs investigation",
+    "reviewedAt": 1778835734822
+  },
+  {
+    "id": "dwf-1778835734822-q9vujm3",
+    "repositoryId": "repo-4",
+    "locator": "#login-btn",
+    "originalSelector": "#login-btn",
+    "proposedSelector": "[data-testid=\"login-button\"]",
+    "failureReason": "Element became stale due to React re-render",
+    "stages": [
+      {
+        "stage": "failure-detected",
+        "enteredAt": 1778835134822,
+        "exitedAt": 1778835194822,
+        "duration": 60000
+      },
+      {
+        "stage": "proposal-generated",
+        "enteredAt": 1778835194822,
+        "exitedAt": 1778835254822,
+        "duration": 60000
+      },
+      {
+        "stage": "governance-evaluated",
+        "enteredAt": 1778835254822,
+        "exitedAt": 1778835314822,
+        "duration": 60000
+      },
+      {
+        "stage": "replay-evidence-shown",
+        "enteredAt": 1778835314822,
+        "exitedAt": 1778835374822,
+        "duration": 60000
+      },
+      {
+        "stage": "mutation-reviewed",
+        "enteredAt": 1778835374822,
+        "exitedAt": 1778835434822,
+        "duration": 60000
+      },
+      {
+        "stage": "rejected",
+        "enteredAt": 1778835434822,
+        "exitedAt": 1778835464822,
+        "duration": 30000
+      }
+    ],
+    "currentStage": "rejected",
+    "governanceAnalysis": {
+      "passed": true,
+      "rejected": false,
+      "reasons": [
+        "Safe mutation",
+        "Low risk"
+      ],
+      "warnings": [],
+      "riskyRecoveryIndicators": [],
+      "confidenceScore": 75.34125906335386
+    },
+    "replayEvidence": {
+      "validated": true,
+      "diverged": false,
+      "divergenceType": null,
+      "comparisonUrl": "/replay/compare/123",
+      "validationScore": 86.77941122950665
+    },
+    "mutationDiff": {
+      "original": "#login-btn",
+      "proposed": "[data-testid=\"login-button\"]",
+      "addedLines": 1,
+      "removedLines": 1,
+      "changedSelectors": 1,
+      "strategy": "data-testid"
+    },
+    "structuralRisk": {
+      "overallRisk": "low",
+      "chainedLocatorRisk": true,
+      "wrapperAbstractionRisk": true,
+      "dynamicSelectorRisk": false,
+      "repeatedSelectorRisk": false,
+      "oversizedPageObjectRisk": false,
+      "asyncFlowRisk": false
+    },
+    "confidenceBreakdown": {
+      "overall": 75.34125906335386,
+      "replay": 79.97308504672492,
+      "uniqueness": 79.21331478983421,
+      "structural": 68.09707530369352,
+      "validation": 72.6014765888664,
+      "runtime": 79.19182639665542
+    },
+    "rollbackMetadata": {
+      "available": true,
+      "backupId": "backup-1778835734822-15",
+      "rollbackCommand": "tg rollback --id=backup-123",
+      "lastValidState": "#login-btn"
+    },
+    "developerDecision": "reject",
+    "decisionReason": "Rollback needed - caused test failure",
+    "reviewedAt": 1778835734822
+  },
+  {
+    "id": "dwf-1778835734822-qcjjf0b",
+    "repositoryId": "repo-5",
+    "locator": ".menu-item:nth-child(2)",
+    "originalSelector": ".menu-item:nth-child(2)",
+    "proposedSelector": "button:has-text(\"Settings\")",
+    "failureReason": "Dynamic class generation changed selector",
+    "stages": [
+      {
+        "stage": "failure-detected",
+        "enteredAt": 1778835134822,
+        "exitedAt": 1778835194822,
+        "duration": 60000
+      },
+      {
+        "stage": "proposal-generated",
+        "enteredAt": 1778835194822,
+        "exitedAt": 1778835254822,
+        "duration": 60000
+      },
+      {
+        "stage": "governance-evaluated",
+        "enteredAt": 1778835254822,
+        "exitedAt": 1778835314822,
+        "duration": 60000
+      },
+      {
+        "stage": "replay-evidence-shown",
+        "enteredAt": 1778835314822,
+        "exitedAt": 1778835374822,
+        "duration": 60000
+      },
+      {
+        "stage": "mutation-reviewed",
+        "enteredAt": 1778835374822,
+        "exitedAt": 1778835434822,
+        "duration": 60000
+      },
+      {
+        "stage": "approved",
+        "enteredAt": 1778835434822,
+        "exitedAt": 1778835464822,
+        "duration": 30000
+      }
+    ],
+    "currentStage": "approved",
+    "governanceAnalysis": {
+      "passed": false,
+      "rejected": true,
+      "reasons": [
+        "High structural risk",
+        "Chained locator detected"
+      ],
+      "warnings": [
+        "Chained locator may fail on DOM changes",
+        "Computed selector unstable"
+      ],
+      "riskyRecoveryIndicators": [
+        {
+          "indicator": "chained-locator",
+          "severity": "high",
+          "description": "Deep locator chain detected"
+        },
+        {
+          "indicator": "dynamic-class",
+          "severity": "medium",
+          "description": "Class may regenerate"
+        }
+      ],
+      "confidenceScore": 55.40628629082033
+    },
+    "replayEvidence": {
+      "validated": false,
+      "diverged": true,
+      "divergenceType": "selector-mismatch",
+      "comparisonUrl": "/replay/compare/123",
+      "validationScore": 76.37948137940988
+    },
+    "mutationDiff": {
+      "original": ".menu-item:nth-child(2)",
+      "proposed": "button:has-text(\"Settings\")",
+      "addedLines": 1,
+      "removedLines": 1,
+      "changedSelectors": 1,
+      "strategy": "text"
+    },
+    "structuralRisk": {
+      "overallRisk": "high",
+      "chainedLocatorRisk": false,
+      "wrapperAbstractionRisk": false,
+      "dynamicSelectorRisk": true,
+      "repeatedSelectorRisk": false,
+      "oversizedPageObjectRisk": false,
+      "asyncFlowRisk": true
+    },
+    "confidenceBreakdown": {
+      "overall": 55.40628629082033,
+      "replay": 59.4225400066524,
+      "uniqueness": 51.960934814918026,
+      "structural": 57.31881391094936,
+      "validation": 58.501673188643984,
+      "runtime": 46.65841354158912
+    },
+    "rollbackMetadata": {
+      "available": true,
+      "backupId": "backup-1778835734822-16",
+      "rollbackCommand": "tg rollback --id=backup-123",
+      "lastValidState": ".menu-item:nth-child(2)"
+    },
+    "developerDecision": "approve",
+    "decisionReason": "Clear improvement, safe to apply",
+    "reviewedAt": 1778835734822
+  },
+  {
+    "id": "dwf-1778835734822-jblypwh",
+    "repositoryId": "repo-6",
+    "locator": "div.container > span",
+    "originalSelector": "div.container > span",
+    "proposedSelector": "[class*=\"header\"]",
+    "failureReason": "Nested element structure changed",
+    "stages": [
+      {
+        "stage": "failure-detected",
+        "enteredAt": 1778835134822,
+        "exitedAt": 1778835194822,
+        "duration": 60000
+      },
+      {
+        "stage": "proposal-generated",
+        "enteredAt": 1778835194822,
+        "exitedAt": 1778835254822,
+        "duration": 60000
+      },
+      {
+        "stage": "governance-evaluated",
+        "enteredAt": 1778835254822,
+        "exitedAt": 1778835314822,
+        "duration": 60000
+      },
+      {
+        "stage": "replay-evidence-shown",
+        "enteredAt": 1778835314822,
+        "exitedAt": 1778835374822,
+        "duration": 60000
+      },
+      {
+        "stage": "mutation-reviewed",
+        "enteredAt": 1778835374822,
+        "exitedAt": 1778835434822,
+        "duration": 60000
+      },
+      {
+        "stage": "rejected",
+        "enteredAt": 1778835434822,
+        "exitedAt": 1778835464822,
+        "duration": 30000
+      }
+    ],
+    "currentStage": "rejected",
+    "governanceAnalysis": {
+      "passed": true,
+      "rejected": false,
+      "reasons": [
+        "Safe mutation",
+        "Low risk"
+      ],
+      "warnings": [],
+      "riskyRecoveryIndicators": [],
+      "confidenceScore": 76.5036134707775
+    },
+    "replayEvidence": {
+      "validated": true,
+      "diverged": false,
+      "divergenceType": null,
+      "comparisonUrl": "/replay/compare/123",
+      "validationScore": 87.16671519044803
+    },
+    "mutationDiff": {
+      "original": "div.container > span",
+      "proposed": "[class*=\"header\"]",
+      "addedLines": 1,
+      "removedLines": 1,
+      "changedSelectors": 1,
+      "strategy": "class-regex"
+    },
+    "structuralRisk": {
+      "overallRisk": "low",
+      "chainedLocatorRisk": false,
+      "wrapperAbstractionRisk": false,
+      "dynamicSelectorRisk": false,
+      "repeatedSelectorRisk": false,
+      "oversizedPageObjectRisk": false,
+      "asyncFlowRisk": false
+    },
+    "confidenceBreakdown": {
+      "overall": 76.5036134707775,
+      "replay": 80.73777976186022,
+      "uniqueness": 72.2331483597662,
+      "structural": 75.39961958474238,
+      "validation": 77.10022613681508,
+      "runtime": 68.49606967864707
+    },
+    "rollbackMetadata": {
+      "available": true,
+      "backupId": "backup-1778835734822-17",
+      "rollbackCommand": "tg rollback --id=backup-123",
+      "lastValidState": "div.container > span"
+    },
+    "developerDecision": "reject",
+    "decisionReason": "Clear improvement, safe to apply",
+    "reviewedAt": 1778835734822
+  },
+  {
+    "id": "dwf-1778835734822-pzh5y88",
+    "repositoryId": "repo-1",
+    "locator": "a[href=\"/profile\"]",
+    "originalSelector": "a[href=\"/profile\"]",
+    "proposedSelector": "nav >> text=Profile",
+    "failureReason": "SPA routing altered DOM hierarchy",
+    "stages": [
+      {
+        "stage": "failure-detected",
+        "enteredAt": 1778835134822,
+        "exitedAt": 1778835194822,
+        "duration": 60000
+      },
+      {
+        "stage": "proposal-generated",
+        "enteredAt": 1778835194822,
+        "exitedAt": 1778835254822,
+        "duration": 60000
+      },
+      {
+        "stage": "governance-evaluated",
+        "enteredAt": 1778835254822,
+        "exitedAt": 1778835314822,
+        "duration": 60000
+      },
+      {
+        "stage": "replay-evidence-shown",
+        "enteredAt": 1778835314822,
+        "exitedAt": 1778835374822,
+        "duration": 60000
+      },
+      {
+        "stage": "mutation-reviewed",
+        "enteredAt": 1778835374822,
+        "exitedAt": 1778835434822,
+        "duration": 60000
+      },
+      {
+        "stage": "rolled-back",
+        "enteredAt": 1778835434822,
+        "exitedAt": 1778835464822,
+        "duration": 30000
+      }
+    ],
+    "currentStage": "rolled-back",
+    "governanceAnalysis": {
+      "passed": true,
+      "rejected": false,
+      "reasons": [
+        "Safe mutation",
+        "Low risk"
+      ],
+      "warnings": [],
+      "riskyRecoveryIndicators": [],
+      "confidenceScore": 86.7450286653493
+    },
+    "replayEvidence": {
+      "validated": true,
+      "diverged": false,
+      "divergenceType": null,
+      "comparisonUrl": "/replay/compare/123",
+      "validationScore": 88.94735210231279
+    },
+    "mutationDiff": {
+      "original": "a[href=\"/profile\"]",
+      "proposed": "nav >> text=Profile",
+      "addedLines": 1,
+      "removedLines": 1,
+      "changedSelectors": 1,
+      "strategy": "chained"
+    },
+    "structuralRisk": {
+      "overallRisk": "low",
+      "chainedLocatorRisk": true,
+      "wrapperAbstractionRisk": false,
+      "dynamicSelectorRisk": false,
+      "repeatedSelectorRisk": true,
+      "oversizedPageObjectRisk": false,
+      "asyncFlowRisk": false
+    },
+    "confidenceBreakdown": {
+      "overall": 86.7450286653493,
+      "replay": 83.02375214727985,
+      "uniqueness": 82.07302491339527,
+      "structural": 83.61566275786078,
+      "validation": 86.75929594526045,
+      "runtime": 82.60808206351044
+    },
+    "rollbackMetadata": {
+      "available": true,
+      "backupId": "backup-1778835734822-18",
+      "rollbackCommand": "tg rollback --id=backup-123",
+      "lastValidState": "a[href=\"/profile\"]"
+    },
+    "developerDecision": "rollback",
+    "decisionReason": "Rollback needed - caused test failure",
+    "reviewedAt": 1778835734822
+  },
+  {
+    "id": "dwf-1778835734822-a64ndmc",
+    "repositoryId": "repo-2",
+    "locator": "#submit-form button",
+    "originalSelector": "#submit-form button",
+    "proposedSelector": "button[type=\"submit\"]",
+    "failureReason": "Accessibility attributes updated",
+    "stages": [
+      {
+        "stage": "failure-detected",
+        "enteredAt": 1778835134822,
+        "exitedAt": 1778835194822,
+        "duration": 60000
+      },
+      {
+        "stage": "proposal-generated",
+        "enteredAt": 1778835194822,
+        "exitedAt": 1778835254822,
+        "duration": 60000
+      },
+      {
+        "stage": "governance-evaluated",
+        "enteredAt": 1778835254822,
+        "exitedAt": 1778835314822,
+        "duration": 60000
+      },
+      {
+        "stage": "replay-evidence-shown",
+        "enteredAt": 1778835314822,
+        "exitedAt": 1778835374822,
+        "duration": 60000
+      },
+      {
+        "stage": "mutation-reviewed",
+        "enteredAt": 1778835374822,
+        "exitedAt": 1778835434822,
+        "duration": 60000
+      },
+      {
+        "stage": "mutation-reviewed",
+        "enteredAt": 1778835434822,
+        "exitedAt": 1778835464822,
+        "duration": 30000
+      }
+    ],
+    "currentStage": "mutation-reviewed",
+    "governanceAnalysis": {
+      "passed": true,
+      "rejected": false,
+      "reasons": [
+        "Safe mutation",
+        "Low risk"
+      ],
+      "warnings": [],
+      "riskyRecoveryIndicators": [],
+      "confidenceScore": 72.73553474060343
+    },
+    "replayEvidence": {
+      "validated": true,
+      "diverged": false,
+      "divergenceType": null,
+      "comparisonUrl": "/replay/compare/123",
+      "validationScore": 88.1779263221096
+    },
+    "mutationDiff": {
+      "original": "#submit-form button",
+      "proposed": "button[type=\"submit\"]",
+      "addedLines": 1,
+      "removedLines": 1,
+      "changedSelectors": 1,
+      "strategy": "type-selector"
+    },
+    "structuralRisk": {
+      "overallRisk": "low",
+      "chainedLocatorRisk": false,
+      "wrapperAbstractionRisk": false,
+      "dynamicSelectorRisk": false,
+      "repeatedSelectorRisk": false,
+      "oversizedPageObjectRisk": false,
+      "asyncFlowRisk": false
+    },
+    "confidenceBreakdown": {
+      "overall": 72.73553474060343,
+      "replay": 68.9824029456677,
+      "uniqueness": 74.13489544017973,
+      "structural": 76.96508298150663,
+      "validation": 72.62088916275434,
+      "runtime": 65.26964371323511
+    },
+    "rollbackMetadata": {
+      "available": true,
+      "backupId": "backup-1778835734822-19",
+      "rollbackCommand": "tg rollback --id=backup-123",
+      "lastValidState": "#submit-form button"
+    },
+    "developerDecision": "needs-more-info",
+    "decisionReason": "Confidence too low, needs investigation",
+    "reviewedAt": 1778835734822
+  }
+]

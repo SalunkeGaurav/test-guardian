@@ -1,0 +1,744 @@
+{
+  "reportId": "large-scale-corpus-1",
+  "corpusPath": "C:\\Users\\Hp\\Automation Tools\\Tool Testing Data\\benchmark-repositories",
+  "totalRepositories": 105,
+  "completedRepositories": 105,
+  "failedRepositories": 0,
+  "results": [
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/1-Enterprise-And-Clean/extensive-react-boilerplate",
+      "name": "extensive-react-boilerplate",
+      "category": "1-Enterprise-And-Clean",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/1-Enterprise-And-Clean/Next-js-Boilerplate",
+      "name": "Next-js-Boilerplate",
+      "category": "1-Enterprise-And-Clean",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/1-Enterprise-And-Clean/Nextjs-Elite-Boilerplate",
+      "name": "Nextjs-Elite-Boilerplate",
+      "category": "1-Enterprise-And-Clean",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/1-Enterprise-And-Clean/playwright-android",
+      "name": "playwright-android",
+      "category": "1-Enterprise-And-Clean",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/1-Enterprise-And-Clean/playwright-boilerplate",
+      "name": "playwright-boilerplate",
+      "category": "1-Enterprise-And-Clean",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/1-Enterprise-And-Clean/playwright-framework-template",
+      "name": "playwright-framework-template",
+      "category": "1-Enterprise-And-Clean",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/1-Enterprise-And-Clean/playwright-reference-project",
+      "name": "playwright-reference-project",
+      "category": "1-Enterprise-And-Clean",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/1-Enterprise-And-Clean/Playwright-Typescript-Example",
+      "name": "Playwright-Typescript-Example",
+      "category": "1-Enterprise-And-Clean",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/1-Enterprise-And-Clean/playwright-typescript-playwright-test",
+      "name": "playwright-typescript-playwright-test",
+      "category": "1-Enterprise-And-Clean",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/1-Enterprise-And-Clean/PlaywrightAutomation",
+      "name": "PlaywrightAutomation",
+      "category": "1-Enterprise-And-Clean",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/1-Enterprise-And-Clean/PlaywrightStarterKit",
+      "name": "PlaywrightStarterKit",
+      "category": "1-Enterprise-And-Clean",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/1-Enterprise-And-Clean/react-redux-boilerplate",
+      "name": "react-redux-boilerplate",
+      "category": "1-Enterprise-And-Clean",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/1-Enterprise-And-Clean/start-ui-web",
+      "name": "start-ui-web",
+      "category": "1-Enterprise-And-Clean",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/1-Enterprise-And-Clean/starter-playwright",
+      "name": "starter-playwright",
+      "category": "1-Enterprise-And-Clean",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/1-Enterprise-And-Clean/supabase-tdd-boilerplate",
+      "name": "supabase-tdd-boilerplate",
+      "category": "1-Enterprise-And-Clean",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/2-JS-And-Brittle-POM/Playwright",
+      "name": "Playwright",
+      "category": "2-JS-And-Brittle-POM",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/2-JS-And-Brittle-POM/Playwright_Ecommerce_Test_Framework",
+      "name": "Playwright_Ecommerce_Test_Framework",
+      "category": "2-JS-And-Brittle-POM",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/2-JS-And-Brittle-POM/Playwright_POM",
+      "name": "Playwright_POM",
+      "category": "2-JS-And-Brittle-POM",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/2-JS-And-Brittle-POM/playwright_pom_fixtures_modular_framework_template",
+      "name": "playwright_pom_fixtures_modular_framework_template",
+      "category": "2-JS-And-Brittle-POM",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/2-JS-And-Brittle-POM/playwright-demo",
+      "name": "playwright-demo",
+      "category": "2-JS-And-Brittle-POM",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/2-JS-And-Brittle-POM/Playwright-Javascript-Framework",
+      "name": "Playwright-Javascript-Framework",
+      "category": "2-JS-And-Brittle-POM",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/2-JS-And-Brittle-POM/Playwright-JS-POM-Framework",
+      "name": "Playwright-JS-POM-Framework",
+      "category": "2-JS-And-Brittle-POM",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/2-JS-And-Brittle-POM/playwright-pom",
+      "name": "playwright-pom",
+      "category": "2-JS-And-Brittle-POM",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/2-JS-And-Brittle-POM/playwright-testing-pom",
+      "name": "playwright-testing-pom",
+      "category": "2-JS-And-Brittle-POM",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/2-JS-And-Brittle-POM/PlaywrightFramework_POM",
+      "name": "PlaywrightFramework_POM",
+      "category": "2-JS-And-Brittle-POM",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/2-JS-And-Brittle-POM/PlaywrightFrameworkWithPOM",
+      "name": "PlaywrightFrameworkWithPOM",
+      "category": "2-JS-And-Brittle-POM",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/2-JS-And-Brittle-POM/POM",
+      "name": "POM",
+      "category": "2-JS-And-Brittle-POM",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/2-JS-And-Brittle-POM/pom-playwright",
+      "name": "pom-playwright",
+      "category": "2-JS-And-Brittle-POM",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/2-JS-And-Brittle-POM/pom-playwright-artillery",
+      "name": "pom-playwright-artillery",
+      "category": "2-JS-And-Brittle-POM",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/2-JS-And-Brittle-POM/pom-pw-js",
+      "name": "pom-pw-js",
+      "category": "2-JS-And-Brittle-POM",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/2-JS-Legacy-Brittle/demos-playwright-e2e",
+      "name": "demos-playwright-e2e",
+      "category": "2-JS-Legacy-Brittle",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/2-JS-Legacy-Brittle/playwright-demo-js",
+      "name": "playwright-demo-js",
+      "category": "2-JS-Legacy-Brittle",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/2-JS-Legacy-Brittle/Playwright-JavaScript-Automation",
+      "name": "Playwright-JavaScript-Automation",
+      "category": "2-JS-Legacy-Brittle",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/2-JS-Legacy-Brittle/Playwright-Web-Api",
+      "name": "Playwright-Web-Api",
+      "category": "2-JS-Legacy-Brittle",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/2-JS-Legacy-Brittle/PlaywrightTutorialFullCourse",
+      "name": "PlaywrightTutorialFullCourse",
+      "category": "2-JS-Legacy-Brittle",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/2-JS-Legacy-Brittle/timezone-converter",
+      "name": "timezone-converter",
+      "category": "2-JS-Legacy-Brittle",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/3-Cucumber-Hybrids/cucumber-playwright",
+      "name": "cucumber-playwright",
+      "category": "3-Cucumber-Hybrids",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/3-Cucumber-Hybrids/cucumber-playwright-javascript",
+      "name": "cucumber-playwright-javascript",
+      "category": "3-Cucumber-Hybrids",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/3-Cucumber-Hybrids/Playwright_Cucumber_TS",
+      "name": "Playwright_Cucumber_TS",
+      "category": "3-Cucumber-Hybrids",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/3-Cucumber-Hybrids/Playwright_JS_BDD",
+      "name": "Playwright_JS_BDD",
+      "category": "3-Cucumber-Hybrids",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/3-Cucumber-Hybrids/playwright-bdd",
+      "name": "playwright-bdd",
+      "category": "3-Cucumber-Hybrids",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/3-Cucumber-Hybrids/Playwright-Cucumber",
+      "name": "Playwright-Cucumber",
+      "category": "3-Cucumber-Hybrids",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/3-Cucumber-Hybrids/Playwright-Cucumber-Exercise",
+      "name": "Playwright-Cucumber-Exercise",
+      "category": "3-Cucumber-Hybrids",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/3-Cucumber-Hybrids/playwright-cucumber-js-e2e-boilerplate",
+      "name": "playwright-cucumber-js-e2e-boilerplate",
+      "category": "3-Cucumber-Hybrids",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/3-Cucumber-Hybrids/playwright-cucumber-report-portal",
+      "name": "playwright-cucumber-report-portal",
+      "category": "3-Cucumber-Hybrids",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/3-Cucumber-Hybrids/playwright-cucumber-sample",
+      "name": "playwright-cucumber-sample",
+      "category": "3-Cucumber-Hybrids",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/3-Cucumber-Hybrids/playwright-java-cucumber",
+      "name": "playwright-java-cucumber",
+      "category": "3-Cucumber-Hybrids",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/3-Cucumber-Hybrids/playwright-sample",
+      "name": "playwright-sample",
+      "category": "3-Cucumber-Hybrids",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/3-Cucumber-Hybrids/serenity-js-cucumber-playwright-template",
+      "name": "serenity-js-cucumber-playwright-template",
+      "category": "3-Cucumber-Hybrids",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/4-Beginner-And-Chaotic/api-testing-playwright-java-testng",
+      "name": "api-testing-playwright-java-testng",
+      "category": "4-Beginner-And-Chaotic",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/4-Beginner-And-Chaotic/awesome-web-testing-playwright",
+      "name": "awesome-web-testing-playwright",
+      "category": "4-Beginner-And-Chaotic",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/4-Beginner-And-Chaotic/example-playwright-typescript",
+      "name": "example-playwright-typescript",
+      "category": "4-Beginner-And-Chaotic",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/4-Beginner-And-Chaotic/playwright-community",
+      "name": "playwright-community",
+      "category": "4-Beginner-And-Chaotic",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/4-Beginner-And-Chaotic/playwright-examples",
+      "name": "playwright-examples",
+      "category": "4-Beginner-And-Chaotic",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/4-Beginner-And-Chaotic/playwright-python-tutorial",
+      "name": "playwright-python-tutorial",
+      "category": "4-Beginner-And-Chaotic",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/4-Beginner-And-Chaotic/Playwright-Test-Runner",
+      "name": "Playwright-Test-Runner",
+      "category": "4-Beginner-And-Chaotic",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/4-Beginner-And-Chaotic/playwright-tutorials-typescript-javascript",
+      "name": "playwright-tutorials-typescript-javascript",
+      "category": "4-Beginner-And-Chaotic",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/4-Beginner-And-Chaotic/Playwright-TypeScript-Jest",
+      "name": "Playwright-TypeScript-Jest",
+      "category": "4-Beginner-And-Chaotic",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/4-Beginner-And-Chaotic/playwright-web-scraping",
+      "name": "playwright-web-scraping",
+      "category": "4-Beginner-And-Chaotic",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/4-Beginner-And-Chaotic/PlaywrightAPITestingTutorial",
+      "name": "PlaywrightAPITestingTutorial",
+      "category": "4-Beginner-And-Chaotic",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/4-Beginner-And-Chaotic/playwrightTutorial",
+      "name": "playwrightTutorial",
+      "category": "4-Beginner-And-Chaotic",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/4-Beginner-And-Chaotic/PlaywrightTypeScriptTutorialFullCourse",
+      "name": "PlaywrightTypeScriptTutorialFullCourse",
+      "category": "4-Beginner-And-Chaotic",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/4-Beginner-And-Chaotic/web-automation-playwright-java",
+      "name": "web-automation-playwright-java",
+      "category": "4-Beginner-And-Chaotic",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/4-Enterprise-Giant-POMs/HyperExecute-Playwright-Vanilla-Javascript",
+      "name": "HyperExecute-Playwright-Vanilla-Javascript",
+      "category": "4-Enterprise-Giant-POMs",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/4-Enterprise-Giant-POMs/playwright_typescript_api",
+      "name": "playwright_typescript_api",
+      "category": "4-Enterprise-Giant-POMs",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/5-Wrapper-Heavy-Abstractions/check-tests",
+      "name": "check-tests",
+      "category": "5-Wrapper-Heavy-Abstractions",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/5-Wrapper-Heavy-Abstractions/playwright-testing-library",
+      "name": "playwright-testing-library",
+      "category": "5-Wrapper-Heavy-Abstractions",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/6-Chaotic-Beginner-Codegen/ai-ready-pw-codegen",
+      "name": "ai-ready-pw-codegen",
+      "category": "6-Chaotic-Beginner-Codegen",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/6-Chaotic-Beginner-Codegen/gad-gui-api-demo",
+      "name": "gad-gui-api-demo",
+      "category": "6-Chaotic-Beginner-Codegen",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/6-Chaotic-Beginner-Codegen/My_First_Project_18032026",
+      "name": "My_First_Project_18032026",
+      "category": "6-Chaotic-Beginner-Codegen",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/6-Chaotic-Beginner-Codegen/My-First-Repo",
+      "name": "My-First-Repo",
+      "category": "6-Chaotic-Beginner-Codegen",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/6-Chaotic-Beginner-Codegen/my-playwright-test",
+      "name": "my-playwright-test",
+      "category": "6-Chaotic-Beginner-Codegen",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/6-Chaotic-Beginner-Codegen/MyFirstPlaywrightTest",
+      "name": "MyFirstPlaywrightTest",
+      "category": "6-Chaotic-Beginner-Codegen",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/6-Chaotic-Beginner-Codegen/MyFirstTest",
+      "name": "MyFirstTest",
+      "category": "6-Chaotic-Beginner-Codegen",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/6-Chaotic-Beginner-Codegen/playwright",
+      "name": "playwright",
+      "category": "6-Chaotic-Beginner-Codegen",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/6-Chaotic-Beginner-Codegen/playwright-APITesting",
+      "name": "playwright-APITesting",
+      "category": "6-Chaotic-Beginner-Codegen",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/6-Chaotic-Beginner-Codegen/playwright-codegen-devcontainer",
+      "name": "playwright-codegen-devcontainer",
+      "category": "6-Chaotic-Beginner-Codegen",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/6-Chaotic-Beginner-Codegen/playwright-codegen-mcp",
+      "name": "playwright-codegen-mcp",
+      "category": "6-Chaotic-Beginner-Codegen",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/6-Chaotic-Beginner-Codegen/playwright-codegen-test-id-issue",
+      "name": "playwright-codegen-test-id-issue",
+      "category": "6-Chaotic-Beginner-Codegen",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/6-Chaotic-Beginner-Codegen/playwright-cucumber-api-e2e-tests",
+      "name": "playwright-cucumber-api-e2e-tests",
+      "category": "6-Chaotic-Beginner-Codegen",
+      "status": "completed",
+      "compatibilityStatus": "partially-supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/6-Chaotic-Beginner-Codegen/playwright-gen-codegen",
+      "name": "playwright-gen-codegen",
+      "category": "6-Chaotic-Beginner-Codegen",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/6-Chaotic-Beginner-Codegen/playwright-java-practice",
+      "name": "playwright-java-practice",
+      "category": "6-Chaotic-Beginner-Codegen",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/6-Chaotic-Beginner-Codegen/playwright-openapi-codegen",
+      "name": "playwright-openapi-codegen",
+      "category": "6-Chaotic-Beginner-Codegen",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/6-Chaotic-Beginner-Codegen/playwright-ts-poc",
+      "name": "playwright-ts-poc",
+      "category": "6-Chaotic-Beginner-Codegen",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/6-Chaotic-Beginner-Codegen/playwright-typescript-poc",
+      "name": "playwright-typescript-poc",
+      "category": "6-Chaotic-Beginner-Codegen",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/6-Chaotic-Beginner-Codegen/Playwright-TypeScript-Practice",
+      "name": "Playwright-TypeScript-Practice",
+      "category": "6-Chaotic-Beginner-Codegen",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/6-Chaotic-Beginner-Codegen/playwright-wizard-mcp",
+      "name": "playwright-wizard-mcp",
+      "category": "6-Chaotic-Beginner-Codegen",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/6-Chaotic-Beginner-Codegen/PlaywrightCodegen",
+      "name": "PlaywrightCodegen",
+      "category": "6-Chaotic-Beginner-Codegen",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/6-Chaotic-Beginner-Codegen/playwrightFirstproject",
+      "name": "playwrightFirstproject",
+      "category": "6-Chaotic-Beginner-Codegen",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/6-Chaotic-Beginner-Codegen/PlaywrightFirstTest",
+      "name": "PlaywrightFirstTest",
+      "category": "6-Chaotic-Beginner-Codegen",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/6-Chaotic-Beginner-Codegen/playwrightTest1",
+      "name": "playwrightTest1",
+      "category": "6-Chaotic-Beginner-Codegen",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/6-Chaotic-Beginner-Codegen/POM_Playwright_codegen",
+      "name": "POM_Playwright_codegen",
+      "category": "6-Chaotic-Beginner-Codegen",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/6-Chaotic-Beginner-Codegen/qa-firstplaywright-automation",
+      "name": "qa-firstplaywright-automation",
+      "category": "6-Chaotic-Beginner-Codegen",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/6-Chaotic-Beginner-Codegen/QA-Practice-Playwright-Automation",
+      "name": "QA-Practice-Playwright-Automation",
+      "category": "6-Chaotic-Beginner-Codegen",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/6-Chaotic-Beginner-Codegen/rest-api-demo",
+      "name": "rest-api-demo",
+      "category": "6-Chaotic-Beginner-Codegen",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/7-Monorepos-Lite/create-t3-app",
+      "name": "create-t3-app",
+      "category": "7-Monorepos-Lite",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/7-Monorepos-Lite/trpc",
+      "name": "trpc",
+      "category": "7-Monorepos-Lite",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/7-Monorepos-Lite/ui",
+      "name": "ui",
+      "category": "7-Monorepos-Lite",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/8-Iframe-Modal-Flaky/playwright-java",
+      "name": "playwright-java",
+      "category": "8-Iframe-Modal-Flaky",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/8-Iframe-Modal-Flaky/playwright-python",
+      "name": "playwright-python",
+      "category": "8-Iframe-Modal-Flaky",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/playwright_typescript_api",
+      "name": "playwright_typescript_api",
+      "category": "benchmark-repositories",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/playwright-cucumber-report-portal",
+      "name": "playwright-cucumber-report-portal",
+      "category": "benchmark-repositories",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/playwright-typescript-playwright-test",
+      "name": "playwright-typescript-playwright-test",
+      "category": "benchmark-repositories",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/PlaywrightTutorialFullCourse",
+      "name": "PlaywrightTutorialFullCourse",
+      "category": "benchmark-repositories",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    },
+    {
+      "repoPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/PW-Framework-Step-By-Step",
+      "name": "PW-Framework-Step-By-Step",
+      "category": "benchmark-repositories",
+      "status": "completed",
+      "compatibilityStatus": "supported"
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "generatedAt": 0,
+  "overallScore": 75,
+  "overallStatus": "needs-work",
+  "dimensions": [
+    {
+      "name": "install-friction",
+      "score": 75,
+      "status": "needs-work",
+      "findings": [
+        "Single command installation: npm install testguardian",
+        "No complex setup required",
+        "Missing \"main\" field in package.json",
+        "Missing \"types\" field in package.json",
+        "Missing \"exports\" map for modern module resolution"
+      ],
+      "recommendations": [
+        "Add \"main\", \"types\", and \"exports\" fields to package.json",
+        "Create installation verification script",
+        "Add post-install hook for .testguardian initialization"
+      ]
+    },
+    {
+      "name": "cli-clarity",
+      "score": 80,
+      "status": "good",
+      "findings": [
+        "13 CLI commands available",
+        "Consistent option naming (--verbose, --compact, --json)",
+        "Help output available via --help",
+        "Version output available via --version",
+        "Some commands have inconsistent option names",
+        "Missing --output option on some commands"
+      ],
+      "recommendations": [
+        "Standardize option names across all commands",
+        "Add --output option to all commands that generate reports",
+        "Add command aliases for common operations",
+        "Improve error messages with actionable suggestions"
+      ]
+    },
+    {
+      "name": "report-readability",
+      "score": 85,
+      "status": "good",
+      "findings": [
+        "JSON reports are well-structured and machine-readable",
+        "Console output is formatted with clear sections",
+        "Report IDs are deterministic",
+        "All reports include generatedAt timestamp (deterministic: 0)",
+        "Missing human-readable summary sections in some reports",
+        "No HTML report output option"
+      ],
+      "recommendations": [
+        "Add human-readable summary sections to all reports",
+        "Add HTML report output option",
+        "Add report comparison feature",
+        "Add report export to PDF option"
+      ]
+    },
+    {
+      "name": "onboarding-complexity",
+      "score": 70,
+      "status": "needs-work",
+      "findings": [
+        "README.md provides comprehensive overview",
+        "Quick start section with 3-step process",
+        "4 example projects available",
+        "Demo assets with sample reports",
+        "Missing interactive tutorial",
+        "Missing video walkthrough",
+        "Documentation could be more structured"
+      ],
+      "recommendations": [
+        "Create interactive tutorial (CLI-based)",
+        "Add video walkthrough for common workflows",
+        "Structure documentation with clear navigation",
+        "Add \"Getting Started\" guide for beginners",
+        "Add troubleshooting guide"
+      ]
+    },
+    {
+      "name": "execution-complexity",
+      "score": 75,
+      "status": "needs-work",
+      "findings": [
+        "Simple command structure: testguardian <command> <path>",
+        "Default options work for most use cases",
+        "Verbose mode available for debugging",
+        "JSON mode available for automation",
+        "Some commands require multiple steps",
+        "Missing progress indicators for long operations"
+      ],
+      "recommendations": [
+        "Add progress indicators for long operations",
+        "Add --dry-run option for all commands",
+        "Add command chaining for common workflows",
+        "Add configuration file for default options"
+      ]
+    },
+    {
+      "name": "operational-discoverability",
+      "score": 65,
+      "status": "needs-work",
+      "findings": [
+        "CLI help lists all available commands",
+        "README.md documents all commands",
+        "Examples directory provides usage patterns",
+        "Demo assets show expected outputs",
+        "Missing command discovery for new users",
+        "Missing \"what can I do?\" guide",
+        "Error messages could suggest next steps"
+      ],
+      "recommendations": [
+        "Add \"testguardian help\" command with categorized commands",
+        "Add \"what can I do?\" interactive guide",
+        "Improve error messages with actionable suggestions",
+        "Add command suggestions based on project type",
+        "Add tutorial mode for first-time users"
+      ]
+    }
+  ],
+  "summary": "Developer Experience Score: 75/100 (needs-work)\n\nStrengths:\n- Report readability is excellent (85/100)\n- CLI clarity is good (80/100)\n- Execution complexity is manageable (75/100)\n\nAreas for Improvement:\n- Operational discoverability needs work (65/100)\n- Onboarding complexity needs work (70/100)\n- Install friction needs work (75/100)\n\nTop Recommendations:\n1. Add \"main\", \"types\", and \"exports\" fields to package.json\n2. Standardize option names across all commands\n3. Create interactive tutorial for new users\n4. Add progress indicators for long operations\n5. Add command discovery for new users"
+}

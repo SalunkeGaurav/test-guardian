@@ -1,0 +1,11 @@
+{
+  "domStabilizationSuccessRate": 1,
+  "replayRecoverySuccess": 1,
+  "staleRecoverySuccess": 1,
+  "iframeRecoveryRate": 0,
+  "asyncRenderInstabilityFrequency": 0,
+  "replayDriftFrequency": 0,
+  "totalSessionsAnalyzed": 1,
+  "stableSessions": 1,
+  "unstableSessions": 0
+}

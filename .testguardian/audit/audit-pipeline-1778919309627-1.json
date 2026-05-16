@@ -1,0 +1,101 @@
+{
+  "id": "audit-pipeline-1778919309627-1",
+  "pipelineRunId": "pipeline-1778919309627-1",
+  "locatorId": "loc-integration",
+  "timestamp": 1778919309627,
+  "schemaVersion": 1,
+  "stageTimings": [
+    {
+      "stage": "healing",
+      "startedAt": 1778919309627,
+      "finishedAt": 1778919309640,
+      "duration": 13
+    },
+    {
+      "stage": "validation",
+      "startedAt": 1778919309640,
+      "finishedAt": 1778919309640,
+      "duration": 0
+    },
+    {
+      "stage": "governance",
+      "startedAt": 1778919309640,
+      "finishedAt": 1778919309640,
+      "duration": 0
+    }
+  ],
+  "stageOutputs": [
+    {
+      "stage": "healing",
+      "candidateCount": 1,
+      "success": true
+    },
+    {
+      "stage": "validation",
+      "candidateCount": 1,
+      "success": true
+    },
+    {
+      "stage": "governance",
+      "candidateCount": 1,
+      "success": true
+    }
+  ],
+  "candidateIds": [
+    "candidate-1778919309635-1"
+  ],
+  "validationOutcomes": [
+    {
+      "id": "validation-1778919309640-6",
+      "proposalId": "candidate-1778919309635-1",
+      "locatorId": "loc-integration",
+      "replaySessionId": "session-1",
+      "status": "passed",
+      "matchedElementCount": 1,
+      "interactionSuccess": true,
+      "replayConfidence": 0.9625,
+      "falsePositiveIndicators": [],
+      "executionMetadata": {
+        "stepIndex": 0,
+        "actionType": "click",
+        "pageUrl": "https://example.com",
+        "frame": "",
+        "resolvedAt": 1778919309640
+      },
+      "validatedAt": 1778919309640
+    }
+  ],
+  "rejectionDecisions": [],
+  "explanations": [
+    {
+      "proposalId": "candidate-1778919309635-1",
+      "locatorId": "loc-integration",
+      "strategy": "attribute-similarity",
+      "proposedExpression": "[name=\"username\"]",
+      "confidenceBreakdown": {
+        "overall": 0.95,
+        "survivabilityScore": 1,
+        "structuralSimilarity": 1,
+        "attributeMatchScore": 0.9,
+        "hierarchyStability": 0.8,
+        "replayContextConfidence": 1
+      },
+      "rankingExplanation": "High-confidence; Overall rank: 0.95; Survivability: 1.00; Structural similarity: 1.00; Attribute match: 0.90; Hierarchy stability: 0.80; Replay context: 1.00",
+      "domEvidenceSummary": "Matched path: input; Matched tag: input; Stable attrs: id, name",
+      "structuralChangeExplanation": "Strategy applied: attribute-similarity; Why matched: attribute-similarity strategy: found input by id, name; Structural changes: No structural changes detected (unchanged); Survivability reasoning: Element exists in current DOM | Strategy attribute-similarity proposing [name=\"username\"]",
+      "evidence": {
+        "staticValidation": {
+          "status": "passed",
+          "matchedElementCount": 1,
+          "interactionSuccess": true,
+          "replayConfidence": 0.9625,
+          "falsePositives": []
+        }
+      },
+      "rejectionReasons": [],
+      "createdAt": 1778919309641
+    }
+  ],
+  "finalStatus": "completed",
+  "duration": 14
+}

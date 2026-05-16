@@ -1,0 +1,352 @@
+[
+  {
+    "id": "audit-pipeline-1778921848672-4",
+    "pipelineRunId": "pipeline-1778921848672-4",
+    "locatorId": "loc-deterministic",
+    "timestamp": 1778921848672,
+    "finalStatus": "completed",
+    "duration": 1,
+    "candidateCount": 2,
+    "stagesCompleted": 3
+  },
+  {
+    "id": "audit-pipeline-1778921848660-3",
+    "pipelineRunId": "pipeline-1778921848660-3",
+    "locatorId": "loc-deterministic",
+    "timestamp": 1778921848660,
+    "finalStatus": "completed",
+    "duration": 3,
+    "candidateCount": 2,
+    "stagesCompleted": 3
+  },
+  {
+    "id": "audit-pipeline-1778921848457-1",
+    "pipelineRunId": "pipeline-1778921848457-1",
+    "locatorId": "loc-integration",
+    "timestamp": 1778921848457,
+    "finalStatus": "completed",
+    "duration": 62,
+    "candidateCount": 1,
+    "stagesCompleted": 3
+  },
+  {
+    "id": "audit-pipeline-1778919309859-4",
+    "pipelineRunId": "pipeline-1778919309859-4",
+    "locatorId": "loc-deterministic",
+    "timestamp": 1778919309859,
+    "finalStatus": "completed",
+    "duration": 1,
+    "candidateCount": 2,
+    "stagesCompleted": 3
+  },
+  {
+    "id": "audit-pipeline-1778919309829-3",
+    "pipelineRunId": "pipeline-1778919309829-3",
+    "locatorId": "loc-deterministic",
+    "timestamp": 1778919309829,
+    "finalStatus": "completed",
+    "duration": 3,
+    "candidateCount": 2,
+    "stagesCompleted": 3
+  },
+  {
+    "id": "audit-pipeline-1778919309627-1",
+    "pipelineRunId": "pipeline-1778919309627-1",
+    "locatorId": "loc-integration",
+    "timestamp": 1778919309627,
+    "finalStatus": "completed",
+    "duration": 14,
+    "candidateCount": 1,
+    "stagesCompleted": 3
+  },
+  {
+    "id": "audit-pipeline-1778915641601-4",
+    "pipelineRunId": "pipeline-1778915641601-4",
+    "locatorId": "loc-deterministic",
+    "timestamp": 1778915641601,
+    "finalStatus": "completed",
+    "duration": 2,
+    "candidateCount": 2,
+    "stagesCompleted": 3
+  },
+  {
+    "id": "audit-pipeline-1778915641573-3",
+    "pipelineRunId": "pipeline-1778915641573-3",
+    "locatorId": "loc-deterministic",
+    "timestamp": 1778915641573,
+    "finalStatus": "completed",
+    "duration": 2,
+    "candidateCount": 2,
+    "stagesCompleted": 3
+  },
+  {
+    "id": "audit-pipeline-1778915641403-1",
+    "pipelineRunId": "pipeline-1778915641403-1",
+    "locatorId": "loc-integration",
+    "timestamp": 1778915641403,
+    "finalStatus": "completed",
+    "duration": 40,
+    "candidateCount": 1,
+    "stagesCompleted": 3
+  },
+  {
+    "id": "audit-pipeline-1778913590994-4",
+    "pipelineRunId": "pipeline-1778913590994-4",
+    "locatorId": "loc-deterministic",
+    "timestamp": 1778913590994,
+    "finalStatus": "completed",
+    "duration": 6,
+    "candidateCount": 2,
+    "stagesCompleted": 3
+  },
+  {
+    "id": "audit-pipeline-1778913590977-3",
+    "pipelineRunId": "pipeline-1778913590977-3",
+    "locatorId": "loc-deterministic",
+    "timestamp": 1778913590977,
+    "finalStatus": "completed",
+    "duration": 3,
+    "candidateCount": 2,
+    "stagesCompleted": 3
+  },
+  {
+    "id": "audit-pipeline-1778913590860-1",
+    "pipelineRunId": "pipeline-1778913590860-1",
+    "locatorId": "loc-integration",
+    "timestamp": 1778913590860,
+    "finalStatus": "completed",
+    "duration": 23,
+    "candidateCount": 1,
+    "stagesCompleted": 3
+  },
+  {
+    "id": "audit-pipeline-1778911811238-4",
+    "pipelineRunId": "pipeline-1778911811238-4",
+    "locatorId": "loc-deterministic",
+    "timestamp": 1778911811238,
+    "finalStatus": "completed",
+    "duration": 1,
+    "candidateCount": 2,
+    "stagesCompleted": 3
+  },
+  {
+    "id": "audit-pipeline-1778911811218-3",
+    "pipelineRunId": "pipeline-1778911811218-3",
+    "locatorId": "loc-deterministic",
+    "timestamp": 1778911811218,
+    "finalStatus": "completed",
+    "duration": 2,
+    "candidateCount": 2,
+    "stagesCompleted": 3
+  },
+  {
+    "id": "audit-pipeline-1778911811152-1",
+    "pipelineRunId": "pipeline-1778911811152-1",
+    "locatorId": "loc-integration",
+    "timestamp": 1778911811152,
+    "finalStatus": "completed",
+    "duration": 13,
+    "candidateCount": 1,
+    "stagesCompleted": 3
+  },
+  {
+    "id": "audit-pipeline-1778906219458-4",
+    "pipelineRunId": "pipeline-1778906219458-4",
+    "locatorId": "loc-deterministic",
+    "timestamp": 1778906219458,
+    "finalStatus": "completed",
+    "duration": 2,
+    "candidateCount": 2,
+    "stagesCompleted": 3
+  },
+  {
+    "id": "audit-pipeline-1778906219354-3",
+    "pipelineRunId": "pipeline-1778906219354-3",
+    "locatorId": "loc-deterministic",
+    "timestamp": 1778906219354,
+    "finalStatus": "completed",
+    "duration": 4,
+    "candidateCount": 2,
+    "stagesCompleted": 3
+  },
+  {
+    "id": "audit-pipeline-1778906219109-1",
+    "pipelineRunId": "pipeline-1778906219109-1",
+    "locatorId": "loc-integration",
+    "timestamp": 1778906219109,
+    "finalStatus": "completed",
+    "duration": 48,
+    "candidateCount": 1,
+    "stagesCompleted": 3
+  },
+  {
+    "id": "audit-pipeline-1778858179322-4",
+    "pipelineRunId": "pipeline-1778858179322-4",
+    "locatorId": "loc-deterministic",
+    "timestamp": 1778858179322,
+    "finalStatus": "completed",
+    "duration": 1,
+    "candidateCount": 2,
+    "stagesCompleted": 3
+  },
+  {
+    "id": "audit-pipeline-1778858179304-3",
+    "pipelineRunId": "pipeline-1778858179304-3",
+    "locatorId": "loc-deterministic",
+    "timestamp": 1778858179304,
+    "finalStatus": "completed",
+    "duration": 3,
+    "candidateCount": 2,
+    "stagesCompleted": 3
+  },
+  {
+    "id": "audit-pipeline-1778858179191-1",
+    "pipelineRunId": "pipeline-1778858179191-1",
+    "locatorId": "loc-integration",
+    "timestamp": 1778858179191,
+    "finalStatus": "completed",
+    "duration": 16,
+    "candidateCount": 1,
+    "stagesCompleted": 3
+  },
+  {
+    "id": "audit-pipeline-1778853380000-4",
+    "pipelineRunId": "pipeline-1778853380000-4",
+    "locatorId": "loc-deterministic",
+    "timestamp": 1778853380000,
+    "finalStatus": "completed",
+    "duration": 2,
+    "candidateCount": 2,
+    "stagesCompleted": 3
+  },
+  {
+    "id": "audit-pipeline-1778853379948-3",
+    "pipelineRunId": "pipeline-1778853379948-3",
+    "locatorId": "loc-deterministic",
+    "timestamp": 1778853379948,
+    "finalStatus": "completed",
+    "duration": 4,
+    "candidateCount": 2,
+    "stagesCompleted": 3
+  },
+  {
+    "id": "audit-pipeline-1778853379402-1",
+    "pipelineRunId": "pipeline-1778853379402-1",
+    "locatorId": "loc-integration",
+    "timestamp": 1778853379402,
+    "finalStatus": "completed",
+    "duration": 26,
+    "candidateCount": 1,
+    "stagesCompleted": 3
+  },
+  {
+    "id": "audit-pipeline-1778848206649-4",
+    "pipelineRunId": "pipeline-1778848206649-4",
+    "locatorId": "loc-deterministic",
+    "timestamp": 1778848206649,
+    "finalStatus": "completed",
+    "duration": 2,
+    "candidateCount": 2,
+    "stagesCompleted": 3
+  },
+  {
+    "id": "audit-pipeline-1778848206623-3",
+    "pipelineRunId": "pipeline-1778848206623-3",
+    "locatorId": "loc-deterministic",
+    "timestamp": 1778848206623,
+    "finalStatus": "completed",
+    "duration": 2,
+    "candidateCount": 2,
+    "stagesCompleted": 3
+  },
+  {
+    "id": "audit-pipeline-1778848206468-1",
+    "pipelineRunId": "pipeline-1778848206468-1",
+    "locatorId": "loc-integration",
+    "timestamp": 1778848206468,
+    "finalStatus": "completed",
+    "duration": 34,
+    "candidateCount": 1,
+    "stagesCompleted": 3
+  },
+  {
+    "id": "audit-pipeline-1778848139832-4",
+    "pipelineRunId": "pipeline-1778848139832-4",
+    "locatorId": "loc-deterministic",
+    "timestamp": 1778848139832,
+    "finalStatus": "completed",
+    "duration": 17,
+    "candidateCount": 2,
+    "stagesCompleted": 3
+  },
+  {
+    "id": "audit-pipeline-1778848139824-3",
+    "pipelineRunId": "pipeline-1778848139824-3",
+    "locatorId": "loc-deterministic",
+    "timestamp": 1778848139824,
+    "finalStatus": "completed",
+    "duration": 3,
+    "candidateCount": 2,
+    "stagesCompleted": 3
+  },
+  {
+    "id": "audit-pipeline-1778848139670-1",
+    "pipelineRunId": "pipeline-1778848139670-1",
+    "locatorId": "loc-integration",
+    "timestamp": 1778848139670,
+    "finalStatus": "completed",
+    "duration": 11,
+    "candidateCount": 1,
+    "stagesCompleted": 3
+  },
+  {
+    "id": "audit-pipeline-1778848025317-1",
+    "pipelineRunId": "pipeline-1778848025317-1",
+    "locatorId": "loc-integration",
+    "timestamp": 1778848025317,
+    "finalStatus": "completed",
+    "duration": 52,
+    "candidateCount": 1,
+    "stagesCompleted": 3
+  },
+  {
+    "id": "audit-pipeline-1778847887819-1",
+    "pipelineRunId": "pipeline-1778847887819-1",
+    "locatorId": "loc-integration",
+    "timestamp": 1778847887819,
+    "finalStatus": "completed",
+    "duration": 15,
+    "candidateCount": 2,
+    "stagesCompleted": 3
+  },
+  {
+    "id": "audit-pipeline-1778847768409-4",
+    "pipelineRunId": "pipeline-1778847768409-4",
+    "locatorId": "loc-deterministic",
+    "timestamp": 1778847768409,
+    "finalStatus": "completed",
+    "duration": 1,
+    "candidateCount": 2,
+    "stagesCompleted": 3
+  },
+  {
+    "id": "audit-pipeline-1778847768386-3",
+    "pipelineRunId": "pipeline-1778847768386-3",
+    "locatorId": "loc-deterministic",
+    "timestamp": 1778847768386,
+    "finalStatus": "completed",
+    "duration": 3,
+    "candidateCount": 2,
+    "stagesCompleted": 3
+  },
+  {
+    "id": "audit-pipeline-1778847768236-1",
+    "pipelineRunId": "pipeline-1778847768236-1",
+    "locatorId": "loc-integration",
+    "timestamp": 1778847768236,
+    "finalStatus": "completed",
+    "duration": 15,
+    "candidateCount": 2,
+    "stagesCompleted": 3
+  }
+]

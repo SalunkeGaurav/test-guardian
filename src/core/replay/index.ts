@@ -2,7 +2,7 @@
  * Navigation Replay Module
  *
  * Responsibilities:
- * - Convert an ExecutionTrace into a deterministic NavigationSession
+ * - Convert an ExecutionTrace into a deterministic ReplaySession
  * - Execute a NavigationSession step-by-step via an adapter
  * - Record new traces during replay for comparison
  * - Fail fast on critical steps
@@ -19,4 +19,6 @@
  * @module replay
  */
 
-export {};
+export { ReplayModelGenerator } from './generator.js';
+export { ReplaySessionPersister } from './persister.js';
+export { SCHEMA_VERSION, EVENT_TYPE_TO_ACTION, REPLAY_STORAGE_DIR } from './schema.js';

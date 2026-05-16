@@ -1,0 +1,73 @@
+{
+  "id": "corpus-1778829937257-19k83px",
+  "generatedAt": 1778829937257,
+  "unsupportedPatterns": [],
+  "replayInstabilitySources": [
+    {
+      "source": "Wait For Selector",
+      "type": "Wait For Selector",
+      "occurrenceCount": 57,
+      "severity": "low",
+      "affectedRepositories": [
+        "C:\\Users\\Hp\\Automation Tools\\Tool Testing Data\\benchmark-repositories\\PW-Framework-Step-By-Step"
+      ]
+    }
+  ],
+  "riskyHealingStructures": [
+    {
+      "structure": "chained-locator",
+      "riskLevel": "high",
+      "occurrenceCount": 110,
+      "falsePositiveCorrelation": 0,
+      "affectedRepositories": [
+        "C:\\Users\\Hp\\Automation Tools\\Tool Testing Data\\benchmark-repositories\\PW-Framework-Step-By-Step"
+      ]
+    },
+    {
+      "structure": "unknown",
+      "riskLevel": "low",
+      "occurrenceCount": 8,
+      "falsePositiveCorrelation": 0,
+      "affectedRepositories": [
+        "C:\\Users\\Hp\\Automation Tools\\Tool Testing Data\\benchmark-repositories\\PW-Framework-Step-By-Step"
+      ]
+    }
+  ],
+  "confidenceCalibrationFailures": [
+    {
+      "signal": "nth-child index",
+      "calibrationError": 99.45,
+      "occurrenceCount": 6,
+      "affectedRepositories": [
+        "C:\\Users\\Hp\\Automation Tools\\Tool Testing Data\\benchmark-repositories\\PW-Framework-Step-By-Step"
+      ]
+    },
+    {
+      "signal": "chained locators",
+      "calibrationError": 99.4,
+      "occurrenceCount": 6,
+      "affectedRepositories": [
+        "C:\\Users\\Hp\\Automation Tools\\Tool Testing Data\\benchmark-repositories\\PW-Framework-Step-By-Step"
+      ]
+    }
+  ],
+  "parserLimitations": [],
+  "governanceWeaknesses": [
+    {
+      "weakness": "confidence-below-threshold",
+      "thresholdViolated": "0.6",
+      "occurrenceCount": 101,
+      "affectedRepositories": [
+        "C:\\Users\\Hp\\Automation Tools\\Tool Testing Data\\benchmark-repositories\\PW-Framework-Step-By-Step"
+      ]
+    },
+    {
+      "weakness": "structural-changes-unacceptable",
+      "thresholdViolated": "0.4",
+      "occurrenceCount": 60,
+      "affectedRepositories": [
+        "C:\\Users\\Hp\\Automation Tools\\Tool Testing Data\\benchmark-repositories\\PW-Framework-Step-By-Step"
+      ]
+    }
+  ]
+}

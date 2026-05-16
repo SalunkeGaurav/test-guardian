@@ -1,0 +1,13 @@
+{
+  "summaryId": "stabilization-1",
+  "corpusPath": "C:\\Users\\Hp\\Automation Tools\\Tool Testing Data\\benchmark-repositories",
+  "totalRepositories": 105,
+  "completedRepositories": 105,
+  "failedRepositories": 0,
+  "overallStabilityScore": 100,
+  "criticalIssues": 0,
+  "highIssues": 0,
+  "mediumIssues": 0,
+  "lowIssues": 0,
+  "generatedAt": 0
+}

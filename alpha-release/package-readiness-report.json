@@ -1,0 +1,53 @@
+{
+  "generatedAt": 0,
+  "packageValidation": {
+    "packageName": "@testguardian/core",
+    "version": "0.1.0",
+    "hasMainEntry": true,
+    "hasTypesEntry": false,
+    "hasBinEntry": false,
+    "hasExportsMap": false,
+    "missingDependencies": [
+      "glob"
+    ],
+    "unusedDependencies": [],
+    "peerDependencyIssues": [],
+    "readinessScore": 55,
+    "status": "needs-work",
+    "recommendations": [
+      "Add \"types\" field to package.json",
+      "Add \"bin\" field to package.json for CLI",
+      "Add \"exports\" map for modern module resolution"
+    ]
+  },
+  "installVerification": {
+    "packageName": "@testguardian/core",
+    "version": "0.1.0",
+    "canResolve": true,
+    "canExecute": false,
+    "cliEntrypoint": "",
+    "errors": [],
+    "status": "verified"
+  },
+  "dependencyAudit": {
+    "totalDependencies": 5,
+    "productionDependencies": 3,
+    "devDependencies": 2,
+    "peerDependencies": 0,
+    "optionalDependencies": 0,
+    "issues": [],
+    "status": "clean"
+  },
+  "exportIntegrity": {
+    "totalExports": 0,
+    "validExports": 0,
+    "brokenExports": [],
+    "status": "intact"
+  },
+  "overallStatus": "needs-work",
+  "recommendations": [
+    "Add \"types\" field to package.json",
+    "Add \"bin\" field to package.json for CLI",
+    "Add \"exports\" map for modern module resolution"
+  ]
+}

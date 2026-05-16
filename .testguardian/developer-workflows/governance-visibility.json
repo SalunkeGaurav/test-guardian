@@ -1,0 +1,59 @@
+{
+  "id": "dwf-1778835734824-eeijdzf",
+  "generatedAt": 1778835734826,
+  "riskyRecoveryWarnings": [
+    {
+      "type": "risky-recovery",
+      "message": "Risky healing: chained-locator",
+      "severity": "high",
+      "actionable": true,
+      "explanation": "Deep locator chain detected"
+    }
+  ],
+  "replayDivergenceWarnings": [
+    {
+      "type": "replay-divergence",
+      "message": "Replay validation shows divergence",
+      "severity": "warning",
+      "actionable": true,
+      "explanation": "Divergence type: selector-mismatch"
+    }
+  ],
+  "structuralInstabilityWarnings": [
+    {
+      "type": "structural-instability",
+      "message": "High structural risk detected",
+      "severity": "critical",
+      "actionable": true,
+      "explanation": "Multiple structural risk factors present"
+    }
+  ],
+  "unsupportedPatternWarnings": [],
+  "confidenceUncertaintyIndicators": [
+    {
+      "indicator": "low-confidence",
+      "uncertaintyLevel": 44.616749609759594,
+      "affectedLocators": [
+        "#submit-form button"
+      ],
+      "recommendation": "Review manually before approval"
+    },
+    {
+      "indicator": "low-confidence",
+      "uncertaintyLevel": 41.26338577031265,
+      "affectedLocators": [
+        "a[href=\"/profile\"]"
+      ],
+      "recommendation": "Review manually before approval"
+    },
+    {
+      "indicator": "low-confidence",
+      "uncertaintyLevel": 44.59371370917967,
+      "affectedLocators": [
+        ".menu-item:nth-child(2)"
+      ],
+      "recommendation": "Review manually before approval"
+    }
+  ],
+  "developerComprehensionRate": 100
+}

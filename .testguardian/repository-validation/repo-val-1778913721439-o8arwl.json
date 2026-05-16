@@ -1,0 +1,39 @@
+{
+  "id": "repo-val-1778913721439-o8arwl",
+  "repositoryPath": "C:/Users/Hp/Automation Tools/Tool Testing Data/benchmark-repositories/PW-Framework-Step-By-Step",
+  "analyzedAt": 1778913768567,
+  "compatibilityStatus": "supported",
+  "parserResults": {
+    "totalFiles": 0,
+    "successfullyParsed": 0,
+    "failedFiles": [],
+    "unsupportedSyntax": [],
+    "parseDurationMs": 4
+  },
+  "locatorPatternStats": {
+    "totalLocators": 0,
+    "strategyBreakdown": {},
+    "dynamicSelectors": 0,
+    "unstableSelectors": 0,
+    "chainedLocators": 0,
+    "pageObjects": [],
+    "customWrappers": 0,
+    "mixedFrameworkConventions": []
+  },
+  "mutationSafetyResults": {
+    "totalTestFiles": 0,
+    "successfullyMutated": 0,
+    "failedMutations": [],
+    "compileSuccessRate": 100,
+    "rollbackSuccessRate": 100,
+    "formattingPreserved": true,
+    "importPreserved": true
+  },
+  "stabilityMetrics": {
+    "parserSurvivability": 100,
+    "compileStability": 100,
+    "replayStability": 100,
+    "overallCompatibilityScore": 100
+  },
+  "architecturalRisks": []
+}

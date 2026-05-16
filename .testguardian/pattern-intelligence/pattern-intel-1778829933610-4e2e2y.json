@@ -1,0 +1,160 @@
+{
+  "id": "pattern-intel-1778829933610-4e2e2y",
+  "generatedAt": 1778829935383,
+  "repositoryPath": "C:\\Users\\Hp\\Automation Tools\\Tool Testing Data\\benchmark-repositories\\PlaywrightTutorialFullCourse",
+  "locatorIntelligence": {
+    "totalLocators": 480,
+    "strategyFrequency": {
+      "css": 204,
+      "text": 39,
+      "role": 107,
+      "placeholder": 63,
+      "label": 27,
+      "alt-text": 2,
+      "testid": 30,
+      "title": 2,
+      "xpath": 6
+    },
+    "strategyPercentages": {
+      "css": 42.5,
+      "text": 8.1,
+      "role": 22.3,
+      "placeholder": 13.1,
+      "label": 5.6,
+      "alt-text": 0.4,
+      "testid": 6.3,
+      "title": 0.4,
+      "xpath": 1.3
+    },
+    "chainedLocatorDepth": {
+      "count": 210,
+      "maxDepth": 1,
+      "depthDistribution": {
+        "1": 210
+      },
+      "averageDepth": 1
+    },
+    "dynamicLocators": {
+      "count": 0,
+      "percentage": 0,
+      "types": {}
+    },
+    "duplicateSelectors": 440,
+    "unstablePatterns": {
+      "count": 219,
+      "percentage": 45.6,
+      "patterns": [
+        "#APjFqb",
+        ".demo-frame",
+        "link",
+        "#month",
+        "heading",
+        "Search",
+        "button",
+        "username",
+        "Password",
+        "Code"
+      ]
+    },
+    "wrapperGenerated": 0,
+    "customAbstractions": {
+      "count": 0,
+      "wrapperTypes": []
+    }
+  },
+  "pageObjectIntelligence": {
+    "totalPageObjects": 0,
+    "sizeDistribution": {
+      "small": 0,
+      "medium": 0,
+      "large": 0,
+      "giant": 0
+    },
+    "locatorDensity": {
+      "averageLocatorsPerPO": 0,
+      "minLocators": 0,
+      "maxLocators": 0
+    },
+    "inheritancePatterns": [],
+    "compositionPatterns": [],
+    "wrapperAbstractions": {
+      "count": 0,
+      "wrapperTypes": [],
+      "indirectionLayers": 0
+    },
+    "antiPatternClusters": []
+  },
+  "mutationRiskIntelligence": {
+    "overallRiskScore": 7,
+    "riskCategories": [
+      {
+        "category": "Dynamic Selectors",
+        "score": 12,
+        "affectedFiles": []
+      },
+      {
+        "category": "Computed Locators",
+        "score": 2,
+        "affectedFiles": []
+      },
+      {
+        "category": "Indirect Wrappers",
+        "score": 5,
+        "affectedFiles": []
+      },
+      {
+        "category": "Runtime Composition",
+        "score": 1,
+        "affectedFiles": []
+      },
+      {
+        "category": "AST Ambiguity",
+        "score": 3,
+        "affectedFiles": []
+      },
+      {
+        "category": "Compile Fragile",
+        "score": 0,
+        "affectedFiles": []
+      }
+    ],
+    "dynamicSelectorRisk": 12,
+    "computedLocatorRisk": 2,
+    "indirectWrapperRisk": 5,
+    "runtimeCompositionRisk": 1,
+    "astAmbiguityRisk": 3,
+    "compileFragileRisk": 0
+  },
+  "replayRiskIntelligence": {
+    "overallRiskScore": 38,
+    "navigationRisks": [
+      {
+        "type": "Wait For Selector",
+        "severity": "low",
+        "count": 53
+      }
+    ],
+    "selectorRisks": [
+      {
+        "type": "nth-child Usage",
+        "severity": "medium",
+        "count": 3
+      }
+    ],
+    "modalHeavyFlows": 0,
+    "dynamicRenderingRisks": 0,
+    "iframeUsage": 5,
+    "asyncInteractionChains": 67
+  },
+  "compatibilityTaxonomy": {
+    "tier": "partially-supported",
+    "supportedFeatures": [
+      "Standard Playwright locators",
+      "Predictable selectors"
+    ],
+    "partiallySupportedFeatures": [],
+    "unsupportedFeatures": [],
+    "riskFactors": [],
+    "recommendations": []
+  }
+}

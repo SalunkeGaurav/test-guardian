@@ -1,0 +1,120 @@
+{
+  "currentThresholds": {
+    "minConfidence": 70,
+    "maxRiskyRecovery": 30,
+    "maxGovernanceRejection": 25,
+    "structuralChangeTolerance": 20
+  },
+  "falseAcceptanceRate": 14.906832298136646,
+  "falseRejectionRate": 7.453416149068323,
+  "riskyAcceptancePatterns": [
+    {
+      "pattern": "chained-locator",
+      "acceptedCount": 110,
+      "actualFailureCount": 33,
+      "falseAcceptanceRate": 30
+    },
+    {
+      "pattern": "dynamic-selector",
+      "acceptedCount": 45,
+      "actualFailureCount": 18,
+      "falseAcceptanceRate": 40
+    },
+    {
+      "pattern": "computed-locator",
+      "acceptedCount": 28,
+      "actualFailureCount": 11,
+      "falseAcceptanceRate": 39
+    }
+  ],
+  "replayInstabilityAcceptancePatterns": [
+    "async-chain",
+    "modal-flow",
+    "iframe-transition"
+  ],
+  "thresholdSensitivityCurves": [
+    {
+      "threshold": 50,
+      "truePositiveRate": 95,
+      "falsePositiveRate": 25,
+      "f1Score": 83.82352941176471,
+      "recommended": false
+    },
+    {
+      "threshold": 55,
+      "truePositiveRate": 91.5,
+      "falsePositiveRate": 23,
+      "f1Score": 83.62611275964392,
+      "recommended": false
+    },
+    {
+      "threshold": 60,
+      "truePositiveRate": 88,
+      "falsePositiveRate": 21,
+      "f1Score": 83.25748502994011,
+      "recommended": false
+    },
+    {
+      "threshold": 65,
+      "truePositiveRate": 84.5,
+      "falsePositiveRate": 19,
+      "f1Score": 82.7129909365559,
+      "recommended": false
+    },
+    {
+      "threshold": 70,
+      "truePositiveRate": 81,
+      "falsePositiveRate": 17,
+      "f1Score": 81.98780487804878,
+      "recommended": false
+    },
+    {
+      "threshold": 75,
+      "truePositiveRate": 77.5,
+      "falsePositiveRate": 15,
+      "f1Score": 81.07692307692308,
+      "recommended": true
+    },
+    {
+      "threshold": 80,
+      "truePositiveRate": 74,
+      "falsePositiveRate": 13,
+      "f1Score": 79.9751552795031,
+      "recommended": true
+    },
+    {
+      "threshold": 85,
+      "truePositiveRate": 70.5,
+      "falsePositiveRate": 11,
+      "f1Score": 78.67711598746081,
+      "recommended": true
+    },
+    {
+      "threshold": 90,
+      "truePositiveRate": 67,
+      "falsePositiveRate": 9,
+      "f1Score": 77.17721518987342,
+      "recommended": false
+    }
+  ],
+  "hardeningRecommendations": [
+    {
+      "recommendation": "Increase minConfidence threshold",
+      "currentValue": 70,
+      "recommendedValue": 75,
+      "expectedImpact": "Reduce false acceptance by ~12%"
+    },
+    {
+      "recommendation": "Lower maxRiskyRecovery tolerance",
+      "currentValue": 30,
+      "recommendedValue": 25,
+      "expectedImpact": "Block 15% more risky mutations"
+    },
+    {
+      "recommendation": "Add structural penalty for chained locators",
+      "currentValue": 0,
+      "recommendedValue": 15,
+      "expectedImpact": "Reduce confidence for deep chains"
+    }
+  ]
+}

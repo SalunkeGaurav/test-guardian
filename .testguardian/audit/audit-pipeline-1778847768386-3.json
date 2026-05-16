@@ -1,0 +1,149 @@
+{
+  "id": "audit-pipeline-1778847768386-3",
+  "pipelineRunId": "pipeline-1778847768386-3",
+  "locatorId": "loc-deterministic",
+  "timestamp": 1778847768386,
+  "schemaVersion": 1,
+  "stageTimings": [
+    {
+      "stage": "healing",
+      "startedAt": 1778847768386,
+      "finishedAt": 1778847768388,
+      "duration": 2
+    },
+    {
+      "stage": "validation",
+      "startedAt": 1778847768388,
+      "finishedAt": 1778847768388,
+      "duration": 0
+    },
+    {
+      "stage": "governance",
+      "startedAt": 1778847768388,
+      "finishedAt": 1778847768388,
+      "duration": 0
+    }
+  ],
+  "stageOutputs": [
+    {
+      "stage": "healing",
+      "candidateCount": 2,
+      "success": true
+    },
+    {
+      "stage": "validation",
+      "candidateCount": 2,
+      "success": true
+    },
+    {
+      "stage": "governance",
+      "candidateCount": 2,
+      "success": true
+    }
+  ],
+  "candidateIds": [
+    "candidate-1778847768387-6",
+    "candidate-1778847768387-8"
+  ],
+  "validationOutcomes": [
+    {
+      "id": "validation-1778847768388-10",
+      "proposalId": "candidate-1778847768387-6",
+      "locatorId": "loc-deterministic",
+      "replaySessionId": "none",
+      "status": "passed",
+      "matchedElementCount": 1,
+      "interactionSuccess": true,
+      "replayConfidence": 0.9625,
+      "falsePositiveIndicators": [],
+      "executionMetadata": {
+        "stepIndex": 0,
+        "actionType": "click",
+        "pageUrl": "",
+        "frame": "",
+        "resolvedAt": 1778847768388
+      },
+      "validatedAt": 1778847768388
+    },
+    {
+      "id": "validation-1778847768388-11",
+      "proposalId": "candidate-1778847768387-8",
+      "locatorId": "loc-deterministic",
+      "replaySessionId": "none",
+      "status": "passed",
+      "matchedElementCount": 1,
+      "interactionSuccess": true,
+      "replayConfidence": 0.9625,
+      "falsePositiveIndicators": [],
+      "executionMetadata": {
+        "stepIndex": 0,
+        "actionType": "click",
+        "pageUrl": "",
+        "frame": "",
+        "resolvedAt": 1778847768388
+      },
+      "validatedAt": 1778847768388
+    }
+  ],
+  "rejectionDecisions": [],
+  "explanations": [
+    {
+      "proposalId": "candidate-1778847768387-6",
+      "locatorId": "loc-deterministic",
+      "strategy": "attribute-similarity",
+      "proposedExpression": "[data-testid=\"btn\"]",
+      "confidenceBreakdown": {
+        "overall": 0.95,
+        "survivabilityScore": 1,
+        "structuralSimilarity": 1,
+        "attributeMatchScore": 0.9,
+        "hierarchyStability": 0.8,
+        "replayContextConfidence": 1
+      },
+      "rankingExplanation": "High-confidence; Overall rank: 0.95; Survivability: 1.00; Structural similarity: 1.00; Attribute match: 0.90; Hierarchy stability: 0.80; Replay context: 1.00",
+      "domEvidenceSummary": "Matched path: button; Matched tag: button; Stable attrs: data-testid; Text match: \"Click\"",
+      "structuralChangeExplanation": "Strategy applied: attribute-similarity; Why matched: attribute-similarity strategy: found button by data-testid; Structural changes: No structural changes detected (unchanged); Survivability reasoning: Element exists in current DOM | Strategy attribute-similarity proposing [data-testid=\"btn\"]",
+      "evidence": {
+        "staticValidation": {
+          "status": "passed",
+          "matchedElementCount": 1,
+          "interactionSuccess": true,
+          "replayConfidence": 0.9625,
+          "falsePositives": []
+        }
+      },
+      "rejectionReasons": [],
+      "createdAt": 1778847768388
+    },
+    {
+      "proposalId": "candidate-1778847768387-8",
+      "locatorId": "loc-deterministic",
+      "strategy": "historical-selector-evolution",
+      "proposedExpression": "text=\"Click\"",
+      "confidenceBreakdown": {
+        "overall": 0.91,
+        "survivabilityScore": 1,
+        "structuralSimilarity": 1,
+        "attributeMatchScore": 0.7,
+        "hierarchyStability": 0.8,
+        "replayContextConfidence": 1
+      },
+      "rankingExplanation": "High-confidence; Overall rank: 0.91; Survivability: 1.00; Structural similarity: 1.00; Attribute match: 0.70; Hierarchy stability: 0.80; Replay context: 1.00",
+      "domEvidenceSummary": "Matched path: button; Matched tag: button; Stable attrs: text; Text match: \"Click\"",
+      "structuralChangeExplanation": "Strategy applied: historical-selector-evolution; Why matched: historical-selector-evolution strategy: found button by text; Structural changes: No structural changes detected (unchanged); Survivability reasoning: Element exists in current DOM | Strategy historical-selector-evolution proposing text=\"Click\"",
+      "evidence": {
+        "staticValidation": {
+          "status": "passed",
+          "matchedElementCount": 1,
+          "interactionSuccess": true,
+          "replayConfidence": 0.9625,
+          "falsePositives": []
+        }
+      },
+      "rejectionReasons": [],
+      "createdAt": 1778847768389
+    }
+  ],
+  "finalStatus": "completed",
+  "duration": 3
+}

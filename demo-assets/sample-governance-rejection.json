@@ -1,0 +1,73 @@
+{
+  "reportId": "demo-governance-rejection-1",
+  "generatedAt": 0,
+  "proposalId": "patch-rejected-1",
+  "testFile": "tests/checkout.spec.ts",
+  "testName": "user completes checkout flow",
+  "line": 23,
+  "originalLocator": "page.locator('.checkout-btn')",
+  "proposedLocator": "page.locator('button:nth-child(3)')",
+  "governanceDecision": {
+    "passed": false,
+    "overallConfidence": 0.42,
+    "threshold": 0.70,
+    "gates": [
+      {
+        "name": "confidence-check",
+        "passed": false,
+        "score": 0.42,
+        "threshold": 0.70,
+        "reason": "Confidence score 0.42 is below threshold 0.70"
+      },
+      {
+        "name": "safety-validation",
+        "passed": false,
+        "score": 0.35,
+        "reason": "Proposed selector matches 3 different elements on the page"
+      },
+      {
+        "name": "stability-analysis",
+        "passed": false,
+        "score": 0.28,
+        "reason": "nth-child selector is highly unstable across page variations"
+      }
+    ]
+  },
+  "rejectionDetails": {
+    "primaryReason": "Low confidence and safety failure",
+    "details": [
+      "Proposed selector 'button:nth-child(3)' is position-based and will break if button order changes",
+      "3 elements match the proposed selector, causing ambiguity",
+      "Original selector '.checkout-btn' has semantic meaning that is lost in the proposal",
+      "Stability analysis shows 72% failure rate for nth-child selectors in similar contexts"
+    ],
+    "recommendations": [
+      "Use a more specific selector: button[type=\"submit\"][aria-label=\"Complete Checkout\"]",
+      "Add data-testid attribute to the checkout button in the application code",
+      "Consider using role-based selector: button[role=\"button\"]:has-text(\"Checkout\")"
+    ]
+  },
+  "auditTrail": [
+    {
+      "timestamp": 0,
+      "stage": "confidence-check",
+      "decision": "reject",
+      "score": 0.42,
+      "reason": "Below threshold"
+    },
+    {
+      "timestamp": 0,
+      "stage": "safety-validation",
+      "decision": "reject",
+      "score": 0.35,
+      "reason": "Multiple matching elements"
+    },
+    {
+      "timestamp": 0,
+      "stage": "stability-analysis",
+      "decision": "reject",
+      "score": 0.28,
+      "reason": "High instability risk"
+    }
+  ]
+}

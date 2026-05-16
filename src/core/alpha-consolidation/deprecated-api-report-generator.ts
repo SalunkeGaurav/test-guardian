@@ -1,0 +1,239 @@
+/**
+ * Deprecated API Report Generator
+ *
+ * Identifies APIs that have been superseded by shared-types or
+ * are otherwise deprecated. Deterministic output.
+ *
+ * @module deprecated-api-report-generator
+ */
+
+import { writeFileSync, mkdirSync, existsSync } from 'node:fs';
+import { join } from 'node:path';
+
+export interface DeprecatedApiEntry {
+  name: string;
+  location: string;
+  reason: string;
+  replacement?: string;
+  severity: 'warning' | 'error';
+}
+
+export interface DeprecatedApiReport {
+  generatedAt: number;
+  totalDeprecated: number;
+  entries: DeprecatedApiEntry[];
+}
+
+export function generateDeprecatedApiReport(): DeprecatedApiReport {
+  const entries: DeprecatedApiEntry[] = [
+    // Duplicated types now consolidated in shared-types
+    {
+      name: 'BenchmarkResult (healing-benchmark/types.ts)',
+      location: 'src/core/healing-benchmark/types.ts:29',
+      reason: 'Duplicated in 3 locations',
+      replacement: 'src/core/shared-types/index.ts',
+      severity: 'warning',
+    },
+    {
+      name: 'BenchmarkResult (developer-workflow/engine.ts)',
+      location: 'src/core/developer-workflow/engine.ts:30',
+      reason: 'Duplicated in 3 locations',
+      replacement: 'src/core/shared-types/index.ts',
+      severity: 'warning',
+    },
+    {
+      name: 'BenchmarkResult (confidence-calibration/engine.ts)',
+      location: 'src/core/confidence-calibration/engine.ts:31',
+      reason: 'Duplicated in 3 locations',
+      replacement: 'src/core/shared-types/index.ts',
+      severity: 'warning',
+    },
+    {
+      name: 'ArchitecturalWeakPoint (healing-benchmark/types.ts)',
+      location: 'src/core/healing-benchmark/types.ts:56',
+      reason: 'Duplicated in 2 locations',
+      replacement: 'src/core/shared-types/index.ts',
+      severity: 'warning',
+    },
+    {
+      name: 'ArchitecturalWeakPoint (adversarial-tester/types.ts)',
+      location: 'src/core/adversarial-tester/types.ts:33',
+      reason: 'Duplicated in 2 locations',
+      replacement: 'src/core/shared-types/index.ts',
+      severity: 'warning',
+    },
+    {
+      name: 'ConfidenceReliability (healing-benchmark/types.ts)',
+      location: 'src/core/healing-benchmark/types.ts:62',
+      reason: 'Duplicated in 2 locations',
+      replacement: 'src/core/shared-types/index.ts',
+      severity: 'warning',
+    },
+    {
+      name: 'ConfidenceReliability (healing-intelligence/types.ts)',
+      location: 'src/core/healing-intelligence/types.ts:127',
+      reason: 'Duplicated in 2 locations',
+      replacement: 'src/core/shared-types/index.ts',
+      severity: 'warning',
+    },
+    {
+      name: 'DiffHunk (developer-workflow/types.ts)',
+      location: 'src/core/developer-workflow/types.ts:84',
+      reason: 'Duplicated in 2 locations',
+      replacement: 'src/core/shared-types/index.ts',
+      severity: 'warning',
+    },
+    {
+      name: 'DiffHunk (patcher/patch-diff-engine.ts)',
+      location: 'src/core/patcher/patch-diff-engine.ts:72',
+      reason: 'Duplicated in 2 locations',
+      replacement: 'src/core/shared-types/index.ts',
+      severity: 'warning',
+    },
+    {
+      name: 'GovernanceWeakness (corpus-execution/types.ts)',
+      location: 'src/core/corpus-execution/types.ts',
+      reason: 'Duplicated in 2 locations',
+      replacement: 'src/core/shared-types/index.ts',
+      severity: 'warning',
+    },
+    {
+      name: 'GovernanceWeakness (stabilization/types.ts)',
+      location: 'src/core/stabilization/types.ts',
+      reason: 'Duplicated in 2 locations',
+      replacement: 'src/core/shared-types/index.ts',
+      severity: 'warning',
+    },
+    {
+      name: 'UnsupportedPattern (corpus-execution/types.ts)',
+      location: 'src/core/corpus-execution/types.ts',
+      reason: 'Duplicated in 2 locations',
+      replacement: 'src/core/shared-types/index.ts',
+      severity: 'warning',
+    },
+    {
+      name: 'UnsupportedPattern (execution-lab/types.ts)',
+      location: 'src/core/execution-lab/types.ts',
+      reason: 'Duplicated in 2 locations',
+      replacement: 'src/core/shared-types/index.ts',
+      severity: 'warning',
+    },
+    {
+      name: 'UnsupportedStructure (healing-intelligence/types.ts)',
+      location: 'src/core/healing-intelligence/types.ts',
+      reason: 'Duplicated in 2 locations',
+      replacement: 'src/core/shared-types/index.ts',
+      severity: 'warning',
+    },
+    {
+      name: 'UnsupportedStructure (stabilization/types.ts)',
+      location: 'src/core/stabilization/types.ts',
+      reason: 'Duplicated in 2 locations',
+      replacement: 'src/core/shared-types/index.ts',
+      severity: 'warning',
+    },
+    {
+      name: 'RepositoryExecutionResult (execution-lab/types.ts)',
+      location: 'src/core/execution-lab/types.ts',
+      reason: 'Duplicated in 2 locations',
+      replacement: 'src/core/shared-types/index.ts',
+      severity: 'warning',
+    },
+    {
+      name: 'RepositoryExecutionResult (large-scale-corpus/types.ts)',
+      location: 'src/core/large-scale-corpus/types.ts',
+      reason: 'Duplicated in 2 locations',
+      replacement: 'src/core/shared-types/index.ts',
+      severity: 'warning',
+    },
+    {
+      name: 'PackagingReadinessSummary (production-readiness/types.ts)',
+      location: 'src/core/production-readiness/types.ts',
+      reason: 'Duplicated within same module',
+      replacement: 'src/core/shared-types/index.ts',
+      severity: 'warning',
+    },
+    {
+      name: 'HealingIntelReport (confidence-calibration/engine.ts)',
+      location: 'src/core/confidence-calibration/engine.ts:41',
+      reason: 'Duplicated in 2 locations',
+      replacement: 'src/core/shared-types/index.ts',
+      severity: 'warning',
+    },
+    {
+      name: 'HealingIntelReport (developer-workflow/engine.ts)',
+      location: 'src/core/developer-workflow/engine.ts:36',
+      reason: 'Duplicated in 2 locations',
+      replacement: 'src/core/shared-types/index.ts',
+      severity: 'warning',
+    },
+    {
+      name: 'PatternReport (confidence-calibration/engine.ts)',
+      location: 'src/core/confidence-calibration/engine.ts:68',
+      reason: 'Duplicated in 2 locations',
+      replacement: 'src/core/shared-types/index.ts',
+      severity: 'warning',
+    },
+    {
+      name: 'PatternReport (developer-workflow/engine.ts)',
+      location: 'src/core/developer-workflow/engine.ts:58',
+      reason: 'Duplicated in 2 locations',
+      replacement: 'src/core/shared-types/index.ts',
+      severity: 'warning',
+    },
+    {
+      name: 'ValidationReport (confidence-calibration/engine.ts)',
+      location: 'src/core/confidence-calibration/engine.ts:55',
+      reason: 'Duplicated in 2 locations',
+      replacement: 'src/core/shared-types/index.ts',
+      severity: 'warning',
+    },
+    {
+      name: 'ValidationReport (developer-workflow/engine.ts)',
+      location: 'src/core/developer-workflow/engine.ts:77',
+      reason: 'Duplicated in 2 locations',
+      replacement: 'src/core/shared-types/index.ts',
+      severity: 'warning',
+    },
+
+    // Redundant persistence wrappers
+    {
+      name: 'DeveloperWorkflowStorage',
+      location: 'src/core/developer-workflow/storage.ts',
+      reason: 'Re-implements ensureDir, atomicWrite, readJson from scratch',
+      replacement: 'src/core/storage/persistence-helper.ts',
+      severity: 'warning',
+    },
+    {
+      name: 'CIFailureValidationStorage',
+      location: 'src/core/ci-failure-validation/storage.ts',
+      reason: 'Duplicated persistence pattern',
+      replacement: 'src/core/storage/persistence-helper.ts',
+      severity: 'warning',
+    },
+    {
+      name: 'ArchitectureCohesionStorage',
+      location: 'src/core/architecture-cohesion-audit/storage.ts',
+      reason: 'Duplicated persistence pattern',
+      replacement: 'src/core/storage/persistence-helper.ts',
+      severity: 'warning',
+    },
+  ];
+
+  return {
+    generatedAt: 0,
+    totalDeprecated: entries.length,
+    entries,
+  };
+}
+
+export function persistDeprecatedApiReport(outputDir: string): string {
+  const report = generateDeprecatedApiReport();
+  const dir = join(outputDir, 'alpha-release');
+  if (!existsSync(dir)) {
+    mkdirSync(dir, { recursive: true });
+  }
+  const filePath = join(dir, 'deprecated-api-report.json');
+  writeFileSync(filePath, JSON.stringify(report, null, 2), 'utf-8');
+  return filePath;
+}

@@ -1,0 +1,44 @@
+[
+  {
+    "repositoryId": "corpus-1778829932626-4p4zm55",
+    "repositoryPath": "C:\\Users\\Hp\\Automation Tools\\Tool Testing Data\\benchmark-repositories\\PW-Framework-Step-By-Step",
+    "classification": "partially-supported",
+    "evidence": [],
+    "confidence": 75.2
+  },
+  {
+    "repositoryId": "corpus-1778829932630-cs7vizz",
+    "repositoryPath": "C:\\Users\\Hp\\Automation Tools\\Tool Testing Data\\benchmark-repositories\\PlaywrightTutorialFullCourse",
+    "classification": "fully-supported",
+    "evidence": [],
+    "confidence": 76
+  },
+  {
+    "repositoryId": "corpus-1778829932634-frmkq4j",
+    "repositoryPath": "C:\\Users\\Hp\\Automation Tools\\Tool Testing Data\\benchmark-repositories\\cucumber-playwright-javascript",
+    "classification": "partially-supported",
+    "evidence": [],
+    "confidence": 74.4
+  },
+  {
+    "repositoryId": "corpus-1778829932641-etby1eq",
+    "repositoryPath": "C:\\Users\\Hp\\Automation Tools\\Tool Testing Data\\benchmark-repositories\\playwright-cucumber-report-portal",
+    "classification": "partially-supported",
+    "evidence": [],
+    "confidence": 75.2
+  },
+  {
+    "repositoryId": "corpus-1778829932648-bnf751x",
+    "repositoryPath": "C:\\Users\\Hp\\Automation Tools\\Tool Testing Data\\benchmark-repositories\\playwright-typescript-playwright-test",
+    "classification": "partially-supported",
+    "evidence": [],
+    "confidence": 75.2
+  },
+  {
+    "repositoryId": "corpus-1778829932652-8ko7788",
+    "repositoryPath": "C:\\Users\\Hp\\Automation Tools\\Tool Testing Data\\benchmark-repositories\\playwright_typescript_api",
+    "classification": "partially-supported",
+    "evidence": [],
+    "confidence": 75.6
+  }
+]

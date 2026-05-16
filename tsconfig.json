@@ -19,5 +19,5 @@
     "types": ["node"]
   },
   "include": ["src/**/*.ts", "cli/**/*.ts"],
-  "exclude": ["node_modules", "dist", ".testguardian", "tests"]
+  "exclude": ["node_modules", "dist", ".testguardian", "tests", "src/adapters/playwright/tracer"]
 }

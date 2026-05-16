@@ -1,0 +1,10 @@
+{
+  "executionId": "exec-10",
+  "repoPath": "C:\\Users\\Hp\\Automation Tools\\test-guardian\\tests\\fixtures\\healing-benchmarks",
+  "compatibilityStatus": "supported",
+  "overallRisk": "low",
+  "healingSuccessRate": 0,
+  "governancePassed": false,
+  "sandboxVerified": false,
+  "replayDeterministic": false
+}

@@ -1,0 +1,53 @@
+{
+  "chainedLocatorCorrelation": 40.909090909090914,
+  "wrapperAbstractionCorrelation": 35.294117647058826,
+  "dynamicSelectorCorrelation": 43.07692307692308,
+  "repeatedSelectorCorrelation": 40,
+  "oversizedPageObjectCorrelation": 50,
+  "asyncFlowCorrelation": 50,
+  "bddAbstractionCorrelation": 32,
+  "significantPatterns": [
+    {
+      "pattern": "oversized-page-object",
+      "correlationWithConfidenceFailure": 50,
+      "occurrenceCount": 30,
+      "severity": "high"
+    },
+    {
+      "pattern": "async-heavy-flow",
+      "correlationWithConfidenceFailure": 50,
+      "occurrenceCount": 40,
+      "severity": "high"
+    },
+    {
+      "pattern": "dynamic-selector",
+      "correlationWithConfidenceFailure": 43.07692307692308,
+      "occurrenceCount": 65,
+      "severity": "high"
+    },
+    {
+      "pattern": "chained-locator",
+      "correlationWithConfidenceFailure": 40.909090909090914,
+      "occurrenceCount": 110,
+      "severity": "high"
+    },
+    {
+      "pattern": "repeated-selector",
+      "correlationWithConfidenceFailure": 40,
+      "occurrenceCount": 45,
+      "severity": "medium"
+    },
+    {
+      "pattern": "wrapper-abstraction",
+      "correlationWithConfidenceFailure": 35.294117647058826,
+      "occurrenceCount": 85,
+      "severity": "medium"
+    },
+    {
+      "pattern": "bdd-abstraction",
+      "correlationWithConfidenceFailure": 32,
+      "occurrenceCount": 25,
+      "severity": "medium"
+    }
+  ]
+}

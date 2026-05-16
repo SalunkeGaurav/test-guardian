@@ -1,0 +1,103 @@
+{
+  "executionId": "exec-9",
+  "repoPath": "C:\\Users\\Hp\\Automation Tools\\test-guardian\\tests\\fixtures\\healing-benchmarks",
+  "frameworkType": "unknown",
+  "compatibilityStatus": "supported",
+  "repositorySummary": {
+    "totalFiles": 5,
+    "totalLocators": 37,
+    "compatibilityScore": 100,
+    "risks": 1
+  },
+  "healingSummary": {
+    "totalAttempts": 0,
+    "successfulHealings": 0,
+    "reviewPackages": 0
+  },
+  "validationOutcomes": {
+    "totalValidations": 0,
+    "passed": 0,
+    "failed": 0
+  },
+  "replayStability": {
+    "domStabilized": true,
+    "replayDeterministic": true,
+    "driftSeverity": "none"
+  },
+  "governanceDecisions": {
+    "governancePassed": false,
+    "gatesPassed": 0,
+    "gatesFailed": 0
+  },
+  "sandboxVerification": {
+    "sandboxExecuted": false,
+    "compileSuccess": false,
+    "isolationVerified": false
+  },
+  "patchProposals": {
+    "totalProposals": 0,
+    "status": "none"
+  },
+  "rollbackMetadata": {
+    "rollbackAvailable": false
+  },
+  "riskAnalysis": {
+    "overallRisk": "medium",
+    "riskFactors": [
+      "Runtime instability detected"
+    ]
+  },
+  "runtimeMetrics": {
+    "domStabilizationSuccessRate": 1,
+    "replayRecoverySuccess": 1,
+    "staleRecoverySuccess": 1,
+    "iframeRecoveryRate": 0,
+    "asyncRenderInstabilityFrequency": 0,
+    "replayDriftFrequency": 0
+  },
+  "stateTransitions": {
+    "transitions": [
+      {
+        "from": "idle",
+        "to": "analyzing",
+        "stage": "repository-analysis",
+        "success": true,
+        "timestamp": 0
+      },
+      {
+        "from": "analyzing",
+        "to": "hardening",
+        "stage": "runtime-hardening",
+        "success": true,
+        "timestamp": 0
+      },
+      {
+        "from": "hardening",
+        "to": "healing",
+        "stage": "failure-detection",
+        "success": true,
+        "timestamp": 0
+      },
+      {
+        "from": "healing",
+        "to": "validating",
+        "stage": "healing-execution",
+        "success": true,
+        "timestamp": 0
+      }
+    ],
+    "currentState": "validating",
+    "finalState": "validating",
+    "totalTransitions": 4,
+    "failedTransitions": 0
+  },
+  "failureBoundary": {
+    "events": [],
+    "totalFailures": 0,
+    "recoverableFailures": 0,
+    "unrecoverableFailures": 0,
+    "gracefulDegradation": true
+  },
+  "persistedPaths": [],
+  "completedAt": 0
+}

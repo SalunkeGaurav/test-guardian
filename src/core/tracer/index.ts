@@ -1,32 +1,8 @@
-/**
- * Tracer Module
- *
- * Purpose: Hook into test execution, capture structured trace events,
- * and persist ExecutionTrace records for later analysis.
- *
- * The tracer wraps FrameworkAdapter.runTest() and injects instrumentation
- * to capture every navigation, click, type, assertion, and error.
- *
- * Inputs:
- *   - FrameworkAdapter instance
- *   - Test file path + optional test name
- *
- * Outputs:
- *   - ExecutionTrace (persisted to .testguardian/traces/)
- *
- * Used by: CLI `trace` command, healing engine (to get failing traces)
- *
- * Boundary:
- *   - Calls adapter.runTest() with instrumentation hooks
- *   - Captures DOM snapshots on failure via adapter.captureSnapshot()
- *   - Persists traces via TraceProvider
- *   - No knowledge of healing or patching
- */
-
 import type { FrameworkAdapter } from '../../interfaces/framework.js';
 import type { TraceProvider } from '../../interfaces/execution.js';
 import type { ExecutionTrace } from '../../models/trace.js';
 import type { Result } from '../../models/result.js';
+import { info, warn } from '../../logger/index.js';
 
 export class Tracer {
   constructor(
@@ -35,11 +11,30 @@ export class Tracer {
   ) {}
 
   async trace(filePath: string, testName?: string): Promise<Result<ExecutionTrace>> {
-    // 1. Adapter exécutes the test
-    // 2. Every action is recorded as a TraceEvent
-    // 3. On failure, capture DOM snapshot via adapter
-    // 4. Persist the trace
-    // 5. Return the trace
-    throw new Error('Not implemented');
+    info('tracer', `Tracing ${filePath}${testName ? ` (test: ${testName})` : ''}`);
+
+    if (!this.adapter.capabilities.canRunTests) {
+      return {
+        ok: false,
+        error: `${this.adapter.name} adapter does not support runtime execution. Use the fixture-based approach: import { test } from 'testguardian/src/adapters/${this.adapter.name}/tracer/fixture.js'`,
+      };
+    }
+
+    const result = await this.adapter.runTest(filePath, testName);
+
+    if (!result.ok) {
+      warn('tracer', `Execution failed: ${result.error}`);
+      return result;
+    }
+
+    const trace = result.value;
+    const persistResult = await this.storage.save(trace);
+
+    if (!persistResult.ok) {
+      warn('tracer', `Failed to persist trace: ${persistResult.error}`);
+    }
+
+    info('tracer', `Trace ${trace.id}: ${trace.passed ? 'PASS' : 'FAIL'} (${trace.events.length} events, ${trace.duration}ms)`);
+    return { ok: true, value: trace };
   }
 }

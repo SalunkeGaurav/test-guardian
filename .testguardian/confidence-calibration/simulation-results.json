@@ -1,0 +1,25 @@
+{
+  "simulationName": "Strict Governance Simulation",
+  "parameters": {
+    "strictnessAdjustment": 10,
+    "replayWeightAdjustment": 5,
+    "uniquenessWeightAdjustment": -2,
+    "structuralPenaltyAdjustment": 3,
+    "confidenceThresholdAdjustment": 5
+  },
+  "results": {
+    "projectedFalsePositiveReduction": 5.217391304347825,
+    "projectedRiskyRecoveryReduction": 8.8,
+    "projectedRecoveryLoss": 3.5,
+    "projectedOverallAccuracy": 3.1612551743895914,
+    "affectedLocatorStrategies": [
+      "chained-locator",
+      "dynamic-selector",
+      "computed-locator"
+    ],
+    "affectedRepositoryTypes": [
+      "playwright-typescript",
+      "cucumber-playwright"
+    ]
+  }
+}

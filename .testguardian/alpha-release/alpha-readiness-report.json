@@ -1,0 +1,108 @@
+{
+  "reportId": "alpha-readiness-1",
+  "overallScore": 1183,
+  "overallStatus": "ready",
+  "assessments": [
+    {
+      "category": "operational-stability",
+      "score": 100,
+      "status": "ready",
+      "blockers": [],
+      "recommendations": []
+    },
+    {
+      "category": "replay-trustworthiness",
+      "score": 100,
+      "status": "ready",
+      "blockers": [],
+      "recommendations": []
+    },
+    {
+      "category": "healing-safety",
+      "score": 100,
+      "status": "ready",
+      "blockers": [],
+      "recommendations": []
+    },
+    {
+      "category": "governance-reliability",
+      "score": 100,
+      "status": "ready",
+      "blockers": [],
+      "recommendations": []
+    },
+    {
+      "category": "runtime-survivability",
+      "score": 9945,
+      "status": "ready",
+      "blockers": [],
+      "recommendations": []
+    },
+    {
+      "category": "developer-usability",
+      "score": 75,
+      "status": "needs-work",
+      "blockers": [],
+      "recommendations": [
+        "Improve CLI documentation",
+        "Add more examples",
+        "Simplify configuration"
+      ]
+    },
+    {
+      "category": "packaging-readiness",
+      "score": 70,
+      "status": "needs-work",
+      "blockers": [],
+      "recommendations": [
+        "Verify npm packaging",
+        "Test installation from registry",
+        "Validate dependency boundaries"
+      ]
+    },
+    {
+      "category": "ci-readiness",
+      "score": 80,
+      "status": "needs-work",
+      "blockers": [],
+      "recommendations": [
+        "Add CI workflow examples",
+        "Test in multiple CI environments"
+      ]
+    },
+    {
+      "category": "external-adoption",
+      "score": 80,
+      "status": "needs-work",
+      "blockers": [],
+      "recommendations": [
+        "Create getting started guide",
+        "Add migration guide from other tools",
+        "Improve error messages"
+      ]
+    }
+  ],
+  "criticalBlockers": [],
+  "recommendedBeforeAlpha": [
+    "Add CI workflow examples",
+    "Add migration guide from other tools",
+    "Add more examples",
+    "Create getting started guide",
+    "Improve CLI documentation",
+    "Improve error messages",
+    "Simplify configuration",
+    "Test in multiple CI environments",
+    "Test installation from registry",
+    "Validate dependency boundaries",
+    "Verify npm packaging"
+  ],
+  "safeToShipFeatures": [
+    "governance-reliability",
+    "healing-safety",
+    "operational-stability",
+    "replay-trustworthiness",
+    "runtime-survivability"
+  ],
+  "experimentalFeatures": [],
+  "generatedAt": 0
+}

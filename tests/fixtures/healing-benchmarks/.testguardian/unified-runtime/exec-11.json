@@ -1,0 +1,133 @@
+{
+  "executionId": "exec-11",
+  "repoPath": "C:\\Users\\Hp\\Automation Tools\\test-guardian\\tests\\fixtures\\healing-benchmarks",
+  "frameworkType": "unknown",
+  "compatibilityStatus": "supported",
+  "repositorySummary": {
+    "totalFiles": 5,
+    "totalLocators": 37,
+    "compatibilityScore": 100,
+    "risks": 1
+  },
+  "healingSummary": {
+    "totalAttempts": 0,
+    "successfulHealings": 0,
+    "reviewPackages": 0
+  },
+  "validationOutcomes": {
+    "totalValidations": 0,
+    "passed": 0,
+    "failed": 0
+  },
+  "replayStability": {
+    "domStabilized": true,
+    "replayDeterministic": true,
+    "driftSeverity": "none"
+  },
+  "governanceDecisions": {
+    "governancePassed": false,
+    "gatesPassed": 0,
+    "gatesFailed": 0
+  },
+  "sandboxVerification": {
+    "sandboxExecuted": false,
+    "compileSuccess": false,
+    "isolationVerified": false
+  },
+  "patchProposals": {
+    "totalProposals": 0,
+    "status": "none"
+  },
+  "rollbackMetadata": {
+    "rollbackAvailable": false
+  },
+  "riskAnalysis": {
+    "overallRisk": "medium",
+    "riskFactors": [
+      "Runtime instability detected"
+    ]
+  },
+  "runtimeMetrics": {
+    "domStabilizationSuccessRate": 1,
+    "replayRecoverySuccess": 1,
+    "staleRecoverySuccess": 1,
+    "iframeRecoveryRate": 0,
+    "asyncRenderInstabilityFrequency": 0,
+    "replayDriftFrequency": 0
+  },
+  "stateTransitions": {
+    "transitions": [
+      {
+        "from": "idle",
+        "to": "analyzing",
+        "stage": "repository-analysis",
+        "success": true,
+        "timestamp": 0
+      },
+      {
+        "from": "analyzing",
+        "to": "hardening",
+        "stage": "runtime-hardening",
+        "success": true,
+        "timestamp": 0
+      },
+      {
+        "from": "hardening",
+        "to": "healing",
+        "stage": "healing-execution",
+        "success": true,
+        "timestamp": 0
+      },
+      {
+        "from": "healing",
+        "to": "validating",
+        "stage": "validation",
+        "success": true,
+        "timestamp": 0
+      },
+      {
+        "from": "validating",
+        "to": "sandboxing",
+        "stage": "sandbox-verification",
+        "success": true,
+        "timestamp": 0
+      },
+      {
+        "from": "sandboxing",
+        "to": "governing",
+        "stage": "sandbox-verification",
+        "success": true,
+        "timestamp": 0
+      },
+      {
+        "from": "governing",
+        "to": "reporting",
+        "stage": "report-aggregation",
+        "success": true,
+        "timestamp": 0
+      }
+    ],
+    "currentState": "reporting",
+    "finalState": "reporting",
+    "totalTransitions": 7,
+    "failedTransitions": 0
+  },
+  "failureBoundary": {
+    "events": [
+      {
+        "type": "governance-rejection",
+        "stage": "healing-execution",
+        "error": "Healing pipeline failed: No healing candidates generated",
+        "recoverable": true,
+        "degradedTo": "review-package-generation",
+        "timestamp": 0
+      }
+    ],
+    "totalFailures": 1,
+    "recoverableFailures": 1,
+    "unrecoverableFailures": 0,
+    "gracefulDegradation": true
+  },
+  "persistedPaths": [],
+  "completedAt": 0
+}

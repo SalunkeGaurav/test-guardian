@@ -1,0 +1,40 @@
+{
+  "sessionId": "session-hardening-1",
+  "overallStable": false,
+  "domSettling": {
+    "status": "stable",
+    "mutationCountStabilized": true,
+    "renderLoopDetected": false
+  },
+  "navigationSync": {
+    "readiness": "ready",
+    "blockedByUnreadiness": false
+  },
+  "asyncRender": {
+    "totalAsyncRenders": 0,
+    "reRenderChurnDetected": false
+  },
+  "staleContext": {
+    "totalStaleEvents": 0,
+    "recoveryRate": 1
+  },
+  "frameModal": {
+    "stabilityPassed": false,
+    "nestedFrameCount": 0
+  },
+  "replayDrift": {
+    "replayDeterministic": true,
+    "driftSeverity": "none"
+  },
+  "metrics": {
+    "domStabilizationSuccessRate": 1,
+    "replayRecoverySuccess": 1,
+    "staleRecoverySuccess": 1,
+    "iframeRecoveryRate": 0,
+    "asyncRenderInstabilityFrequency": 0,
+    "replayDriftFrequency": 0,
+    "totalSessionsAnalyzed": 1,
+    "stableSessions": 1,
+    "unstableSessions": 0
+  }
+}

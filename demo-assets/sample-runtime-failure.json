@@ -1,0 +1,48 @@
+{
+  "reportId": "demo-runtime-failure-1",
+  "generatedAt": 0,
+  "testFile": "tests/login.spec.ts",
+  "testName": "user can login successfully",
+  "line": 5,
+  "failure": {
+    "type": "element-not-visible",
+    "message": "locator resolved to 0 elements. Waiting for element to be visible...",
+    "locator": "page.locator('#username')",
+    "timeout": 30000,
+    "stackTrace": [
+      "tests/login.spec.ts:5:18",
+      "node_modules/@playwright/test/lib/worker.js:123:45"
+    ]
+  },
+  "domState": {
+    "url": "https://example.com/login",
+    "title": "Login - Example App",
+    "elementCount": 47,
+    "renderComplete": true,
+    "asyncOperationsPending": false
+  },
+  "analysis": {
+    "rootCause": "Element exists in DOM but is hidden by CSS (display: none)",
+    "contributingFactors": [
+      "Page uses lazy loading for login form",
+      "Form appears after animation completes",
+      "Animation duration varies by network speed"
+    ],
+    "confidence": 0.88
+  },
+  "healingProposal": {
+    "originalCode": "await page.locator('#username').fill('testuser');",
+    "proposedCode": "await page.waitForSelector('#username', { state: 'visible' });\nawait page.locator('#username').fill('testuser');",
+    "strategy": "async-render-detection",
+    "confidence": 0.95,
+    "safetyPassed": true,
+    "explanation": "Added explicit wait for element visibility before interaction. This handles the lazy loading animation."
+  },
+  "sandboxValidation": {
+    "executed": true,
+    "result": "passed",
+    "executionTime": 2340,
+    "replayConsistent": true,
+    "noSideEffects": true
+  }
+}

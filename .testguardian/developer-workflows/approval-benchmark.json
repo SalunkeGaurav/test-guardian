@@ -1,0 +1,18 @@
+{
+  "id": "dwf-1778835734828-f3twz0r",
+  "generatedAt": 1778835734828,
+  "totalSessions": 20,
+  "safeApprovalRate": 75,
+  "riskyApprovalRate": 25,
+  "rejectionPrecision": 55.55555555555556,
+  "rollbackUsageFrequency": 20,
+  "confidenceComprehensionEffectiveness": 25,
+  "approvalTimeAverage": 300,
+  "rejectionTimeAverage": 300,
+  "decisionDistribution": {
+    "approve": 4,
+    "reject": 5,
+    "rollback": 4,
+    "needsMoreInfo": 7
+  }
+}

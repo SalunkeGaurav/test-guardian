@@ -1,0 +1,56 @@
+{
+  "generatedAt": 0,
+  "installVerification": {
+    "packageName": "@testguardian/core",
+    "version": "0.1.0",
+    "canResolve": true,
+    "canExecute": false,
+    "cliEntrypoint": "",
+    "errors": [],
+    "status": "verified"
+  },
+  "dependencyValidation": {
+    "totalDependencies": 5,
+    "productionDependencies": 3,
+    "devDependencies": 2,
+    "missingDependencies": [],
+    "unusedDependencies": [
+      "commander",
+      "typescript",
+      "fast-glob"
+    ],
+    "status": "warnings"
+  },
+  "cliSmokeTests": [
+    {
+      "command": "testguardian --help",
+      "expectedExitCode": 0,
+      "actualExitCode": 3221226505,
+      "stdout": "Usage: testguardian [options] [command]\n\nFramework-agnostic automation healing platform\n\nOptions:\n  -V, --version                    output the version number\n  -h, --help                       display help for command\n\nCommands:\n  init                             Initialize .testguardian in the current\n                                   project\n  analyze [options]                Analyze the test framework in the current\n                                   project\n  trace [options] [files...]       Run tests and capture execution traces\n  heal [options]                   Analyze failures and generate healing\n                                   proposals\n  validate [options]               Validate healing proposals\n  validate-repo [options]          Validate real repository compatibility (Real\n                                   Repository Compatibility v1)\n  stress-test [options]            Run adversarial stress tests (Adversarial\n                                   Repository Stress Testing v1)\n  pattern-intel [options]          Extract repository pattern intelligence\n                                   (Pattern Intelligence v1)\n  healing-benchmark [options]      Run healing effectiveness benchmark\n                                   (Measured Healing Effectiveness v1)\n  healing-intel [options]          Analyze healing failures and root causes\n                                   (Healing Failure Intelligence v1)\n  corpus [options]                 Run real repository corpus benchmarking\n                                   (Real Repository Corpus Execution v1)\n  calibrate [options]              Run confidence calibration hardening\n                                   (Confidence Calibration Hardening v1)\n  workflow [options]               Simulate developer workflows (Developer\n                                   Workflow Simulation v1)\n  risk-discrimination [options]    Run risk discrimination analysis (Risk\n                                   Discrimination Hardening v1)\n  ci-failure-validation [options]  Run real CI failure replay validation (Real\n                                   CI Failure Replay Validation v1)\n  cohesion-audit [options]         Run architecture cohesion audit\n                                   (Architecture Cohesion Audit v1)\n  runtime-heal [options]           Execute runtime healing loop for a failing\n                                   test (Runtime Healing Execution Loop v1)\n  runtime-hardening [options]      Execute runtime hardening analysis for\n                                   browser stability (Real Browser Runtime\n                                   Hardening v1)\n  run [options]                    Execute unified TestGuardian workflow\n                                   (Unified Execution Runtime v1)\n  execution-lab [options]          Execute operational execution laboratory\n                                   (Execution Lab v1)\n  review [options]                 Generate developer-facing review reports\n                                   (Developer Review Experience v1)\n  production-readiness [options]   Execute production readiness assessment\n                                   (Production Readiness & Real-World\n                                   Integration v1)\n  corpus-scale [options]           Execute large-scale corpus validation (Large\n                                   Scale Corpus Execution v1)\n  stabilization [options]          Execute stabilization analysis\n                                   (Stabilization & Real-World Evidence v1)\n  alpha-prepare [options]          Prepare alpha release with consolidated\n                                   reports (Alpha Consolidation & Packaging v1)\n  help [command]                   display help for command\n",
+      "stderr": "Assertion failed: !(handle->flags & UV_HANDLE_CLOSING), file src\\win\\async.c, line 76\r\n",
+      "passed": false
+    },
+    {
+      "command": "testguardian --version",
+      "expectedExitCode": 0,
+      "actualExitCode": 0,
+      "stdout": "0.1.0\n",
+      "stderr": "",
+      "passed": true
+    }
+  ],
+  "packageStartup": {
+    "canImport": true,
+    "canInitialize": true,
+    "exportsValid": true,
+    "errors": [],
+    "status": "ready"
+  },
+  "overallStatus": "failed",
+  "recommendations": [
+    "Unused dependency: commander",
+    "Unused dependency: typescript",
+    "Unused dependency: fast-glob",
+    "CLI test failed: testguardian --help"
+  ]
+}

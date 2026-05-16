@@ -1,49 +1,31 @@
 /**
  * Healing Engine Module
  *
- * Purpose: Analyze failing traces, identify broken locators, and
- * generate ranked healing proposals using registered strategies.
+ * Purpose: Analyze failing locators and generate ranked healing
+ * candidates using deterministic DOM intelligence strategies.
  *
  * This is a deterministic pipeline — strategies are evaluated in
- * priority order. The first strategy to produce a high-confidence
- * proposal wins. No AI, no guessing, no autonomous decision-making.
+ * priority order, candidates are scored by a weighted composite,
+ * and low-confidence proposals are discarded. No AI. No patches.
  *
  * Inputs:
- *   - ExecutionTrace (failing)
- *   - DomSnapshot (captured at failure)
- *   - LocatorIndex (to find the broken locator's record)
- *   - HealingStrategyProvider[] (registered strategies)
+ *   - Locator (failing)
+ *   - Original DOM (snapshot where locator worked)
+ *   - Current DOM (snapshot where locator failed)
+ *   - Optional: ReplaySession, DomComparisonResult, SimilarityMetrics
  *
  * Outputs:
- *   - HealingProposal[] (ranked, validated)
- *
- * Used by: CLI `heal` command
+ *   - HealingCandidate[] (ranked, explained, deduplicated)
  *
  * Boundary:
  *   - Does NOT apply patches — only generates proposals
- *   - Does NOT execute tests — works against stored traces + snapshots
- *   - Strategies are injected — this module orchestrates, not implements
+ *   - Does NOT execute tests — works against stored snapshots
+ *   - Does NOT use AI or LLMs
+ *   - Does NOT use embeddings
+ *
+ * @module healing
  */
 
-import type { HealingStrategyProvider } from '../../interfaces/healing.js';
-import type { LocatorIndexProvider } from '../../interfaces/locator.js';
-import type { ExecutionTrace } from '../../models/trace.js';
-import type { DomSnapshot } from '../../models/snapshot.js';
-import type { HealingProposal } from '../../models/healing.js';
-import type { Result } from '../../models/result.js';
-
-export class HealingEngine {
-  constructor(
-    private readonly strategies: HealingStrategyProvider[],
-    private readonly locatorIndex: LocatorIndexProvider,
-  ) {}
-
-  async heal(trace: ExecutionTrace, snapshot: DomSnapshot): Promise<Result<HealingProposal[]>> {
-    // 1. Find failed locators in the trace
-    // 2. Look up each in the locator index
-    // 3. Run each strategy in priority order
-    // 4. Collect and rank proposals
-    // 5. Return proposals (do NOT apply)
-    throw new Error('Not implemented');
-  }
-}
+export { HealingEngine } from './engine.js';
+export { collectCandidates, STRATEGIES, STRATEGY_DEFINITIONS } from './strategies.js';
+export { rankCandidates, rankCandidate, removeLowConfidence, deduplicateCandidates } from './ranker.js';

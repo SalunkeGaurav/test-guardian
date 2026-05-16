@@ -1,0 +1,79 @@
+{
+  "generatedAt": 1778829937250,
+  "corpusPath": "C:\\Users\\Hp\\Automation Tools\\Tool Testing Data\\benchmark-repositories",
+  "repositoryCount": 6,
+  "repositories": [
+    {
+      "id": "corpus-1778829937157-ob0xjs6",
+      "name": "PW-Framework-Step-By-Step",
+      "path": "C:\\Users\\Hp\\Automation Tools\\Tool Testing Data\\benchmark-repositories\\PW-Framework-Step-By-Step",
+      "framework": "playwright",
+      "language": "typescript",
+      "bdd": "none",
+      "wrapperArchitecture": "lightweight",
+      "discoveredAt": 1778829937157,
+      "testFileCount": 0,
+      "pageObjectCount": 0
+    },
+    {
+      "id": "corpus-1778829937160-9yfx4ou",
+      "name": "PlaywrightTutorialFullCourse",
+      "path": "C:\\Users\\Hp\\Automation Tools\\Tool Testing Data\\benchmark-repositories\\PlaywrightTutorialFullCourse",
+      "framework": "playwright",
+      "language": "javascript",
+      "bdd": "none",
+      "wrapperArchitecture": "lightweight",
+      "discoveredAt": 1778829937160,
+      "testFileCount": 33,
+      "pageObjectCount": 3
+    },
+    {
+      "id": "corpus-1778829937172-l0241v9",
+      "name": "cucumber-playwright-javascript",
+      "path": "C:\\Users\\Hp\\Automation Tools\\Tool Testing Data\\benchmark-repositories\\cucumber-playwright-javascript",
+      "framework": "playwright",
+      "language": "javascript",
+      "bdd": "none",
+      "wrapperArchitecture": "lightweight",
+      "discoveredAt": 1778829937172,
+      "testFileCount": 0,
+      "pageObjectCount": 0
+    },
+    {
+      "id": "corpus-1778829937185-knw60rq",
+      "name": "playwright-cucumber-report-portal",
+      "path": "C:\\Users\\Hp\\Automation Tools\\Tool Testing Data\\benchmark-repositories\\playwright-cucumber-report-portal",
+      "framework": "playwright",
+      "language": "mixed",
+      "bdd": "none",
+      "wrapperArchitecture": "lightweight",
+      "discoveredAt": 1778829937185,
+      "testFileCount": 0,
+      "pageObjectCount": 0
+    },
+    {
+      "id": "corpus-1778829937202-5fh1crs",
+      "name": "playwright-typescript-playwright-test",
+      "path": "C:\\Users\\Hp\\Automation Tools\\Tool Testing Data\\benchmark-repositories\\playwright-typescript-playwright-test",
+      "framework": "playwright",
+      "language": "mixed",
+      "bdd": "none",
+      "wrapperArchitecture": "heavy",
+      "discoveredAt": 1778829937202,
+      "testFileCount": 0,
+      "pageObjectCount": 0
+    },
+    {
+      "id": "corpus-1778829937246-6sry3la",
+      "name": "playwright_typescript_api",
+      "path": "C:\\Users\\Hp\\Automation Tools\\Tool Testing Data\\benchmark-repositories\\playwright_typescript_api",
+      "framework": "playwright",
+      "language": "typescript",
+      "bdd": "none",
+      "wrapperArchitecture": "moderate",
+      "discoveredAt": 1778829937246,
+      "testFileCount": 1,
+      "pageObjectCount": 0
+    }
+  ]
+}
